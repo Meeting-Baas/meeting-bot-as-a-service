@@ -92,11 +92,13 @@ const VideoRenderer = ({ jsonData }: { jsonData: VideoData }) => {
                 className="flex flex-col h-full min-w-full lg:min-w-[calc(30%-1rem)] w-full lg:w-[calc(30%-1rem)] gap-4"
                 style={{ minWidth: `${width}%` }}
             >
-                <VideoPlayer
-                    url={videoData.data.mp4}
-                    onTimeUpdate={handleTimeUpdate}
-                    setPlayerRef={setPlayerRef}
-                />
+                <div className='block'>
+                    <VideoPlayer
+                        url={videoData.data.mp4}
+                        onTimeUpdate={handleTimeUpdate}
+                        setPlayerRef={setPlayerRef}
+                    />
+                </div>
 
                 <Card
                     header={

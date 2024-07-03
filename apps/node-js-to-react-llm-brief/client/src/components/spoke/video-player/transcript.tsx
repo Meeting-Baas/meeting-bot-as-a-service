@@ -35,14 +35,14 @@ const Transcript: React.FC<TranscriptProps> = ({
 }) => {
     return (
         <div
-            className="flex w-full h-full max-w-full overflow-y-auto overflow-x-hidden flex-col p-4 lg:p-8"
+            className="flex w-full h-full max-w-full overflow-y-auto overflow-x-hidden flex-col p-2"
         >
             {transcript.map((entry, index) => (
                 <div
                     className="flex flex-col w-full user-select-none"
                     key={index}
                 >
-                    <h6 className="text-md font-bold px-1">
+                    <h6 className="text-md font-bold">
                         {entry.speaker}
                     </h6>
 

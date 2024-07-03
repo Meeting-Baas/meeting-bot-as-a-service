@@ -1,7 +1,7 @@
 import * as React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { VideoPlayer } from "@/components/spoke/video-player/video-player";
+import VideoPlayer from "@/components/spoke/video-player/video-player";
 import Transcript from "@/components/spoke/video-player/transcript";
 
 export type MeetingInfo = {
@@ -90,13 +90,26 @@ function Meeting() {
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
-      <div className="flex ">
-        <VideoPlayer
-          // url={data?.data.assets[0].mp4_s3_path}
-          url={"https://www.w3schools.com/tags/mov_bbb.mp4"}
-          onTimeUpdate={() => {}}
-          setPlayerRef={() => {}}
-        />
+      <div className="flex">
+        <div className='w-full h-full'>
+          <VideoPlayer
+            // url={data?.data.assets[0].mp4_s3_path}
+            options={{
+              autoplay: true,
+              controls: true,
+              responsive: true,
+              fluid: true,
+              sources: [
+                {
+                  src: "https://www.w3schools.com/tags/mov_bbb.mp4",
+                  type: "video/mp4",
+                },
+              ],
+            }}
+            // onTimeUpdate={() => {}}
+            // setPlayerRef={() => {}}
+          />
+        </div>
         <Transcript
           transcript={data?.data.editors[0].video.transcripts}
           currentTime={0}
