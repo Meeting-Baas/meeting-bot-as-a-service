@@ -19,7 +19,7 @@ When deployed, team members can share a link to invite the meeting bot and recei
 
 ### Meeting Bass
 
-Obtain your API key from [https://spoke.app/bass](https://spoke.app/bass)
+Obtain your API key from [https://meetingbaas.com/bass](https://meetingbaas.com/bass)
 
 ### OpenAI
 
