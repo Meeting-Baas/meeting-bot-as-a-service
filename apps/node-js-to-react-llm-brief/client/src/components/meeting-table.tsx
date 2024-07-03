@@ -42,6 +42,8 @@ import {
 
 import axios from "axios";
 import { Badge } from "./ui/badge";
+import { ExternalLinkIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export type Meeting = {
   id: string;
@@ -119,22 +121,29 @@ export const columns: ColumnDef<Meeting>[] = [
       const meeting = row.original;
 
       return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <DotsHorizontalIcon className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(meeting.bot_id)}
-            >
-              Copy Bot ID
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <div className="flex items-center gap-2">
+          <Button size="icon" asChild className="h-8 w-8 p-0">
+            <Link to={`/meeting/${meeting.bot_id}`} target="_blank">
+              <ExternalLinkIcon className="w-4 h-4" />
+            </Link>
+          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="h-8 w-8 p-0">
+                <span className="sr-only">Open menu</span>
+                <DotsHorizontalIcon className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+              <DropdownMenuItem
+                onClick={() => navigator.clipboard.writeText(meeting.bot_id)}
+              >
+                Copy Bot ID
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       );
     },
   },
