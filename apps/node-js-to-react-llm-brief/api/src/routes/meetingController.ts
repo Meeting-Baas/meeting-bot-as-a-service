@@ -3,5 +3,6 @@ import { getMeetings } from "../db/queries";
 
 export const meeting = async (req: Request, res: Response) => {
   const meetings = await getMeetings();
+  console.log("meetings", meetings);
   res.json(meetings);
 };

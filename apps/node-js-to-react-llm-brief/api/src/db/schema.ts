@@ -9,8 +9,10 @@ export const meetingsTable = pgTable("meetings", {
     .array()
     .notNull()
     .default(sql`'{}'::text[]`),
-  createdAt: timestamp("created_at"),
-  updatedAt: timestamp("updated_at"),
+  createdAt: timestamp('created_at', { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+  updatedAt: timestamp('updatedAt', { withTimezone: true })
 });
 
 export type InsertMeeting = typeof meetingsTable.$inferInsert;
