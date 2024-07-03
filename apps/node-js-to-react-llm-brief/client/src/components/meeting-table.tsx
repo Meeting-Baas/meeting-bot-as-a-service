@@ -41,12 +41,14 @@ import {
 } from "@/components/ui/table";
 
 import axios from "axios";
+import { Badge } from "./ui/badge";
 
 export type Payment = {
   id: string;
-  amount: number;
-  status: "pending" | "processing" | "success" | "failed";
-  email: string;
+  name: string;
+  bot_id: string;
+  attendees: string[];
+  createdAt: Date;
 };
 
 export const columns: ColumnDef<Payment>[] = [
@@ -73,47 +75,46 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
-    ),
+    accessorKey: "bot_id",
+    header: "Bot ID",
+    cell: ({ row }) => <div>{row.getValue("bot_id")}</div>,
   },
   {
-    accessorKey: "email",
-    header: ({ column }) => {
+    accessorKey: "name",
+    header: "Name",
+    cell: ({ row }) => <div>{row.getValue("name")}</div>,
+  },
+  {
+    accessorKey: "attendees",
+    header: () => "Attendees",
+    cell: ({ row }) => {
+        // todo: check if this is a proper list later
+      const attendees = row.getValue("attendees") || [];
+
       return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Email
-          <CaretSortIcon className="ml-2 h-4 w-4" />
-        </Button>
+        <div className="text-right font-medium flex gap-2">
+          {attendees.map((attendee) => (
+            <Badge>{attendee}</Badge>
+          ))}
+        </div>
       );
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
   },
   {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
+    accessorKey: "createdAt",
+    header: "Created At",
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
+        // todo: get proper date
+      const date = row.getValue("createdAt");
 
-      // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount);
-
-      return <div className="text-right font-medium">{formatted}</div>;
+      return <div>{date}</div>;
     },
   },
   {
     id: "actions",
     enableHiding: false,
     cell: ({ row }) => {
-      const payment = row.original;
+      const meeting = row.original;
 
       return (
         <DropdownMenu>
@@ -126,13 +127,10 @@ export const columns: ColumnDef<Payment>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
             <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
+              onClick={() => navigator.clipboard.writeText(meeting.bot_id)}
             >
-              Copy payment ID
+              Copy Bot ID
             </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
@@ -193,13 +191,14 @@ function MeetingTable() {
       {data.length > 0 ? (
         <>
           <div className="flex items-center py-4 gap-2">
+            {/* todo: make this search everything like attendees */}
             <Input
-              placeholder="Filter emails..."
+              placeholder="Filter Bot Id..."
               value={
-                (table.getColumn("email")?.getFilterValue() as string) ?? ""
+                (table.getColumn("bot_id")?.getFilterValue() as string) ?? ""
               }
               onChange={(event) =>
-                table.getColumn("email")?.setFilterValue(event.target.value)
+                table.getColumn("bot_id")?.setFilterValue(event.target.value)
               }
             />
             <DropdownMenu>

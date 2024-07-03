@@ -45,6 +45,7 @@ export const webhook = async (req: Request, res: Response) => {
 
       // Database Block
       createMeeting({
+        name: `Meeting Summary`,
         bot_id: eventData.data.bot_id,
         attendees: eventData.data.speakers
       });

@@ -19,8 +19,10 @@ export async function getMeetings(
     return db
       .select({
         id: meetingsTable.id,
+        name: meetingsTable.name,
         bot_id: meetingsTable.bot_id,
         attendees: meetingsTable.attendees,
+        createdAt: meetingsTable.createdAt,
       })
       .from(meetingsTable)
       .orderBy(desc(meetingsTable.createdAt))
