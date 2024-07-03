@@ -15,8 +15,8 @@
     "zod": "^3.23.4"
   },
   "scripts": {
-    "build": "npx tsc --build --clean",
-    "start": "node dist/index.js",
+    "build": "rm -rf dist/ && npx tsc",
+    "start": "node dist/src/index.js",
     "dev": "nodemon src/index.ts",
 
     "db:generate": "drizzle-kit generate",
