@@ -4,7 +4,7 @@ import { serial, text, timestamp, pgTable } from "drizzle-orm/pg-core";
 export const meetingsTable = pgTable("meetings", {
   id: serial("id"),
   name: text("name"),
-  bot_id: text("bot_id"),
+  bot_id: text("bot_id").notNull(),
   attendees: text("role")
     .array()
     .notNull()

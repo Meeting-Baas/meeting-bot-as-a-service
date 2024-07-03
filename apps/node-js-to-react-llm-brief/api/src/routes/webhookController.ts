@@ -2,7 +2,7 @@ import { markdownToBlocks } from "@tryfabric/martian";
 import { Request, Response } from "express";
 import { createNotionPage, summarizeTranscript } from "../lib/utils";
 
-import { db } from "../db";
+import { createMeeting } from "../db/queries";
 
 interface TranscriptEntry {
   speaker: string;
@@ -44,7 +44,10 @@ export const webhook = async (req: Request, res: Response) => {
       }
 
       // Database Block
-      // 
+      createMeeting({
+        bot_id: eventData.data.bot_id,
+        attendees: eventData.data.speakers
+      });
     }
   }
   res.sendStatus(200);
