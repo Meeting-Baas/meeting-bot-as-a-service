@@ -15,7 +15,7 @@
     "zod": "^3.23.4"
   },
   "scripts": {
-    "build": "npx tsc",
+    "build": "npx tsc --build --clean",
     "start": "node dist/index.js",
     "dev": "nodemon src/index.ts",
 
