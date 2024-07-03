@@ -4,67 +4,48 @@ Using Meeting's API and open-source examples, this repository contains programs 
 
 1. Send Meeting Bots to Google Meet, Zoom and Microsoft Teams in an easy way.
 
-2. Automate data extraction from meetings and conversations via LLMs and save specific, custom data somewhere .
+2. Automate data extraction from meetings and conversations via LLMs and save specific, custom data somewhere.
 
 ## Available Setups
 
-Examples are divided in 2: 
-1. stand-alone examples which include:
-	a. how to send a bot in different fashions (through a calendar API, a Chrome extension, a form, ...) and 
-	b. how to handle the data, present it, search inside it, ...
-2. integrations using third-party software, whether said software is open-source or not. So of course make.com, n8n.io integrations, but also a Google Calendar form to invite a bot to meeting to record it which you can share with a team, ....
+Examples are divided in 2:
+1. Stand-alone examples which include:
+    - How to send a bot in different fashions (through a calendar API, a Chrome extension, a form, ...)
+    - How to handle the data, present it, search inside it, ...
+2. Integrations using third-party software, whether said software is open-source or not. So of course make.com, n8n.io integrations, but also a Google Calendar form to invite a bot to meeting to record it which you can share with a team, ...
 
-### Apps & Data-Handling.
+## Apps & Data-Handling
 
 Learn how to invite meeting bots to a meeting for yourself or your users, and view examples to start handling the data quickly.
 
+**[Transcript Player Interface](./apps/player-interface/)**
+- This project is a web application that displays a video player with a synchronized transcript. The interface is divided into two main parts: the video player and the transcript.
+- Technologies used: Node, React, Typescript, Chakra.
 
-**Transcript Player Interface**
+**[Desktop App to invite a bot](./apps/rust-send-bots-form/)**
+- A cross-platform desktop application with a simple user-input form to send Meeting Bots to Zoom, Google Meet, or Microsoft Teams meetings.
+- Technologies used: Rust, Tauri, HTML, Javascript.
 
-- [Player Interface](./apps/player-interface/)
-	- This project is a web application that displays a video player with a synchronized transcript. The interface is divided into two main parts: the video player and the transcript.
-	- technologies used: Node, React, Typescript, Chakra.
+**[WebApp and Server to record and handle data](./apps/node-js-to-notion-llm-brief/)**
+- A simple web app that:
+  - Has a simple sharable page to send a meeting bot.
+  - Has an automation process to summarize meeting transcriptions with OpenAI and publish formatted information to a Notion DataBase, with meta-data.
+- Technologies used: ExpressJS, Node.
+- Third-parties used: OpenAI, Notion.
 
-**Desktop App to invite a bot**
+**[Talking Blob](./apps/rust-talking-blob/)**
+- Slightly off-topic: an animated blob packaged a desktop app. It simply reacts to microphone input :)
+- Technologies used: Node, React, ThreeJS, Rust, Tauri.
 
-- [Desktop App to invite a bot](./apps/rust-send-bots-form/)
-  - A cross-platform desktop application with a simple user-input form to send Meeting Bots to Zoom, Google Meet, or Microsoft Teams meetings.
-  - technologies used: Rust, Tauri, HTML, Javascript.
-  
-  
-**NodeJS App with an online form and Meeting data processing**
-
-- [WebApp and Server to record and handle data](./apps/node-js-to-notion-llm-brief/)
-  - A simple web app that:
-    -- has a simple sharable page to send a meeting bot.
-    -- has an automation process to summarize meeting transcriptions with OpenAI and publish formatted information to a Notion DataBase, with meta-data.
-  - technologies used: ExpressJS, Node.
-  - third-parties used: OpenAI, Notion.
-  
-  
-**Talking blob**
-- [Talking Blob](./apps/rust-talking-blob/)
-
-  - Slightly off-topic: an animated blob packaged a desktop app. It simply reacts to microphone input :)
-  - technologies used: Node, React, ThreeJS, Rust, Tauri. 
-
-
-
-### Automations relying on third-party software
+## Automations relying on third-party software
 
 Automate data extraction from Google Meet, Microsoft Teams, and Zoom using third party, "no-code" software.
 
+**[View n8n Example](./to-other-apps/meeting-to-notion-with-n8n/)**
+- Automate meeting transcription and Notion sync using n8n's visual workflow editor and the AI Meeting Bot API.
 
-**n8n AI Meeting Bot**
-
-- [View n8n Example](./to-other-apps/meeting-to-notion-with-n8n/)
-  - Automate meeting transcription and Notion sync using n8n's visual workflow editor and the AI Meeting Bot API.
-
-**Make AI Meeting Bot**
-
-- [View Make Example](./to-other-apps/meeting-to-airtable-with-make/)
-  - Sync meeting transcriptions to Airtable using Make's no-code platform and the AI Meeting Bot API.
-
+**[View Make Example](./to-other-apps/meeting-to-airtable-with-make/)**
+- Sync meeting transcriptions to Airtable using Make's no-code platform and the AI Meeting Bot API.
 
 ## Contributing && Troubleshooting
 
