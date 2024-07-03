@@ -1,0 +1,2 @@
+﻿id,Meeting Bot Name,Meeting URL,Meeting Bot Image,Meeting Bot Entry Message,Created Time,API Key,Created By
+5,Make Meeting Bot,https://meet.google.com/abc-defg-hij,animoji-FA.webp (https://v5.airtableusercontent.com/v3/u/28/28/1714233600000/KQ_R4Ck9meUBHh8KU-ag-w/mrMIDHVLokoSWzc4Nl62JvDo2M-XWB-C_SOSxSFVs4mWnUk0cc9jypD1Fly5Dc3KF77FDXjWq6SDZ-b1k0kGYN7NZboJsE08PfYrSakczththISzwZON_GOgsYHy346-FHAvWmuPGsbc4Ctd4CkI7O_K5KGP4v9oqMbvd2j_Oh8/SOqpgl0JUskse3BL5L9H8657XctfB0EV-MSyCk1ZWH0),Hello - recording this meeting,27/4/2024 11:17am,randomly-generated-api-key,Anonymous

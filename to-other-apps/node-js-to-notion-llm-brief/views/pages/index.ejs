@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="p-4">
+    <h1>Meeting Bot</h1>
+    <p>
+      Change or modify your webhook URL in your
+      <a href="https://spoke.app/baas">Meeting Bass dashboard</a>. <br />To test
+      your webhook, you can use online services like
+      <a href="https://webhook-test.com/">this one.</a>.
+    </p>
+    <hr />
+    <% if (missingEnvVars && missingEnvVars.length > 0) { %>
+    <div class="alert alert-warning" role="alert">
+      <h4 class="alert-heading">Warning: Missing Environment Variables</h4>
+      <p>The following required environment variables are not set:</p>
+      <ul>
+        <% missingEnvVars.forEach(function(varName) { %>
+        <li><%= varName %></li>
+        <% }); %>
+      </ul>
+      <p>Please set these variables in your .env file or environment.</p>
+    </div>
+    <% } %>
+
+    <!-- <form action="/form" method="post">
+
+        <div class="mb-3">
+            <label for="meetingURL" class="form-label">Meeting URL</label>
+            <input type="url" class="form-control" id="meetingURL" name="meetingURL" required placeholder="Enter meeting URL">
+        </div>
+        <div class="mb-3">
+            <label for="meetingBotName" min="3" class="form-label">Meeting Bot Name</label>
+            <input type="text" class="form-control" id="meetingBotName" name="meetingBotName" placeholder="Enter meeting bot name">
+        </div>
+        <div class="mb-3">
+            <label for="meetingBotImage" class="form-label">Meeting Bot Image</label>
+            <input type="url" class="form-control" id="meetingBotImage" name="meetingBotImage" placeholder="Enter URL for meeting bot image">
+        </div>
+        <div class="mb-3">
+            <label for="meetingBotEntryMessage" class="form-label">Meeting Bot Entry Message</label>
+            <textarea class="form-control" id="meetingBotEntryMessage" name="meetingBotEntryMessage" rows="3" placeholder="Enter meeting bot entry message"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="apiKey" class="form-label">API Key</label>
+            <input type="text" class="form-control" id="apiKey" name="apiKey" required placeholder="Enter API key">
+        </div>
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+    </form> 
+    
+    <%- include('../partials/scripts'); %>
+</body>
+</html> -->
+
+    <form action="/form" method="post">
+      <div class="mb-3">
+        <div class="mb-3">
+          <label for="meetingURL" class="form-label">Meeting URL *</label>
+          <input
+            type="url"
+            class="form-control"
+            id="meetingURL"
+            name="meetingURL"
+            required
+            placeholder="Enter meeting URL"
+          />
+        </div>
+        <br />
+
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+        <br />
+        <br />
+        <br />
+        <label for="meetingBotName" class="form-label"
+          >Meeting Bot Name (optional)</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="meetingBotName"
+          name="meetingBotName"
+          placeholder="Enter meeting bot name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="meetingBotImage" class="form-label"
+          >Meeting Bot Image (optional)</label
+        >
+        <input
+          type="url"
+          class="form-control"
+          id="meetingBotImage"
+          name="meetingBotImage"
+          placeholder="Enter URL for meeting bot image"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="meetingBotEntryMessage" class="form-label"
+          >Meeting Bot Entry Message (optional)</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="meetingBotEntryMessage"
+          name="meetingBotEntryMessage"
+          placeholder="Enter meeting bot entry message"
+          style="overflow-x: auto; white-space: nowrap"
+        />
+      </div>
+      <!-- <div class="mb-3">
+        <label for="meetingBotEntryMessage" class="form-label"
+          >Meeting Bot Entry Message (optional)</label
+        >
+        <textarea
+          class="form-control"
+          id="meetingBotEntryMessage"
+          name="meetingBotEntryMessage"
+          rows="3"
+          placeholder="Enter meeting bot entry message"
+        ></textarea>
+      </div> -->
+      <div class="mb-3">
+        <label for="apiKey" class="form-label">API Key (optional)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="apiKey"
+          name="apiKey"
+          placeholder="Enter API key"
+        />
+      </div>
+    </form>
+
+    <%- include('../partials/scripts'); %>
+  </body>
+</html>

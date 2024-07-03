@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="p-4">
+    <h1>Meeting Bot</h1>
+    <p>An unexpected error occured</p>
+    <hr />
+    
+    <h3 class="text-danger"><%= error %></h3>
+    <% if (typeof details !== 'undefined' && details !== '') { %>
+        <p class="text-danger"><%= details %></p>
+    <% } %>
+    <%- include('../partials/scripts'); %>
+</body>
+</html>

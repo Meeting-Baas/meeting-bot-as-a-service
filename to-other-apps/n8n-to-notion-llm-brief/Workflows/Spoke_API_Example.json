@@ -1,0 +1,669 @@
+{
+  "name": "Spoke API Example",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Example Workflow Setup for Spoke using n8n\n\n**Introduction:** This guide provides a step-by-step approach to setting up an example workflow in n8n for Spoke. Follow the steps below to configure your environment efficiently.\n\n",
+        "height": 189.26658798752203,
+        "width": 342.93179049939204
+      },
+      "id": "ed62d8fd-2328-4aea-8be3-029ac2b98416",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        20,
+        380
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "da686590-ca96-4566-9c2b-b724beb3f9af",
+              "leftValue": "={{ $json.body.event }}",
+              "rightValue": "=complete",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "59a7d543-65d6-4ff1-b49a-ed53cabc6b38",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        620,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.spoke.app/bots",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-spoke-api-key",
+              "value": "={{ $json['API Key'] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"meeting_url\": \"{{ $json['Meeting URL'] }}\",\n  \"bot_name\": \"{{ $json['Meeting Bot Name'] || 'N8N Meeting Bot' }}\",\n  \"enter_message\": \"{{ $json['Meeting Bot Entry Message'] || 'Hello - recording this meeting' }}\",\n  \"bot_image\": \"{{ $json['Meeting Bot Image'] || 'https://docs.n8n.io/_images/n8n-docs-icon.svg' }}\",\n  \"speech_to_text\": \"Gladia\",\n  \"reserved\": false\n}",
+        "options": {}
+      },
+      "id": "992a03a4-520f-43ae-b1b8-8ad4b02cf052",
+      "name": "Join Meeting",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        580,
+        580
+      ],
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"google/gemma-7b-it:free\",\n  \"messages\": [\n    {\"role\": \"user\", \"content\": \"Given a detailed transcript of a meeting, generate a concise summary that captures the key points, decisions made, and action items, formatted in Markdown for better readability and organization.\"},\n    {\"role\": \"user\", \"content\": \"{{ $json.body.data.transcript.map(entry => \n  `${entry.speaker}: ${entry.words.map(word => word.word).join(' ')}`\n).join('\\\\n') }}\"}\n  ]\n}",
+        "options": {}
+      },
+      "id": "329e57ce-7244-4bc1-b7f5-a262fb9b499e",
+      "name": "OpenRouter",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        840,
+        760
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "jOB4SRwTc7Aj6njY",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://martian-api.onrender.com/convert",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "markdown",
+              "value": "={{ $json.choices[0].message.content }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ef7a820a-4bc4-4f9b-a110-64e6052bc0ba",
+      "name": "Martian",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1040,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.notion.com/v1/pages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "notionApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"parent\": {\n    \"page_id\": \"40efa0e73da44a17b66a6a3336aaa332\"\n  },\n  \"icon\": {\n    \"emoji\": \"🗣️\"\n  },\n  \"properties\": {\n    \"title\": [\n      {\n        \"text\": {\n          \"content\": \"Meeting Summary - {{ $('OpenRouter').item.json.id }}\"\n        }\n      }\n    ]\n  },\n  \"children\": {{ JSON.stringify($json.blocks) }}\n}",
+        "options": {}
+      },
+      "id": "31af26fe-7b35-4bb3-af91-d9948d39996c",
+      "name": "Notion",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1280,
+        760
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "4j13CRZmH11pdy5Z",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "meeting-bot",
+        "formTitle": "Meeting Bot",
+        "formDescription": "Add https://techwithanirudh.app.n8n.cloud/webhook-test/aimeetingbot to the webhook URL in your spoke dashboard",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Meeting Bot Name"
+            },
+            {
+              "fieldLabel": "Meeting URL",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Meeting Bot Image"
+            },
+            {
+              "fieldLabel": "Meeting Bot Entry Message"
+            },
+            {
+              "fieldLabel": "API Key",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "formSubmittedText": "A meeting bot will be sent shortly."
+        }
+      },
+      "id": "8832abc3-374b-4f37-bd85-5745636ce330",
+      "name": "Form Trigger",
+      "type": "n8n-nodes-base.formTrigger",
+      "position": [
+        400,
+        580
+      ],
+      "webhookId": "30f21edc-6c39-4877-b21b-71a129d5e511",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "aimeetingbot",
+        "options": {}
+      },
+      "id": "86e5a578-b1e4-44a6-884d-d7aaea7c4069",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        400,
+        780
+      ],
+      "webhookId": "68c6d475-43dc-489a-a38c-c899ed98a7cf"
+    },
+    {
+      "parameters": {
+        "content": "### Step 1: Update Your Webhook URL\n\n*   **Note:** Start by navigating to your **Spoke dashboard**.\n*   Locate and double-click the **Webhook** node to edit its settings.\n*   Copy the production webhook URL from the provided field, and paste it into the Spoke Dashboard.",
+        "height": 212.8651678098114,
+        "width": 379.33651734368004
+      },
+      "id": "1dc821ec-bb66-43a4-8427-5d2b72ed1ff8",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        380,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Step 2: Configure the OpenRouter Action\n\n*   **Note:** Ensure the router is properly directed to the correct API.\n*   Double-click on the **OpenRouter** node.\n*   Change the URL to `https://platform.openai.com/v1/chat/completions`.\n*   Update the JSON payload with the model you prefer and insert your OpenAI API key.\n\n",
+        "height": 199.26918392204638,
+        "width": 474.34835566382435
+      },
+      "id": "9c946ede-42da-401a-ac2c-d8dd129e6ea7",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        840,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Step 3: Set Up Notion Integration\n\n*   **Note:** Integrating Notion will require an access token.\n*   Follow this link to create a Notion Access Token: [Notion Integration Guide](https://docs.n8n.io/integrations/builtin/credentials/notion/?utm_source=n8n_app).\n*   Update the token in the corresponding node in your workflow.",
+        "height": 179.00121802679664,
+        "width": 399.61023142509123
+      },
+      "id": "005f4413-2c06-46f3-b602-80f2732f5139",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Finalize and Test Your Setup\n\n*   Save your changes in n8n.\n*   Open the form, input the meeting URL and Spoke Api Key, and test your setup to ensure everything is working as expected.\n\n",
+        "height": 176.46772228989045,
+        "width": 305.8708891595617
+      },
+      "id": "eaabeed6-d99f-4f8c-95eb-9890dd1eee3f",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        740
+      ]
+    }
+  ],
+  "pinData": {
+    "OpenRouter": [
+      {
+        "json": {
+          "id": "gen-pdhjom7mPGeeg7bgQSuJZl2auhYA",
+          "model": "google/gemma-7b-it:free",
+          "object": "chat.completion",
+          "created": 1713951093,
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "## Summary of Meeting Transcript\n\n### Key Points:\n\n- Introduction of a new AI-powered meeting bot, \"ai meeting bot\".\n- Discussion of its potential to enhance meetings through interactive discussions.\n\n\n### Decisions Made:\n\n* No specific decisions were documented in the provided transcript.\n\n\n### Action Items:\n\n* Further information and details regarding the AI meeting bot are required to establish specific actions."
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 106,
+            "completion_tokens": 81,
+            "total_tokens": 187,
+            "total_cost": 0
+          }
+        }
+      }
+    ],
+    "Webhook Trigger": [
+      {
+        "json": {
+          "headers": {
+            "host": "techwithanirudh.app.n8n.cloud",
+            "content-length": "2671",
+            "accept": "*/*",
+            "accept-encoding": "gzip",
+            "content-type": "application/json",
+            "x-forwarded-for": "15.237.3.223",
+            "x-forwarded-host": "techwithanirudh.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-5666bddbdb-9ml6b",
+            "x-real-ip": "15.237.3.223",
+            "x-spoke-api-key": "412d0aafbbb1ebf86dea1caa22eaa9976f3631189822ce384b3386ccb85f330c"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event": "complete",
+            "data": {
+              "bot_id": 2565,
+              "transcript": [
+                {
+                  "speaker": "Anirudh Sriram",
+                  "words": [
+                    {
+                      "start": 0,
+                      "end": 0.14,
+                      "word": "bot"
+                    },
+                    {
+                      "start": 0.14,
+                      "end": 0.82,
+                      "word": "called"
+                    },
+                    {
+                      "start": 0.82,
+                      "end": 2.18,
+                      "word": "ai"
+                    },
+                    {
+                      "start": 2.18,
+                      "end": 2.54,
+                      "word": "meeting"
+                    },
+                    {
+                      "start": 2.54,
+                      "end": 3,
+                      "word": "bot"
+                    },
+                    {
+                      "start": 3,
+                      "end": 3.88,
+                      "word": "where"
+                    },
+                    {
+                      "start": 3.88,
+                      "end": 4.28,
+                      "word": "the"
+                    },
+                    {
+                      "start": 4.28,
+                      "end": 4.6,
+                      "word": "bot"
+                    },
+                    {
+                      "start": 4.6,
+                      "end": 5.98,
+                      "word": "discusses"
+                    },
+                    {
+                      "start": 5.98,
+                      "end": 6.32,
+                      "word": "about"
+                    },
+                    {
+                      "start": 6.32,
+                      "end": 7.4,
+                      "word": "something"
+                    },
+                    {
+                      "start": 7.4,
+                      "end": 8.46,
+                      "word": "and"
+                    },
+                    {
+                      "start": 8.46,
+                      "end": 9.3,
+                      "word": "uh"
+                    },
+                    {
+                      "start": 9.3,
+                      "end": 10.9,
+                      "word": "yeah"
+                    },
+                    {
+                      "start": 10.9,
+                      "end": 12.12,
+                      "word": "also"
+                    },
+                    {
+                      "start": 12.12,
+                      "end": 13.48,
+                      "word": "we"
+                    },
+                    {
+                      "start": 13.48,
+                      "end": 13.62,
+                      "word": "are"
+                    },
+                    {
+                      "start": 13.62,
+                      "end": 13.94,
+                      "word": "talking"
+                    },
+                    {
+                      "start": 13.94,
+                      "end": 14.26,
+                      "word": "about"
+                    },
+                    {
+                      "start": 14.26,
+                      "end": 14.82,
+                      "word": "something"
+                    },
+                    {
+                      "start": 14.82,
+                      "end": 15.3,
+                      "word": "and"
+                    },
+                    {
+                      "start": 15.3,
+                      "end": 15.76,
+                      "word": "it"
+                    },
+                    {
+                      "start": 15.76,
+                      "end": 15.92,
+                      "word": "will"
+                    },
+                    {
+                      "start": 15.92,
+                      "end": 16.24,
+                      "word": "be"
+                    },
+                    {
+                      "start": 16.24,
+                      "end": 16.64,
+                      "word": "very"
+                    },
+                    {
+                      "start": 16.64,
+                      "end": 17.26,
+                      "word": "interesting"
+                    },
+                    {
+                      "start": 17.26,
+                      "end": 18.22,
+                      "word": "and"
+                    },
+                    {
+                      "start": 18.22,
+                      "end": 18.5,
+                      "word": "this"
+                    },
+                    {
+                      "start": 18.5,
+                      "end": 18.64,
+                      "word": "is"
+                    },
+                    {
+                      "start": 18.64,
+                      "end": 18.9,
+                      "word": "something"
+                    },
+                    {
+                      "start": 18.9,
+                      "end": 19.2,
+                      "word": "that"
+                    },
+                    {
+                      "start": 19.2,
+                      "end": 19.36,
+                      "word": "is"
+                    },
+                    {
+                      "start": 19.36,
+                      "end": 19.76,
+                      "word": "interesting"
+                    },
+                    {
+                      "start": 19.76,
+                      "end": 20.36,
+                      "word": "and"
+                    },
+                    {
+                      "start": 20.88,
+                      "end": 21.28,
+                      "word": "that"
+                    },
+                    {
+                      "start": 21.28,
+                      "end": 21.54,
+                      "word": "is"
+                    },
+                    {
+                      "start": 21.54,
+                      "end": 21.7,
+                      "word": "that"
+                    },
+                    {
+                      "start": 21.7,
+                      "end": 21.98,
+                      "word": "and"
+                    },
+                    {
+                      "start": 21.98,
+                      "end": 22.34,
+                      "word": "something"
+                    },
+                    {
+                      "start": 22.34,
+                      "end": 22.64,
+                      "word": "like"
+                    },
+                    {
+                      "start": 22.64,
+                      "end": 22.84,
+                      "word": "that"
+                    },
+                    {
+                      "start": 22.84,
+                      "end": 23.14,
+                      "word": "or"
+                    },
+                    {
+                      "start": 23.14,
+                      "end": 23.44,
+                      "word": "something"
+                    },
+                    {
+                      "start": 23.44,
+                      "end": 23.9,
+                      "word": "something"
+                    },
+                    {
+                      "start": 23.9,
+                      "end": 24.88,
+                      "word": "and"
+                    },
+                    {
+                      "start": 24.88,
+                      "end": 25.54,
+                      "word": "something"
+                    },
+                    {
+                      "start": 25.54,
+                      "end": 25.96,
+                      "word": "something"
+                    },
+                    {
+                      "start": 25.96,
+                      "end": 26.3,
+                      "word": "something"
+                    },
+                    {
+                      "start": 26.3,
+                      "end": 26.5,
+                      "word": "Something,"
+                    },
+                    {
+                      "start": 26.5,
+                      "end": 26.84,
+                      "word": "something,"
+                    },
+                    {
+                      "start": 26.96,
+                      "end": 27.18,
+                      "word": "something,"
+                    },
+                    {
+                      "start": 27.26,
+                      "end": 29.84,
+                      "word": "cool."
+                    }
+                  ]
+                }
+              ],
+              "speakers": [
+                "Anirudh Sriram"
+              ],
+              "mp4": "https://s3.eu-west-3.amazonaws.com/bots-videos/134975/pve4py5pny/2565.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIEJ2N5VNBVY7J7IA%2F20240424%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240424T074215Z&X-Amz-Expires=3600&X-Amz-Signature=0f17f5f24c6b26731de490d82d9dd8f93883baac5acb55b30a8a8513aa80c195&X-Amz-SignedHeaders=host"
+            }
+          },
+          "webhookUrl": "https://techwithanirudh.app.n8n.cloud/webhook-test/aimeetingbot",
+          "executionMode": "test"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "If": {
+      "main": [
+        [
+          {
+            "node": "OpenRouter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter": {
+      "main": [
+        [
+          {
+            "node": "Martian",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Martian": {
+      "main": [
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "Join Meeting",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {},
+  "versionId": "c19b191a-afe4-404a-8821-e46c4e92b5c3",
+  "meta": {
+    "onboardingId": "1972",
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ca63b0b94c7ca42f718fe0049aeca49d7109398d7b405c6da09e9d339fb58a1e"
+  },
+  "id": "icyGieuXYn6FON2r",
+  "tags": []
+}
