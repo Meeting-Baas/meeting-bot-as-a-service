@@ -1,7 +1,7 @@
 import * as React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import VideoPlayer from "@/components/spoke/video-player/video-player";
+import { Player as VideoPlayer } from "@/components/spoke/video-player/video-player";
 import Transcript from "@/components/spoke/video-player/transcript";
 
 export type MeetingInfo = {
@@ -67,6 +67,20 @@ function Meeting() {
     },
   });
   const [isLoading, setIsLoading] = React.useState(true);
+  const [currentTime, setCurrentTime] = React.useState(0);
+
+  const [transcripts, setTranscripts] = React.useState<any[]>([
+    {
+      speaker: "",
+      words: [
+        {
+          start_time: 0,
+          end_time: 0,
+          text: "",
+        },
+      ],
+    },
+  ]);
 
   const fetchData = async () => {
     try {
@@ -85,36 +99,42 @@ function Meeting() {
     fetchData();
   }, []);
 
+  React.useEffect(() => {
+    if (data?.data.editors.length > 0) {
+      const editors = data?.data.editors;
+      const transcripts: MeetingInfo["data"]["editors"][0]["video"]["transcripts"][0][] =
+        [];
+      editors.forEach((editor) => {
+        transcripts.push(...editor.video.transcripts);
+      });
+
+      console.log(transcripts);
+      setTranscripts(transcripts);
+    }
+  }, [data]);
+
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
       <div className="flex">
-        <div className='w-full h-full'>
+        <div className="w-full h-full">
           <VideoPlayer
             // url={data?.data.assets[0].mp4_s3_path}
-            options={{
-              autoplay: true,
-              controls: true,
-              responsive: true,
-              fluid: true,
-              sources: [
-                {
-                  src: "https://www.w3schools.com/tags/mov_bbb.mp4",
-                  type: "video/mp4",
-                },
-              ],
+            onTimeUpdate={(time) => {
+              setCurrentTime(time);
             }}
-            // onTimeUpdate={() => {}}
             // setPlayerRef={() => {}}
           />
         </div>
-        <Transcript
-          transcript={data?.data.editors[0].video.transcripts}
-          currentTime={0}
-          onWordClick={() => {}}
-        />
+        <div className="max-h-[80vh] overflow-auto">
+          <Transcript
+            transcript={transcripts}
+            currentTime={currentTime}
+            onWordClick={() => {}}
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,54 +1,94 @@
-import React from 'react';
-import videojs from 'video.js';
-import 'video.js/dist/video-js.css';
+import './player.css';
 
-const VideoJS = (props) => {
-  const videoRef = React.useRef(null);
-  const playerRef = React.useRef(null);
-  const {options, onReady} = props;
+import { useEffect, useRef, useState } from 'react';
 
-  React.useEffect(() => {
+import {
+  isHLSProvider,
+  MediaPlayer,
+  MediaProvider,
+  Poster,
+  Track,
+  type MediaCanPlayDetail,
+  type MediaCanPlayEvent,
+  type MediaPlayerInstance,
+  type MediaProviderAdapter,
+  type MediaProviderChangeEvent,
+} from '@vidstack/react';
+import {
+  DefaultAudioLayout,
+  defaultLayoutIcons,
+  DefaultVideoLayout,
+} from '@vidstack/react/player/layouts/default';
 
-    // Make sure Video.js player is only initialized once
-    if (!playerRef.current) {
-      // The Video.js player needs to be _inside_ the component el for React 18 Strict Mode. 
-      const videoElement = document.createElement("video-js");
+import { textTracks } from './tracks';
 
-      videoElement.classList.add('vjs-big-play-centered');
-      videoRef.current.appendChild(videoElement);
-
-      const player = playerRef.current = videojs(videoElement, options, () => {
-        videojs.log('player is ready');
-        onReady && onReady(player);
-      });
-
-    // You could update an existing player in the `else` block here
-    // on prop change, for example:
-    } else {
-      const player = playerRef.current;
-
-      player.autoplay(options.autoplay);
-      player.src(options.sources);
-    }
-  }, [options, videoRef]);
-
-  // Dispose the Video.js player when the functional component unmounts
-  React.useEffect(() => {
-    const player = playerRef.current;
-
-    return () => {
-      if (player && !player.isDisposed()) {
-        player.dispose();
-        playerRef.current = null;
-      }
-    };
-  }, [playerRef]);
-
-  return (
-    <div data-vjs-player>
-      <div ref={videoRef} />
-    </div>
-  );
+interface PlayerProps {
+    onTimeUpdate: (time: number) => void;
 }
 
-export default VideoJS;
+export function Player({ onTimeUpdate }: PlayerProps) {
+  let player = useRef<MediaPlayerInstance>(null),
+    [src, setSrc] = useState('https://files.vidstack.io/sprite-fight/720p.mp4');
+
+  useEffect(() => {
+    // Subscribe to state updates.
+    
+    return player.current!.subscribe(({ paused, viewType, currentTime }) => {
+        console.log('current time', '->', currentTime);
+        onTimeUpdate(currentTime);
+    //   console.log('is paused?', '->', paused);
+      // console.log('is audio view?', '->', viewType === 'audio');
+    });
+  }, []);
+
+  function onProviderChange(
+    provider: MediaProviderAdapter | null,
+    nativeEvent: MediaProviderChangeEvent,
+  ) {
+    // We can configure provider's here.
+    if (isHLSProvider(provider)) {
+      provider.config = {};
+    }
+  }
+
+  // We can listen for the `can-play` event to be notified when the player is ready.
+  function onCanPlay(detail: MediaCanPlayDetail, nativeEvent: MediaCanPlayEvent) {
+    // ...
+  }
+
+  return (
+    <>
+      <MediaPlayer
+        className="player"
+        title="Sprite Fight"
+        src={src}
+        crossOrigin
+        playsInline
+        onProviderChange={onProviderChange}
+        onCanPlay={onCanPlay}
+        onProgress={(detail) => {
+            console.log('progress', '->', detail);
+        }}
+        ref={player}
+      >
+        <MediaProvider>
+          <Poster
+            className="vds-poster"
+            src="https://files.vidstack.io/sprite-fight/poster.webp"
+            alt="Girl walks into campfire with gnomes surrounding her friend ready for their next meal!"
+          />
+          {textTracks.map((track) => (
+            <Track {...track} key={track.src} />
+          ))}
+        </MediaProvider>
+
+        {/* Layouts */}
+        <DefaultAudioLayout icons={defaultLayoutIcons} />
+        <DefaultVideoLayout
+          icons={defaultLayoutIcons}
+          thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
+        />
+      </MediaPlayer>
+    </>
+  );
+}
