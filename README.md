@@ -1,4 +1,4 @@
-![Header](./[./GithubPreview.png])
+![Header]([./GithubPreview.png])
 # Meeting Baas 🐟 Integration Examples
 
 Using Meeting's API and open-source examples, this repository contains programs that either:
