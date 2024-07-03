@@ -43,7 +43,7 @@ import {
 import axios from "axios";
 import { Badge } from "./ui/badge";
 
-export type Payment = {
+export type Meeting = {
   id: string;
   name: string;
   bot_id: string;
@@ -51,7 +51,7 @@ export type Payment = {
   createdAt: Date;
 };
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Meeting>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -150,7 +150,7 @@ function MeetingTable() {
   const [rowSelection, setRowSelection] = React.useState({});
 
   const [isLoading, setIsLoading] = React.useState(true);
-  const [data, setData] = React.useState<Payment[]>([]);
+  const [data, setData] = React.useState<Meeting[]>([]);
 
   const table = useReactTable({
     data,
@@ -173,7 +173,7 @@ function MeetingTable() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get<Payment[]>("/api/meetings");
+      const res = await axios.get<Meeting[]>("/api/meetings");
 
       console.log("response", res);
       setData(res.data);

@@ -1,6 +1,6 @@
 import MeetingTable from '@/components/meeting-table';
 
-function View() {
+function Meetings() {
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold">View Meetings</h1>
@@ -9,4 +9,4 @@ function View() {
   )
 }
 
-export default View;
+export default Meetings;

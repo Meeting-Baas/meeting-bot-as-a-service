@@ -12,7 +12,7 @@ function Root() {
           </Link>
         </Button>
         <Button className='w-full' variant="outline" asChild>
-          <Link to="/view">
+          <Link to="/meetings">
             View Meetings
           </Link>
         </Button>

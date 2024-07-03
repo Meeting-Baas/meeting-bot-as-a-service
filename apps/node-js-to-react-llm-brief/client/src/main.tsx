@@ -8,7 +8,8 @@ import "@/styles/globals.css";
 
 import Root from "@/routes/root";
 import Join from "@/routes/join";
-import View from "@/routes/view";
+import Meetings from "@/routes/meetings";
+import Meeting from "@/routes/meeting";
 import NotFound from "@/routes/not-found";
 
 import { Toaster } from "@/components/ui/sonner"
@@ -23,8 +24,12 @@ const router = createBrowserRouter([
     element: <Join />,
   },
   {
-    path: "/view",
-    element: <View />,
+    path: "/meetings",
+    element: <Meetings />,
+  },
+  {
+    path: "/meeting/:botId",
+    element: <Meeting />,
   },
   {
     path: "*",
