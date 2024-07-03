@@ -1,0 +1,5 @@
+/* VideoPlayer.css */
+.video-js .vjs-control-bar {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

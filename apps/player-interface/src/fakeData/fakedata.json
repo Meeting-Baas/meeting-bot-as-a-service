@@ -1,0 +1,4055 @@
+{
+    "event": "complete",
+    "data": {
+        "bot_id": "cf8d2cf0-15bc-488d-8d3b-477b1de6294a",
+        "transcript": [
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 0.86,
+                        "end": 1.04,
+                        "word": "va"
+                    },
+                    {
+                        "start": 1.04,
+                        "end": 1.16,
+                        "word": "un"
+                    },
+                    {
+                        "start": 1.16,
+                        "end": 1.32,
+                        "word": "truc"
+                    },
+                    {
+                        "start": 1.32,
+                        "end": 3.58,
+                        "word": "et"
+                    },
+                    {
+                        "start": 3.58,
+                        "end": 3.82,
+                        "word": "j"
+                    },
+                    {
+                        "start": 3.82,
+                        "end": 3.92,
+                        "word": "'ai"
+                    },
+                    {
+                        "start": 3.92,
+                        "end": 3.94,
+                        "word": "une"
+                    },
+                    {
+                        "start": 3.94,
+                        "end": 4.22,
+                        "word": "question"
+                    },
+                    {
+                        "start": 4.22,
+                        "end": 4.44,
+                        "word": "là"
+                    },
+                    {
+                        "start": 4.44,
+                        "end": 4.66,
+                        "word": "par"
+                    },
+                    {
+                        "start": 4.66,
+                        "end": 4.98,
+                        "word": "rapport"
+                    },
+                    {
+                        "start": 4.98,
+                        "end": 7.44,
+                        "word": "au"
+                    },
+                    {
+                        "start": 7.44,
+                        "end": 18.18,
+                        "word": "web"
+                    },
+                    {
+                        "start": 18.18,
+                        "end": 18.36,
+                        "word": "ou"
+                    },
+                    {
+                        "start": 18.36,
+                        "end": 18.68,
+                        "word": "là"
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 30.800000000000004,
+                        "end": 31.200000000000003,
+                        "word": "pour"
+                    },
+                    {
+                        "start": 31.200000000000003,
+                        "end": 31.6,
+                        "word": "les"
+                    },
+                    {
+                        "start": 31.6,
+                        "end": 32,
+                        "word": "webbooks"
+                    },
+                    {
+                        "start": 32.5,
+                        "end": 32.9,
+                        "word": "toi"
+                    },
+                    {
+                        "start": 32.9,
+                        "end": 33.08,
+                        "word": "tu"
+                    },
+                    {
+                        "start": 33.08,
+                        "end": 33.2,
+                        "word": "m"
+                    },
+                    {
+                        "start": 33.2,
+                        "end": 33.22,
+                        "word": "'as"
+                    },
+                    {
+                        "start": 33.22,
+                        "end": 33.54,
+                        "word": "expliqué"
+                    },
+                    {
+                        "start": 33.54,
+                        "end": 33.68,
+                        "word": "que"
+                    },
+                    {
+                        "start": 33.68,
+                        "end": 33.76,
+                        "word": "si"
+                    },
+                    {
+                        "start": 33.76,
+                        "end": 33.94,
+                        "word": "jamais"
+                    },
+                    {
+                        "start": 33.94,
+                        "end": 34.14,
+                        "word": "le"
+                    },
+                    {
+                        "start": 34.14,
+                        "end": 34.3,
+                        "word": "truc"
+                    },
+                    {
+                        "start": 34.3,
+                        "end": 34.52,
+                        "word": "était"
+                    },
+                    {
+                        "start": 34.52,
+                        "end": 34.86,
+                        "word": "down"
+                    },
+                    {
+                        "start": 34.86,
+                        "end": 35.04,
+                        "word": "il"
+                    },
+                    {
+                        "start": 35.04,
+                        "end": 35.24,
+                        "word": "fallait"
+                    },
+                    {
+                        "start": 35.24,
+                        "end": 35.38,
+                        "word": "que"
+                    },
+                    {
+                        "start": 35.38,
+                        "end": 35.5,
+                        "word": "tous"
+                    },
+                    {
+                        "start": 35.5,
+                        "end": 35.56,
+                        "word": "les"
+                    },
+                    {
+                        "start": 35.56,
+                        "end": 35.88,
+                        "word": "webbooks"
+                    },
+                    {
+                        "start": 35.88,
+                        "end": 36.48,
+                        "word": "reprennent"
+                    },
+                    {
+                        "start": 36.48,
+                        "end": 36.68,
+                        "word": "c"
+                    },
+                    {
+                        "start": 36.68,
+                        "end": 37.62,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 37.62,
+                        "end": 37.68,
+                        "word": "ça"
+                    },
+                    {
+                        "start": 38.3,
+                        "end": 38.7,
+                        "word": "ouais"
+                    }
+                ]
+            },
+            {
+                "speaker": "Vincent COMBEY",
+                "words": [
+                    {
+                        "start": 40.26,
+                        "end": 40.66,
+                        "word": "ouais"
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 42,
+                        "end": 42.4,
+                        "word": "et"
+                    },
+                    {
+                        "start": 42.4,
+                        "end": 42.8,
+                        "word": "Mika"
+                    },
+                    {
+                        "start": 42.8,
+                        "end": 43.16,
+                        "word": "il"
+                    },
+                    {
+                        "start": 43.16,
+                        "end": 43.42,
+                        "word": "fait"
+                    },
+                    {
+                        "start": 43.42,
+                        "end": 43.54,
+                        "word": "un"
+                    },
+                    {
+                        "start": 43.54,
+                        "end": 43.96,
+                        "word": "truc"
+                    },
+                    {
+                        "start": 43.96,
+                        "end": 44.28,
+                        "word": "je"
+                    },
+                    {
+                        "start": 44.28,
+                        "end": 44.48,
+                        "word": "sais"
+                    },
+                    {
+                        "start": 44.48,
+                        "end": 44.66,
+                        "word": "pas"
+                    },
+                    {
+                        "start": 44.66,
+                        "end": 44.78,
+                        "word": "si"
+                    },
+                    {
+                        "start": 44.78,
+                        "end": 44.86,
+                        "word": "c"
+                    },
+                    {
+                        "start": 44.86,
+                        "end": 44.86,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 44.86,
+                        "end": 45.06,
+                        "word": "lié"
+                    },
+                    {
+                        "start": 45.06,
+                        "end": 45.16,
+                        "word": "à"
+                    },
+                    {
+                        "start": 45.16,
+                        "end": 45.36,
+                        "word": "ça"
+                    }
+                ]
+            },
+            {
+                "speaker": "Vincent COMBEY",
+                "words": [
+                    {
+                        "start": 54.16,
+                        "end": 54.599999999999994,
+                        "word": "est"
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 54.599999999999994,
+                        "end": 55.04,
+                        "word": "-ce"
+                    },
+                    {
+                        "start": 55.04,
+                        "end": 55.1,
+                        "word": "que"
+                    },
+                    {
+                        "start": 55.1,
+                        "end": 55.24,
+                        "word": "vous"
+                    },
+                    {
+                        "start": 55.24,
+                        "end": 55.54,
+                        "word": "trouvez"
+                    },
+                    {
+                        "start": 55.54,
+                        "end": 55.7,
+                        "word": "ça"
+                    },
+                    {
+                        "start": 55.7,
+                        "end": 56.12,
+                        "word": "normal"
+                    },
+                    {
+                        "start": 59.06,
+                        "end": 59.5,
+                        "word": "et"
+                    },
+                    {
+                        "start": 59.5,
+                        "end": 59.92,
+                        "word": "après"
+                    },
+                    {
+                        "start": 59.92,
+                        "end": 60.12,
+                        "word": "mais"
+                    },
+                    {
+                        "start": 60.12,
+                        "end": 60.26,
+                        "word": "c"
+                    },
+                    {
+                        "start": 60.26,
+                        "end": 60.96,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 60.96,
+                        "end": 61.32,
+                        "word": "toujours"
+                    },
+                    {
+                        "start": 61.32,
+                        "end": 62.94,
+                        "word": "exécuté"
+                    },
+                    {
+                        "start": 62.94,
+                        "end": 63,
+                        "word": "à"
+                    },
+                    {
+                        "start": 63,
+                        "end": 63.04,
+                        "word": "la"
+                    },
+                    {
+                        "start": 63.04,
+                        "end": 63.28,
+                        "word": "fin"
+                    },
+                    {
+                        "start": 63.28,
+                        "end": 63.46,
+                        "word": "non"
+                    },
+                    {
+                        "start": 63.46,
+                        "end": 64.3,
+                        "word": "c"
+                    },
+                    {
+                        "start": 64.3,
+                        "end": 64.54,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 64.54,
+                        "end": 64.58,
+                        "word": "une"
+                    },
+                    {
+                        "start": 64.58,
+                        "end": 64.8,
+                        "word": "question"
+                    },
+                    {
+                        "start": 64.8,
+                        "end": 65.02,
+                        "word": "qu"
+                    },
+                    {
+                        "start": 65.02,
+                        "end": 65.04,
+                        "word": "'il"
+                    },
+                    {
+                        "start": 65.04,
+                        "end": 65.24,
+                        "word": "pose"
+                    },
+                    {
+                        "start": 66.58,
+                        "end": 67.02,
+                        "word": "oui"
+                    }
+                ]
+            },
+            {
+                "speaker": "Vincent COMBEY",
+                "words": [
+                    {
+                        "start": 70.26,
+                        "end": 70.7,
+                        "word": "partage"
+                    },
+                    {
+                        "start": 70.7,
+                        "end": 70.82,
+                        "word": "ton"
+                    },
+                    {
+                        "start": 70.82,
+                        "end": 71.18,
+                        "word": "écran"
+                    },
+                    {
+                        "start": 71.18,
+                        "end": 71.36,
+                        "word": "parce"
+                    },
+                    {
+                        "start": 71.36,
+                        "end": 71.54,
+                        "word": "que"
+                    },
+                    {
+                        "start": 71.54,
+                        "end": 71.76,
+                        "word": "là"
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 74.34,
+                        "end": 74.74000000000001,
+                        "word": "ouais"
+                    },
+                    {
+                        "start": 74.74000000000001,
+                        "end": 75.14,
+                        "word": "mais"
+                    },
+                    {
+                        "start": 75.14,
+                        "end": 76.34,
+                        "word": "t"
+                    },
+                    {
+                        "start": 76.34,
+                        "end": 76.44,
+                        "word": "'as"
+                    },
+                    {
+                        "start": 76.44,
+                        "end": 76.74,
+                        "word": "quitté"
+                    },
+                    {
+                        "start": 76.74,
+                        "end": 76.94,
+                        "word": "en"
+                    },
+                    {
+                        "start": 76.94,
+                        "end": 77.1,
+                        "word": "fait"
+                    },
+                    {
+                        "start": 77.1,
+                        "end": 77.3,
+                        "word": "c"
+                    },
+                    {
+                        "start": 77.3,
+                        "end": 77.38,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 77.38,
+                        "end": 77.38,
+                        "word": "pour"
+                    },
+                    {
+                        "start": 77.38,
+                        "end": 77.5,
+                        "word": "ça"
+                    },
+                    {
+                        "start": 77.5,
+                        "end": 77.66,
+                        "word": "que"
+                    },
+                    {
+                        "start": 77.66,
+                        "end": 77.72,
+                        "word": "tu"
+                    },
+                    {
+                        "start": 77.72,
+                        "end": 77.72,
+                        "word": "as"
+                    },
+                    {
+                        "start": 77.72,
+                        "end": 77.88,
+                        "word": "pu"
+                    },
+                    {
+                        "start": 77.88,
+                        "end": 78,
+                        "word": "m"
+                    },
+                    {
+                        "start": 78,
+                        "end": 78.2,
+                        "word": "'inscrire"
+                    },
+                    {
+                        "start": 78.2,
+                        "end": 79.26,
+                        "word": "ouais"
+                    },
+                    {
+                        "start": 84.64000000000001,
+                        "end": 85.04,
+                        "word": "et"
+                    }
+                ]
+            },
+            {
+                "speaker": "Vincent COMBEY",
+                "words": [
+                    {
+                        "start": 96.16,
+                        "end": 97.08,
+                        "word": "Et"
+                    },
+                    {
+                        "start": 97.08,
+                        "end": 97.28,
+                        "word": "c"
+                    },
+                    {
+                        "start": 97.28,
+                        "end": 97.48,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 97.48,
+                        "end": 97.52,
+                        "word": "quoi"
+                    },
+                    {
+                        "start": 97.52,
+                        "end": 97.9,
+                        "word": "ça"
+                    },
+                    {
+                        "start": 97.9,
+                        "end": 98.02,
+                        "word": "?"
+                    },
+                    {
+                        "start": 98.02,
+                        "end": 98.64,
+                        "word": "API"
+                    },
+                    {
+                        "start": 98.64,
+                        "end": 100.02,
+                        "word": ".retryWeb."
+                    },
+                    {
+                        "start": 103.02,
+                        "end": 103.94,
+                        "word": "Info"
+                    },
+                    {
+                        "start": 103.94,
+                        "end": 104.5,
+                        "word": ".ro"
+                    },
+                    {
+                        "start": 104.5,
+                        "end": 105.42,
+                        "word": ".original."
+                    },
+                    {
+                        "start": 116.52,
+                        "end": 116.9,
+                        "word": "Ah"
+                    },
+                    {
+                        "start": 116.9,
+                        "end": 117.08,
+                        "word": "bah"
+                    },
+                    {
+                        "start": 117.08,
+                        "end": 117.26,
+                        "word": "oui"
+                    },
+                    {
+                        "start": 118.82,
+                        "end": 119.2,
+                        "word": "ça"
+                    },
+                    {
+                        "start": 119.2,
+                        "end": 119.58,
+                        "word": "devrait"
+                    },
+                    {
+                        "start": 119.58,
+                        "end": 119.8,
+                        "word": "être"
+                    },
+                    {
+                        "start": 119.8,
+                        "end": 119.9,
+                        "word": "un"
+                    },
+                    {
+                        "start": 119.9,
+                        "end": 120.18,
+                        "word": "catch"
+                    },
+                    {
+                        "start": 120.18,
+                        "end": 120.62,
+                        "word": "plutôt"
+                    },
+                    {
+                        "start": 120.62,
+                        "end": 120.86,
+                        "word": "qu"
+                    },
+                    {
+                        "start": 120.86,
+                        "end": 120.92,
+                        "word": "'un"
+                    },
+                    {
+                        "start": 120.92,
+                        "end": 122.52,
+                        "word": "finali"
+                    },
+                    {
+                        "start": 128.70000000000002,
+                        "end": 129.08,
+                        "word": "Non"
+                    },
+                    {
+                        "start": 129.08,
+                        "end": 129.44,
+                        "word": "ça"
+                    },
+                    {
+                        "start": 129.44,
+                        "end": 129.54,
+                        "word": "a"
+                    },
+                    {
+                        "start": 129.54,
+                        "end": 129.7,
+                        "word": "pas"
+                    },
+                    {
+                        "start": 129.7,
+                        "end": 129.8,
+                        "word": "de"
+                    },
+                    {
+                        "start": 129.8,
+                        "end": 129.96,
+                        "word": "rapport"
+                    },
+                    {
+                        "start": 129.96,
+                        "end": 130.16,
+                        "word": "ce"
+                    },
+                    {
+                        "start": 130.16,
+                        "end": 130.26,
+                        "word": "que"
+                    },
+                    {
+                        "start": 130.26,
+                        "end": 130.38,
+                        "word": "tu"
+                    },
+                    {
+                        "start": 130.38,
+                        "end": 130.62,
+                        "word": "dis"
+                    },
+                    {
+                        "start": 130.62,
+                        "end": 131.2,
+                        "word": "Philippe,"
+                    },
+                    {
+                        "start": 131.2,
+                        "end": 131.62,
+                        "word": "là"
+                    },
+                    {
+                        "start": 131.62,
+                        "end": 131.8,
+                        "word": "c"
+                    },
+                    {
+                        "start": 131.8,
+                        "end": 131.84,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 131.84,
+                        "end": 131.9,
+                        "word": "le"
+                    },
+                    {
+                        "start": 131.9,
+                        "end": 132.12,
+                        "word": "quad"
+                    },
+                    {
+                        "start": 132.12,
+                        "end": 132.26,
+                        "word": "en"
+                    },
+                    {
+                        "start": 132.26,
+                        "end": 132.5,
+                        "word": "fond"
+                    },
+                    {
+                        "start": 133.18,
+                        "end": 133.56,
+                        "word": "donc"
+                    },
+                    {
+                        "start": 133.56,
+                        "end": 133.64,
+                        "word": "c"
+                    },
+                    {
+                        "start": 133.64,
+                        "end": 133.74,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 133.74,
+                        "end": 133.88,
+                        "word": "juste"
+                    },
+                    {
+                        "start": 133.88,
+                        "end": 134.04,
+                        "word": "ça"
+                    },
+                    {
+                        "start": 134.04,
+                        "end": 134.3,
+                        "word": "devrait"
+                    },
+                    {
+                        "start": 134.3,
+                        "end": 134.48,
+                        "word": "être"
+                    },
+                    {
+                        "start": 134.48,
+                        "end": 134.58,
+                        "word": "un"
+                    },
+                    {
+                        "start": 134.58,
+                        "end": 134.8,
+                        "word": "catch"
+                    },
+                    {
+                        "start": 134.8,
+                        "end": 135.1,
+                        "word": "plutôt"
+                    },
+                    {
+                        "start": 135.1,
+                        "end": 135.3,
+                        "word": "qu"
+                    },
+                    {
+                        "start": 135.3,
+                        "end": 135.38,
+                        "word": "'un"
+                    },
+                    {
+                        "start": 135.38,
+                        "end": 135.82,
+                        "word": "finali,"
+                    },
+                    {
+                        "start": 135.9,
+                        "end": 136.22,
+                        "word": "voilà"
+                    },
+                    {
+                        "start": 136.22,
+                        "end": 136.5,
+                        "word": "c"
+                    },
+                    {
+                        "start": 136.5,
+                        "end": 136.6,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 136.6,
+                        "end": 136.76,
+                        "word": "tout"
+                    },
+                    {
+                        "start": 145.04,
+                        "end": 158.86,
+                        "word": "Merci."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 182.483,
+                        "end": 182.883,
+                        "word": "Du"
+                    },
+                    {
+                        "start": 182.883,
+                        "end": 183.063,
+                        "word": "coup,"
+                    },
+                    {
+                        "start": 183.163,
+                        "end": 183.183,
+                        "word": "qu"
+                    },
+                    {
+                        "start": 183.183,
+                        "end": 183.243,
+                        "word": "'est"
+                    },
+                    {
+                        "start": 183.243,
+                        "end": 183.283,
+                        "word": "-ce"
+                    },
+                    {
+                        "start": 183.283,
+                        "end": 183.423,
+                        "word": "que"
+                    },
+                    {
+                        "start": 183.423,
+                        "end": 183.563,
+                        "word": "je"
+                    },
+                    {
+                        "start": 183.563,
+                        "end": 183.683,
+                        "word": "dis"
+                    },
+                    {
+                        "start": 183.683,
+                        "end": 183.883,
+                        "word": "là"
+                    },
+                    {
+                        "start": 183.883,
+                        "end": 184.163,
+                        "word": "?"
+                    },
+                    {
+                        "start": 185.623,
+                        "end": 186.023,
+                        "word": "Oula,"
+                    },
+                    {
+                        "start": 186.103,
+                        "end": 186.323,
+                        "word": "je"
+                    },
+                    {
+                        "start": 186.323,
+                        "end": 186.563,
+                        "word": "reçois"
+                    },
+                    {
+                        "start": 186.563,
+                        "end": 186.823,
+                        "word": "plein"
+                    },
+                    {
+                        "start": 186.823,
+                        "end": 186.883,
+                        "word": "de"
+                    },
+                    {
+                        "start": 186.883,
+                        "end": 187.083,
+                        "word": "choses."
+                    },
+                    {
+                        "start": 199.063,
+                        "end": 199.463,
+                        "word": "Ok."
+                    },
+                    {
+                        "start": 228.203,
+                        "end": 228.603,
+                        "word": "Ok,"
+                    },
+                    {
+                        "start": 228.803,
+                        "end": 229.143,
+                        "word": "voilà,"
+                    },
+                    {
+                        "start": 229.403,
+                        "end": 229.763,
+                        "word": "du"
+                    },
+                    {
+                        "start": 229.763,
+                        "end": 229.943,
+                        "word": "coup"
+                    },
+                    {
+                        "start": 229.943,
+                        "end": 230.103,
+                        "word": "j"
+                    },
+                    {
+                        "start": 230.103,
+                        "end": 230.183,
+                        "word": "'ai"
+                    },
+                    {
+                        "start": 230.183,
+                        "end": 230.203,
+                        "word": "une"
+                    },
+                    {
+                        "start": 230.203,
+                        "end": 230.563,
+                        "word": "vidéo"
+                    },
+                    {
+                        "start": 230.563,
+                        "end": 230.883,
+                        "word": "avec"
+                    },
+                    {
+                        "start": 230.883,
+                        "end": 231.743,
+                        "word": "potentiellement"
+                    },
+                    {
+                        "start": 231.743,
+                        "end": 231.823,
+                        "word": "un"
+                    },
+                    {
+                        "start": 231.823,
+                        "end": 232.143,
+                        "word": "transcript,"
+                    },
+                    {
+                        "start": 232.303,
+                        "end": 232.383,
+                        "word": "non"
+                    },
+                    {
+                        "start": 232.383,
+                        "end": 232.683,
+                        "word": "?"
+                    },
+                    {
+                        "start": 236.243,
+                        "end": 236.643,
+                        "word": "Je"
+                    },
+                    {
+                        "start": 236.643,
+                        "end": 236.983,
+                        "word": "peux"
+                    },
+                    {
+                        "start": 236.983,
+                        "end": 238.163,
+                        "word": "qu"
+                    },
+                    {
+                        "start": 238.163,
+                        "end": 238.243,
+                        "word": "'il"
+                    },
+                    {
+                        "start": 238.243,
+                        "end": 238.343,
+                        "word": "ait"
+                    },
+                    {
+                        "start": 238.343,
+                        "end": 238.443,
+                        "word": "le"
+                    },
+                    {
+                        "start": 238.443,
+                        "end": 238.563,
+                        "word": "bot,"
+                    },
+                    {
+                        "start": 238.663,
+                        "end": 238.723,
+                        "word": "là"
+                    },
+                    {
+                        "start": 238.723,
+                        "end": 238.923,
+                        "word": "?"
+                    }
+                ]
+            },
+            {
+                "speaker": "Vincent COMBEY",
+                "words": [
+                    {
+                        "start": 240.503,
+                        "end": 240.903,
+                        "word": "Euh,"
+                    },
+                    {
+                        "start": 240.903,
+                        "end": 241.303,
+                        "word": "ouais,"
+                    },
+                    {
+                        "start": 241.363,
+                        "end": 241.503,
+                        "word": "tu"
+                    },
+                    {
+                        "start": 241.503,
+                        "end": 241.763,
+                        "word": "peux,"
+                    },
+                    {
+                        "start": 241.843,
+                        "end": 242.043,
+                        "word": "ouais."
+                    },
+                    {
+                        "start": 244.643,
+                        "end": 245.043,
+                        "word": "Ah,"
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            },
+            {
+                "speaker": "Philippe Drion",
+                "words": [
+                    {
+                        "start": 245.063,
+                        "end": 245.203,
+                        "word": "il"
+                    },
+                    {
+                        "start": 245.203,
+                        "end": 245.323,
+                        "word": "y"
+                    },
+                    {
+                        "start": 245.323,
+                        "end": 245.443,
+                        "word": "a"
+                    },
+                    {
+                        "start": 245.443,
+                        "end": 245.483,
+                        "word": "une"
+                    },
+                    {
+                        "start": 245.483,
+                        "end": 245.703,
+                        "word": "nouvelle"
+                    },
+                    {
+                        "start": 245.703,
+                        "end": 246.463,
+                        "word": "fonctionnalité,"
+                    },
+                    {
+                        "start": 246.523,
+                        "end": 246.703,
+                        "word": "hein."
+                    },
+                    {
+                        "start": 246.783,
+                        "end": 247.143,
+                        "word": "How"
+                    },
+                    {
+                        "start": 247.143,
+                        "end": 247.343,
+                        "word": "does"
+                    },
+                    {
+                        "start": 247.343,
+                        "end": 247.443,
+                        "word": "it"
+                    },
+                    {
+                        "start": 247.443,
+                        "end": 247.683,
+                        "word": "call"
+                    },
+                    {
+                        "start": 247.683,
+                        "end": 247.963,
+                        "word": "off"
+                    },
+                    {
+                        "start": 247.963,
+                        "end": 248.523,
+                        "word": "?"
+                    },
+                    {
+                        "start": 249.983,
+                        "end": 250.383,
+                        "word": "Ouf."
+                    }
+                ]
+            }
+        ],
+        "speakers": ["Philippe Drion", "Vincent COMBEY"],
+        "mp4": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    }
+}

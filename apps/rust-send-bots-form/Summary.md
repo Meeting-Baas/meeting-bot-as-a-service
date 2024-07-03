@@ -1,0 +1,11 @@
+# Files chosen as relevant code examples for current example
+- [Summary.md](Summary.md)
+- [desktop-rust-app.md](desktop-rust-app.md)
+- [frontend](frontend)
+- [src-tauri](src-tauri)
+- [Cargo.lock](src-tauri/Cargo.lock)
+- [Cargo.toml](src-tauri/Cargo.toml)
+- [build.rs](src-tauri/build.rs)
+- [src](src-tauri/src)
+- [tauri.conf.json](src-tauri/tauri.conf.json)
+- [main.rs](src-tauri/src/main.rs)

@@ -1,0 +1,62 @@
+{
+  "build": {
+    "beforeDevCommand": "cd ./src && yarn install && yarn start",
+    "beforeBuildCommand": "cd ./src && yarn install && yarn build",
+    "devPath": "http://localhost:7421",
+    "distDir": "../src/build/",
+
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "Talking Blob",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+
+      "icon": ["icons/icon.icns"],
+      "externalBin": [],
+      "identifier": "com.Spoke.app",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 600,
+        "resizable": true,
+        "title": "🔵 Talking Blob 🔵",
+        "width": 800
+      }
+    ]
+  }
+}

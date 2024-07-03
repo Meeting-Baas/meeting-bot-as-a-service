@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5",                         // Specify ECMAScript target version
+    "lib": ["dom", "dom.iterable", "esnext"],// List of library files to be included in the compilation
+    "allowJs": false,                        // Disallow JavaScript files to be compiled
+    "skipLibCheck": false,                   // Enable type checking of declaration files
+    "esModuleInterop": true,                 // Enables compatibility with Babel's module system
+    "allowSyntheticDefaultImports": true,    // Allow default imports from modules with no default export
+    "strict": true,                          // Enable all strict type checking options
+    "forceConsistentCasingInFileNames": true,// Disallow inconsistently-cased references to the same file
+    "noFallthroughCasesInSwitch": true,      // Report errors for fallthrough cases in switch statement
+    "module": "esnext",                      // Specify module code generation method
+    "moduleResolution": "node",              // Resolve modules using Node.js style
+    "resolveJsonModule": true,               // Include modules imported with '.json' extension
+    "isolatedModules": true,                 // Transpile each file separately to ensure no cross-file inferences
+    "noEmit": true,                          // Do not emit outputs (since this is handled by create-react-app)
+    "jsx": "react-jsx",                      // Support JSX in .tsx files
+
+    // Additional strict checks
+    "noImplicitAny": true,                   // Raise error on expressions and declarations with an implied 'any' type
+    "strictNullChecks": true,                // Include 'null' and 'undefined' in type checking
+    "strictFunctionTypes": true,             // Ensure function parameter bivariance checks
+    "strictBindCallApply": true,             // Strict checks for bind/call/apply methods
+    "strictPropertyInitialization": true,    // Ensure non-undefined class properties are initialized in the constructor
+    "noImplicitThis": true,                  // Raise error on 'this' expressions with an implied 'any' type
+    "alwaysStrict": true,                     // Parse in strict mode and emit "use strict" for each source file
+    //"noUnusedLocals": true,
+    "noUnusedParameters": true,
+  },
+  "include": ["src"]
+}
