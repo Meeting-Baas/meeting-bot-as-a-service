@@ -5,7 +5,7 @@ import { timestamps } from "./utils";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const Meeting = pgTable("meeting", {
+export const meetingsTable = pgTable("meetings", {
   id: serial("id"),
   name: text("name"),
   bot_id: text("bot_id"),
@@ -17,13 +17,5 @@ export const Meeting = pgTable("meeting", {
   updatedAt: timestamp("updated_at"),
 });
 
-export const CreateMeetingSchema = createInsertSchema(Meeting, {
-  name: z.string().max(256),
-  // todo: make this longer, idk
-  path: z.array(z.string()).default(["/"]),
-  parentId: z.string().uuid().optional(),
-}).omit({
-  id: true,
-  authorId: true,
-  ...timestamps,
-});
+export type InsertMeeting = typeof meetingsTable.$inferInsert;
+export type SelectMeeting = typeof meetingsTable.$inferSelect;

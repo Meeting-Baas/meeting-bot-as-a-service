@@ -2,6 +2,8 @@ import { markdownToBlocks } from "@tryfabric/martian";
 import { Request, Response } from "express";
 import { createNotionPage, summarizeTranscript } from "../lib/utils";
 
+import { db } from "../db";
+
 interface TranscriptEntry {
   speaker: string;
   words: Array<{
@@ -42,7 +44,7 @@ export const webhook = async (req: Request, res: Response) => {
       }
 
       // Database Block
-      
+      // 
     }
   }
   res.sendStatus(200);
