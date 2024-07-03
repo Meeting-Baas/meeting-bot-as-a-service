@@ -41,7 +41,7 @@ function Meeting() {
     <div className="p-8">
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
       <p>Bot Id: {data?.data.id}</p>
-      <p>Bot Name: {data?.data.id}</p>
+      <p>Bot Name: {data?.data.name}</p>  
     </div>
   )
 }
