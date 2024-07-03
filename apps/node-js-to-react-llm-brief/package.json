@@ -7,11 +7,15 @@
         "client"
     ],
     "scripts": {
-        "start": "npm run frontend && npm run backend",
+        "start": "npm run backend",
+        "build": "npm run frontend:build && npm run backend:build",
         "dev": "npm run frontend:dev && npm run backend:dev",
-        "backend": "cd api && npm run build && npm start",
+
+        "backend": "npm start",
+        "backend:build": "cd api && npm run build",
         "backend:dev": "cd api && npm run dev",
-        "frontend": "cd client && npm run build",
+
+        "frontend:build": "cd client && npm run build",
         "frontend:dev": "cd client && npm run dev"
     },
     "keywords": [],
