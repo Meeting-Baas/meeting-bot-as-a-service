@@ -3,27 +3,26 @@
     "version": "1.0.0",
     "description": "",
     "workspaces": [
-      "api",
-      "client"
+        "api",
+        "client"
     ],
     "scripts": {
-      "start": "npm run frontend && npm run backend",
-      "dev": "npm run frontend:dev && npm run backend:dev",
-
-      "backend": "cd api && npm run build && npm start",
-      "backend:dev": "cd api && npm run dev",
-      "frontend": "cd client && npm run build",
-      "frontend:dev": "cd client && npm run dev"
+        "start": "npm run frontend && npm run backend",
+        "dev": "npm run frontend:dev && npm run backend:dev",
+        "backend": "cd api && npm run build && npm start",
+        "backend:dev": "cd api && npm run dev",
+        "frontend": "cd client && npm run build",
+        "frontend:dev": "cd client && npm run dev"
     },
     "keywords": [],
     "author": "",
     "license": "MIT",
     "devDependencies": {
-      "cross-env": "^7.0.3"
+        "cross-env": "^7.0.3"
     },
     "nodemonConfig": {
-      "ignore": [
-        "client/"
-      ]
+        "ignore": [
+            "client/"
+        ]
     }
-  }
+}
