@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.29.1",
+    "@editorjs/header": "^2.8.3",
+    "@editorjs/list": "^1.9.0",
+    "@editorjs/paragraph": "^2.11.5",
     "@hookform/resolvers": "^3.6.0",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dropdown-menu": "^2.1.1",
@@ -32,6 +36,7 @@
     "sort-by": "^1.2.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "video.js": "^8.12.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

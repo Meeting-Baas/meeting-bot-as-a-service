@@ -1,12 +1,37 @@
 import * as React from "react";
 import axios from "axios";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import { VideoPlayer } from "@/components/spoke/video-player/video-player";
+import Transcript from "@/components/spoke/video-player/transcript";
 
 export type MeetingInfo = {
   data: {
     id: string;
     name: string;
-  }
+    editors: [
+      {
+        video: {
+          transcripts: [
+            {
+              speaker: string;
+              words: [
+                {
+                  start_time: number;
+                  end_time: number;
+                  text: string;
+                }
+              ];
+            }
+          ];
+        };
+      }
+    ];
+    assets: [
+      {
+        mp4_s3_path: string;
+      }
+    ];
+  };
 };
 
 function Meeting() {
@@ -16,7 +41,30 @@ function Meeting() {
     data: {
       id: "",
       name: "",
-    }
+      editors: [
+        {
+          video: {
+            transcripts: [
+              {
+                speaker: "",
+                words: [
+                  {
+                    start: 0,
+                    end: 0,
+                    word: "",
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      ],
+      assets: [
+        {
+          mp4_s3_path: "",
+        },
+      ],
+    },
   });
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -40,10 +88,23 @@ function Meeting() {
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
-      <p>Bot Id: {data?.data.id}</p>
-      <p>Bot Name: {data?.data.name}</p>  
+      {/* url={data?.data.assets[0].mp4_s3_path} */}
+      {/* data?.data.editors[0].video.transcripts */}
+      <div className="flex ">
+        <VideoPlayer
+          // url={data?.data.assets[0].mp4_s3_path}
+          url={"https://www.w3schools.com/tags/mov_bbb.mp4"}
+          onTimeUpdate={() => {}}
+          setPlayerRef={() => {}}
+        />
+        <Transcript
+          transcript={data?.data.editors[0].video.transcripts}
+          currentTime={0}
+          onWordClick={() => {}}
+        />
+      </div>
     </div>
-  )
+  );
 }
 
 export default Meeting;
