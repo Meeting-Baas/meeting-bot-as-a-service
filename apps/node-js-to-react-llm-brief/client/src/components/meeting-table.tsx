@@ -110,7 +110,7 @@ export const columns: ColumnDef<Payment>[] = [
         // todo: get proper date
     //   const date = row.getValue("createdAt");
 
-      return <div>{''}</div>;
+      return <div>{row.getValue("createdAt")}</div>;
     },
   },
   {
