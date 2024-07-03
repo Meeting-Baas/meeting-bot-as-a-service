@@ -12,6 +12,7 @@ import { Client } from "@notionhq/client";
 
 import formRouter from "./routes/form";
 import webhookRouter from "./routes/webhook";
+import meetingRouter from "./routes/meeting";
 
 import cors from "cors";
 
@@ -43,6 +44,7 @@ app.use(express.static(path.join(client)));
 
 app.get('/health', (_req: Request, res: Response) => res.status(200).send('OK'));
 
+app.use('/api/meetings', meetingRouter);
 app.use('/api/form', formRouter);
 app.use('/api/webhook', webhookRouter);
 
