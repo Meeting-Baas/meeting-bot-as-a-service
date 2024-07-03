@@ -20,15 +20,13 @@ import {
   DefaultVideoLayout,
 } from '@vidstack/react/player/layouts/default';
 
-import { textTracks } from './tracks';
-
 interface PlayerProps {
+    src: string;
     onTimeUpdate: (time: number) => void;
 }
 
-export function Player({ onTimeUpdate }: PlayerProps) {
-  let player = useRef<MediaPlayerInstance>(null),
-    [src, setSrc] = useState('https://files.vidstack.io/sprite-fight/720p.mp4');
+export function Player({ src, onTimeUpdate }: PlayerProps) {
+  let player = useRef<MediaPlayerInstance>(null);
 
   useEffect(() => {
     // Subscribe to state updates.
@@ -77,9 +75,6 @@ export function Player({ onTimeUpdate }: PlayerProps) {
             src="https://files.vidstack.io/sprite-fight/poster.webp"
             alt="Girl walks into campfire with gnomes surrounding her friend ready for their next meal!"
           />
-          {textTracks.map((track) => (
-            <Track {...track} key={track.src} />
-          ))}
         </MediaProvider>
 
         {/* Layouts */}

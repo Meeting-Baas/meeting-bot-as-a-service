@@ -26,6 +26,9 @@ export type MeetingInfo = {
         };
       }
     ];
+    meeting: {
+      video_url: string;
+    };
     assets: [
       {
         mp4_s3_path: string;
@@ -59,6 +62,9 @@ function Meeting() {
           },
         },
       ],
+      meeting: {
+        video_url: "",
+      },
       assets: [
         {
           mp4_s3_path: "",
@@ -121,14 +127,15 @@ function Meeting() {
       <div className="flex flex-col lg:flex-row my-4 gap-4">
         <div className="w-full h-full">
           <VideoPlayer
-            // url={data?.data.assets[0].mp4_s3_path}
+            // src={data?.data.meeting.video_url}
             onTimeUpdate={(time) => {
               setCurrentTime(time);
             }}
             // setPlayerRef={() => {}}
           />
         </div>
-        <div className="max-h-[85vh] overflow-auto bg-muted rounded-md">
+        <div className="max-h-[88vh] overflow-auto bg-muted rounded-md lg:w-1/2">
+          {isLoading && <div className="flex items-center justify-center w-full h-full">Loading...</div>}
           <Transcript
             transcript={transcripts}
             currentTime={currentTime}
