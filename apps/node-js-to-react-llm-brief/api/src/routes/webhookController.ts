@@ -34,11 +34,15 @@ export const webhook = async (req: Request, res: Response) => {
     console.log("summary", summary);
 
     if (summary) {
+      // Notion Block
       const children = markdownToBlocks(summary);
       if (children) {
         const speakers = eventData.data.speakers;
         await createNotionPage(children, speakers, now);
       }
+
+      // Database Block
+      
     }
   }
   res.sendStatus(200);
