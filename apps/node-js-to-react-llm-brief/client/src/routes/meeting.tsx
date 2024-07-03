@@ -118,7 +118,7 @@ function Meeting() {
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
-      <div className="flex">
+      <div className="flex flex-col lg:flex-row my-4 gap-4">
         <div className="w-full h-full">
           <VideoPlayer
             // url={data?.data.assets[0].mp4_s3_path}
@@ -128,7 +128,7 @@ function Meeting() {
             // setPlayerRef={() => {}}
           />
         </div>
-        <div className="max-h-[80vh] overflow-auto">
+        <div className="max-h-[85vh] overflow-auto bg-muted rounded-md">
           <Transcript
             transcript={transcripts}
             currentTime={currentTime}
