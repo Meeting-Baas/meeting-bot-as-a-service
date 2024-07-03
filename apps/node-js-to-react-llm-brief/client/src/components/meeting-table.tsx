@@ -88,15 +88,11 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "attendees",
     header: () => "Attendees",
     cell: ({ row }) => {
-      // todo: check if this is a proper list later
-        
-      let attendees = row.getValue("attendees") || [];
+      let attendees: string[] = row.getValue("attendees") || [];
 
       return (
         <div className="text-right font-medium flex gap-2">
-          {
-          // @ts-expect-error
-          attendees.map((attendee) => (
+          {attendees.map((attendee) => (
             <Badge>{attendee}</Badge>
           ))}
         </div>
@@ -107,10 +103,13 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "createdAt",
     header: "Created At",
     cell: ({ row }) => {
-        // todo: get proper date
-    //   const date = row.getValue("createdAt");
+      const date = new Date(row.getValue("createdAt"))
+      const formatted = new Intl.DateTimeFormat("en-US", {
+        dateStyle: 'short',
+        timeStyle: 'short',
+      }).format(date)
 
-      return <div>{row.getValue("createdAt")}</div>;
+      return <div className="font-medium">{formatted}</div>;
     },
   },
   {

@@ -3,7 +3,7 @@ import path from 'path';
 
 // todo: make this dynamic
 dotenv.config({
-  path: path.resolve(__dirname, "..", "..", "..", ".env"),
+  path: path.resolve(__dirname, "..", "..", ".env"),
 });
 
 import express, { Express, Request, Response } from "express";
