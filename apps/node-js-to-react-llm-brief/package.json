@@ -9,7 +9,7 @@
     "scripts": {
         "start": "npm run backend",
         "build": "npm run frontend:build && npm run backend:build",
-        "dev": "npm run frontend:dev && npm run backend:dev",
+        "dev": "npm run frontend:dev & npm run backend:dev",
 
         "backend": "cd api && npm start",
         "backend:build": "cd api && npm run build",
