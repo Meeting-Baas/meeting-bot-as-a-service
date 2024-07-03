@@ -1,33 +1,59 @@
-# Meeting Bass 🐟 Integration Examples
+# Meeting Baas 🐟 Integration Examples
 
-This repository contains automation examples and code repositories that either:
+Using Meeting's API and open-source examples, this repository contains programs that either:
 
 1. Send Meeting Bots to Google Meet, Zoom and Microsoft Teams in an easy way.
 
-2. Automate data extraction from meetings via LLMs and save on different platforms meeting.
-
-It shows you easy ways to extract data from video meetings and create your own software or automation process.
+2. Automate data extraction from meetings and conversations via LLMs and save specific, custom data somewhere .
 
 ## Available Setups
 
-Examples are divided in 2: between sending data and handling it.
-This is a bit arbitrary as some code examples handle both in one same example both (a) sending and (b) receiving the data.
+Examples are divided in 2: 
+1. stand-alone examples which include:
+	a. how to send a bot in different fashions (through a calendar API, a Chrome extension, a form, ...) and 
+	b. how to handle the data, present it, search inside it, ...
+2. integrations using third-party software, whether said software is open-source or not. So of course make.com, n8n.io integrations, but also a Google Calendar form to invite a bot to meeting to record it which you can share with a team, ....
 
-### Sending Data: Apps & Simple Online Forms
+### Apps & Data-Handling.
 
-**Tiny Meeting Bot Desktop App with Tauri**
+Learn how to invite meeting bots to a meeting for yourself or your users, and view examples to start handling the data quickly.
 
-- [View Tauri Desktop App Example](./apps/desktop-rust-app/)
-  - A lightweight cross-platform desktop application to send Meeting Bots to Zoom, Google Meet, or Microsoft Teams meetings.
 
-### Handling Data: Software and Automations
+**Transcript Player Interface**
 
-**NodeJS App with an online form and meeting data processing**
+- [Player Interface](./apps/player-interface/)
+	- This project is a web application that displays a video player with a synchronized transcript. The interface is divided into two main parts: the video player and the transcript.
+	- technologies used: Node, React, Typescript, Chakra.
 
-- [View NodeJS + Rust Example](./apps/rust-send-bots-form/)
-  - Using NodeJS and express, create a simple app that:
+**Desktop App to invite a bot**
+
+- [Desktop App to invite a bot](./apps/rust-send-bots-form/)
+  - A cross-platform desktop application with a simple user-input form to send Meeting Bots to Zoom, Google Meet, or Microsoft Teams meetings.
+  - technologies used: Rust, Tauri, HTML, Javascript.
+  
+  
+**NodeJS App with an online form and Meeting data processing**
+
+- [WebApp and Server to record and handle data](./apps/node-js-to-notion-llm-brief/)
+  - A simple web app that:
     -- has a simple sharable page to send a meeting bot.
     -- has an automation process to summarize meeting transcriptions with OpenAI and publish formatted information to a Notion DataBase, with meta-data.
+  - technologies used: ExpressJS, Node.
+  - third-parties used: OpenAI, Notion.
+  
+  
+**Talking blob**
+- [Talking Blob](./apps/rust-talking-blob/)
+
+  - Slightly off-topic: an animated blob packaged a desktop app. It simply reacts to microphone input :)
+  - technologies used: Node, React, ThreeJS, Rust, Tauri. 
+
+
+
+### Automations relying on third-party software
+
+Automate data extraction from Google Meet, Microsoft Teams, and Zoom using third party, "no-code" software.
+
 
 **n8n AI Meeting Bot**
 
@@ -39,12 +65,6 @@ This is a bit arbitrary as some code examples handle both in one same example bo
 - [View Make Example](./to-other-apps/meeting-to-airtable-with-make/)
   - Sync meeting transcriptions to Airtable using Make's no-code platform and the AI Meeting Bot API.
 
-**NodeJS App with an online form and meeting data processing**
-
-- [View React + ThreeJS + Rust Example](./apps/rust-talking-blob/)
-  - Using React with the ThreeJS library, packaged in a Rust app, create a talking blob that reacts to the sounf of the microphone.
-
-Each setup guide provides step-by-step instructions to configure and use the respective technology stack with the AI Meeting Bot API, enabling efficient automation of meeting processes.
 
 ## Contributing && Troubleshooting
 
