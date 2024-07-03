@@ -2,7 +2,11 @@ import { Request, Response } from "express";
 import { getMeetings } from "../db/queries";
 
 export const meeting = async (req: Request, res: Response) => {
-  const meetings = await getMeetings();
-  console.log("meetings", meetings);
-  res.json(meetings);
+  // get path
+  const botId = req.params.botId;
+  console.log(botId)
+
+  res.json({
+    "hello": "world"
+  });
 };

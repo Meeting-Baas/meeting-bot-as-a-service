@@ -4,6 +4,6 @@ const meetingRouter = express.Router();
 
 import { meeting } from "./meetingController";
 
-meetingRouter.get("/", meeting);
+meetingRouter.get("/:botId", meeting);
 
 export default meetingRouter;
