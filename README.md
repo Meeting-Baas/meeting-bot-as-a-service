@@ -6,8 +6,8 @@ Using Meeting's API and open-source examples, this repository contains programs 
 1. Send Meeting Bots to Google Meet, Zoom and Microsoft Teams in an easy way.
 
 2. Automate :
-    - data extraction from meetings and conversations via LLMs
-    - to save specific data, and make it easily searchable and indexable.
+    - data extraction from meetings and conversations via LLM
+    - index specific data, and make it easily searchable, retriavable and viewable.
 
 ## Available Setups
 
