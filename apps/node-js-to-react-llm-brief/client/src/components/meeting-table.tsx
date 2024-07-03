@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import {
-  CaretSortIcon,
+//   CaretSortIcon,
   ChevronDownIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
@@ -27,7 +27,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
+//   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
@@ -88,12 +88,15 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "attendees",
     header: () => "Attendees",
     cell: ({ row }) => {
-        // todo: check if this is a proper list later
-      const attendees = row.getValue("attendees") || [];
+      // todo: check if this is a proper list later
+        
+      let attendees = row.getValue("attendees") || [];
 
       return (
         <div className="text-right font-medium flex gap-2">
-          {attendees.map((attendee) => (
+          {
+          // @ts-expect-error
+          attendees.map((attendee) => (
             <Badge>{attendee}</Badge>
           ))}
         </div>
@@ -107,7 +110,7 @@ export const columns: ColumnDef<Payment>[] = [
         // todo: get proper date
       const date = row.getValue("createdAt");
 
-      return <div>{date}</div>;
+      return <div>{''}</div>;
     },
   },
   {
