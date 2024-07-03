@@ -1,8 +1,9 @@
 import dotenv from "dotenv";
 import path from 'path';
 
+// todo: make this dynamic
 dotenv.config({
-  path: path.resolve(__dirname, "..", "..", ".env"),
+  path: path.resolve(__dirname, "..", "..", "..", ".env"),
 });
 
 import express, { Express, Request, Response } from "express";
@@ -53,7 +54,7 @@ app.use((req, res) => {
 });
 
 // webhook setup
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3080;
 app.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;
   console.log(`\n\n[server]: 🟢🟢 Server is running at \u001b]8;;${url}\u001b\\${url}\u001b]8;;\u001b\\ 🟢🟢`);
