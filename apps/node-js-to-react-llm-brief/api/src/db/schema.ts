@@ -10,7 +10,7 @@ export const meetingsTable = pgTable("meetings", {
     .notNull()
     .default(sql`'{}'::text[]`),
   createdAt: timestamp("created_at").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt", {
+  updatedAt: timestamp("updated_at", {
     mode: "date",
     withTimezone: true,
   }).$onUpdateFn(() => sql`now()`),
