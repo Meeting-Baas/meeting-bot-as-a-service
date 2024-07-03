@@ -104,7 +104,8 @@ export function MeetingForm() {
             </FormItem>
           )}
         />
-        <FormField
+        {/* this doesn't really make sense if you think about it */}
+        {/* <FormField
           control={form.control}
           name="apiKey"
           render={({ field }) => (
@@ -116,7 +117,7 @@ export function MeetingForm() {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
         <Button type="submit">Submit</Button>
       </form>
     </Form>
