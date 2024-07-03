@@ -22,7 +22,7 @@ function Meeting() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get<MeetingInfo[]>(`/api/meeting/${botId}`);
+      const res = await axios.get<MeetingInfo>(`/api/meeting/${botId}`);
 
       console.log("response", res);
       setData(res.data);
