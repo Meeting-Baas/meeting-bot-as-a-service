@@ -1,12 +1,13 @@
 import { Request, Response } from "express";
-import { getMeetings } from "../db/queries";
+import { fetchBotDetails } from "../lib/fetchBotDetails";
 
 export const meeting = async (req: Request, res: Response) => {
-  // get path
   const botId = req.params.botId;
-  console.log(botId)
-
-  res.json({
-    "hello": "world"
+  // todo: cleanup fetchBotDetails and joinMeeting later
+  const details = await fetchBotDetails({
+    botId,
+    apiKey: process.env.BASS_API_KEY || "",
   });
+
+  res.json(details);
 };

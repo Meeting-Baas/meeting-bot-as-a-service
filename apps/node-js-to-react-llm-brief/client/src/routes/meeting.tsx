@@ -3,17 +3,21 @@ import axios from "axios";
 import { useParams } from 'react-router-dom';
 
 export type MeetingInfo = {
-  id: string;
-  name: string;
-  bot_id: string;
-  attendees: string[];
-  createdAt: Date;
+  data: {
+    id: string;
+    name: string;
+  }
 };
 
 function Meeting() {
   let { botId } = useParams();
 
-  const [data, setData] = React.useState<MeetingInfo[]>([]);
+  const [data, setData] = React.useState<MeetingInfo>({
+    data: {
+      id: "",
+      name: "",
+    }
+  });
   const [isLoading, setIsLoading] = React.useState(true);
 
   const fetchData = async () => {
@@ -36,7 +40,8 @@ function Meeting() {
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
-      Hello World
+      <p>Bot Id: {data?.data.id}</p>
+      <p>Bot Name: {data?.data.id}</p>
     </div>
   )
 }
