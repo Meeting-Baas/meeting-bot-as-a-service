@@ -18,11 +18,11 @@ export function validateData(schema: z.ZodObject<any, any>) {
         );
 
         res.locals.title = "Error";
-        res.render("pages/error", {
-          error: "Invalid data",
-          details: errorMessages,
-        });
-        // res.status(400).json({ error: "Invalid data", details: errorMessages });
+        // res.render("pages/error", {
+        //   error: "Invalid data",
+        //   details: errorMessages,
+        // });
+        res.status(400).json({ error: "Invalid data", details: errorMessages });
       } else {
         console.log("WRONG DATA");
         res.status(500).json({ error: "Internal Server Error" });
