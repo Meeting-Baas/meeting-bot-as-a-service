@@ -49,9 +49,9 @@ function Meeting() {
                 speaker: "",
                 words: [
                   {
-                    start: 0,
-                    end: 0,
-                    word: "",
+                    start_time: 0,
+                    end_time: 0,
+                    text: "",
                   },
                 ],
               },
