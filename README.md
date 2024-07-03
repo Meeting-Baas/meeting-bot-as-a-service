@@ -1,18 +1,23 @@
 # Meeting Baas 🐟 Integration Examples
+![Header](./GithubPreview.png)
 
 Using Meeting's API and open-source examples, this repository contains programs that either:
 
 1. Send Meeting Bots to Google Meet, Zoom and Microsoft Teams in an easy way.
 
-2. Automate data extraction from meetings and conversations via LLMs and save specific, custom data somewhere.
+2. Automate :
+    - data extraction from meetings and conversations via LLM
+    - index specific data, and make it easily searchable, retriavable and viewable.
 
 ## Available Setups
 
 Examples are divided in 2:
-1. Stand-alone examples which include:
+
+1. **Stand-alone examples using code** which include:
     - How to send a bot in different fashions (through a calendar API, a Chrome extension, a form, ...)
     - How to handle the data, present it, search inside it, ...
-2. Integrations using third-party software, whether said software is open-source or not. So of course make.com, n8n.io integrations, but also a Google Calendar form to invite a bot to meeting to record it which you can share with a team, ...
+
+2. **Integrations using third-party software**, whether said software is open-source or not. So of course make.com, n8n.io integrations, but also a Google Calendar form to invite a bot to meeting to record it which you can share with a team, ...
 
 ## Apps & Data-Handling
 
