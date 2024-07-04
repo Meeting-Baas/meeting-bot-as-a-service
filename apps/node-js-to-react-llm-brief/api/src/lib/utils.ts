@@ -4,9 +4,9 @@ import { createNotionPage, listDatabases } from "./notion";
 import { summarizeTranscript } from "./summarizeTranscript";
 
 export {
-    checkEnvironmentVariables,
-    joinMeeting,
-    createNotionPage,
-    listDatabases,
-    summarizeTranscript
-}
+  checkEnvironmentVariables,
+  joinMeeting,
+  createNotionPage,
+  listDatabases,
+  summarizeTranscript,
+};

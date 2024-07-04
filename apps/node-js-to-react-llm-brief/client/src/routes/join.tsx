@@ -1,4 +1,4 @@
-import { MeetingForm } from '../components/meeting-form'
+import { MeetingForm } from "../components/meeting-form";
 
 function Join() {
   return (
@@ -6,7 +6,7 @@ function Join() {
       <h1 className="text-2xl font-bold">Join a Meeting</h1>
       <MeetingForm />
     </div>
-  )
+  );
 }
 
 export default Join;

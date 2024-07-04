@@ -35,7 +35,7 @@ export async function joinMeeting({
         headers: {
           "x-spoke-api-key": apiKey || process.env.BASS_API_KEY,
         },
-      }
+      },
     );
 
     console.log(`New bot created, with id: ${response.data?.bot_id}`);

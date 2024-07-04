@@ -55,7 +55,7 @@ export type Meeting = {
 };
 
 export const columns: (
-  deleteMeeting: (id: string) => void
+  deleteMeeting: (id: string) => void,
 ) => ColumnDef<Meeting>[] = (deleteMeeting) => [
   {
     id: "select",
@@ -163,7 +163,7 @@ export const columns: (
 function MeetingTable() {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
+    [],
   );
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
@@ -273,7 +273,7 @@ function MeetingTable() {
                             ? null
                             : flexRender(
                                 header.column.columnDef.header,
-                                header.getContext()
+                                header.getContext(),
                               )}
                         </TableHead>
                       );
@@ -292,7 +292,7 @@ function MeetingTable() {
                         <TableCell key={cell.id}>
                           {flexRender(
                             cell.column.columnDef.cell,
-                            cell.getContext()
+                            cell.getContext(),
                           )}
                         </TableCell>
                       ))}

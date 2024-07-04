@@ -18,12 +18,10 @@
     "build": "rm -rf dist/ && npx tsc",
     "start": "node dist/src/index.js",
     "dev": "nodemon src/index.ts",
-
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
-    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

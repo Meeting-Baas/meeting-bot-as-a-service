@@ -14,7 +14,7 @@ export function validateData(schema: z.ZodObject<any, any>) {
         //   message: `${issue.path.join(".")} is ${issue.message}`,
         // }));
         const errorMessages = error.errors.map(
-          (issue: any) => `${issue.path.join(".")} is ${issue.message}`
+          (issue: any) => `${issue.path.join(".")} is ${issue.message}`,
         );
 
         res.locals.title = "Error";

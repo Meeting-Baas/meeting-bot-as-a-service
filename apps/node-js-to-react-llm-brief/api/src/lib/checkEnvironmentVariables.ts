@@ -9,18 +9,18 @@ export function checkEnvironmentVariables(): string[] {
   ];
 
   const missingVars = requiredEnvVars.filter(
-    (varName) => !process.env[varName]
+    (varName) => !process.env[varName],
   );
 
   if (missingVars.length > 0) {
     console.warn(
-      "⚠️ Warning: The following required environment variables are not set:"
+      "⚠️ Warning: The following required environment variables are not set:",
     );
     missingVars.forEach((varName) => console.warn(`\t‼️ - ${varName}`));
     console.warn(
       "Please set these variables in your .env file or environment.",
       "\n\t- OPENAI_BASE_URL defaults to https://api.openai.com/v1",
-      "\n\t- BASS_API_KEY can be set manually in the form."
+      "\n\t- BASS_API_KEY can be set manually in the form.",
     );
   }
 

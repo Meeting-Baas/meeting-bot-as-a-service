@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -12,11 +12,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
 import axios from "axios";
-import { toast } from "sonner"
+import { toast } from "sonner";
 
 const formSchema = z.object({
   meetingURL: z.string().url().nonempty("Meeting URL is required"),
@@ -36,12 +36,12 @@ export function MeetingForm() {
       meetingBotEntryMessage: "",
       apiKey: "",
     },
-  })
+  });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const response = await axios.post('/api/form', values);
-      console.log(response.data)
+      const response = await axios.post("/api/form", values);
+      console.log(response.data);
       toast.success("Meeting bot created successfully");
     } catch (error) {
       console.error("Error adding meeting bot:", error);
@@ -72,7 +72,11 @@ export function MeetingForm() {
             <FormItem>
               <FormLabel>Meeting Bot Name (optional)</FormLabel>
               <FormControl>
-                <Input type="text" placeholder="Enter meeting bot name" {...field} />
+                <Input
+                  type="text"
+                  placeholder="Enter meeting bot name"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -98,7 +102,11 @@ export function MeetingForm() {
             <FormItem>
               <FormLabel>Meeting Bot Entry Message (optional)</FormLabel>
               <FormControl>
-                <Input type="text" placeholder="Enter meeting bot entry message" {...field} />
+                <Input
+                  type="text"
+                  placeholder="Enter meeting bot entry message"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -121,5 +129,5 @@ export function MeetingForm() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
+  );
 }

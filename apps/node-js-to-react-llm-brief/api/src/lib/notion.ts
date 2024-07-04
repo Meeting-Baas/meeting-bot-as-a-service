@@ -4,13 +4,13 @@ import { DatabaseObjectResponse } from "@notionhq/client/build/src/api-endpoints
 export async function createNotionPage(
   children: any, // no proper type available
   speakers: string[],
-  now: Date
+  now: Date,
 ) {
   const notion = new Client({ auth: process.env.NOTION_API_KEY });
   const DATABASE_ID = process.env.DATABASE_ID || "";
   if (!DATABASE_ID)
     throw new Error(
-      "Missing Notion DATABASE_ID: Please verify that the DATABASE_ID is correctly set in your .env file."
+      "Missing Notion DATABASE_ID: Please verify that the DATABASE_ID is correctly set in your .env file.",
     );
 
   try {
@@ -90,7 +90,7 @@ export async function createNotionPage(
 }
 
 export async function listDatabases(
-  notionClient: Client
+  notionClient: Client,
 ): Promise<DatabaseObjectResponse[]> {
   const databases: DatabaseObjectResponse[] = [];
   console.log("\n\nlisting available Databases on NOTION:");
@@ -105,7 +105,7 @@ export async function listDatabases(
       if (isFullDatabase(page)) {
         databases.push(page);
         console.log(
-          `- 📚 ${page.title[0]?.plain_text || "Untitled"}: ${page.id}`
+          `- 📚 ${page.title[0]?.plain_text || "Untitled"}: ${page.id}`,
         );
       } else {
         console.log("not a full database.");

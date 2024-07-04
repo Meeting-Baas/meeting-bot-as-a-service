@@ -1,12 +1,20 @@
-import { db } from '.';
-import { asc, between, count, desc, eq, getTableColumns, sql } from 'drizzle-orm';
-import { InsertMeeting, SelectMeeting, meetingsTable } from './schema';
+import { db } from ".";
+import {
+  asc,
+  between,
+  count,
+  desc,
+  eq,
+  getTableColumns,
+  sql,
+} from "drizzle-orm";
+import { InsertMeeting, SelectMeeting, meetingsTable } from "./schema";
 
 export async function createMeeting(data: InsertMeeting) {
   await db.insert(meetingsTable).values(data);
 }
 
-export async function deleteMeeting(id: SelectMeeting['id']) {
+export async function deleteMeeting(id: SelectMeeting["id"]) {
   await db.delete(meetingsTable).where(eq(meetingsTable.id, id));
 }
 
@@ -33,7 +41,7 @@ export async function deleteMeeting(id: SelectMeeting['id']) {
 //       .limit(pageSize)
 //       .offset((page - 1) * pageSize);
 //   }
-  
+
 export async function getMeetings(): Promise<
   Array<{
     id: number;

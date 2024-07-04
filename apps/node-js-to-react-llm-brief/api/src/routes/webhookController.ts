@@ -27,9 +27,9 @@ export const webhook = async (req: Request, res: Response) => {
           (entry: TranscriptEntry) =>
             `${entry.speaker}: ${entry.words
               .map((word) => word.word)
-              .join(" ")}`
+              .join(" ")}`,
         )
-        .join("\n")
+        .join("\n"),
     );
 
     const summary = await summarizeTranscript(transcript);
@@ -47,7 +47,7 @@ export const webhook = async (req: Request, res: Response) => {
       createMeeting({
         name: `Meeting Summary`,
         bot_id: eventData.data.bot_id,
-        attendees: eventData.data.speakers
+        attendees: eventData.data.speakers,
       });
     }
   }

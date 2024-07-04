@@ -39,17 +39,17 @@ export type MeetingInfo = {
                   start_time: number;
                   end_time: number;
                   text: string;
-                }
+                },
               ];
-            }
+            },
           ];
         };
-      }
+      },
     ];
     assets: [
       {
         mp4_s3_path: string;
-      }
+      },
     ];
   };
 };
@@ -130,7 +130,7 @@ function Meeting() {
         player.pause();
       }
     },
-    [player]
+    [player],
   );
 
   const setPlayerRef = React.useCallback((player: MediaPlayerInstance) => {
@@ -218,9 +218,12 @@ function Meeting() {
             className={cn("flex w-full h-full")}
           >
             <ResizablePanel defaultSize={50} minSize={25}>
-              <Editor initialValue={undefined} onChange={(v) => {
-                console.log("editor changed", v);
-              }} />
+              <Editor
+                initialValue={undefined}
+                onChange={(v) => {
+                  console.log("editor changed", v);
+                }}
+              />
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={25}>

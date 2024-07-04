@@ -1,20 +1,20 @@
 import dotenv from "dotenv";
-import path from 'path';
+import path from "path";
 
 // handle env variable parsing
 var root: string;
 var client: string;
 
 if (process.env?.NODE_ENV === "development") {
-  var root = path.resolve(__dirname, '..', '..');
-  var client = path.resolve(root, 'client', 'dist');
+  var root = path.resolve(__dirname, "..", "..");
+  var client = path.resolve(root, "client", "dist");
 
   dotenv.config({
     path: path.resolve(root, ".env"),
   });
-} else  {
-  var root = path.resolve(__dirname, '..',  '..', '..');
-  var client = path.resolve(root, 'client', 'dist');
+} else {
+  var root = path.resolve(__dirname, "..", "..", "..");
+  var client = path.resolve(root, "client", "dist");
 
   dotenv.config({
     path: path.resolve(root, ".env"),
@@ -51,26 +51,30 @@ if (process.env.NOTION_API_KEY) {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.set('trust proxy', 1); // trust first proxy
+app.set("trust proxy", 1); // trust first proxy
 app.use(cors());
 
 app.use(express.static(path.join(client)));
 
-app.get('/health', (_req: Request, res: Response) => res.status(200).send('OK'));
+app.get("/health", (_req: Request, res: Response) =>
+  res.status(200).send("OK"),
+);
 
-app.use('/api/meetings', meetingsRouter);
-app.use('/api/meeting', meetingRouter);
+app.use("/api/meetings", meetingsRouter);
+app.use("/api/meeting", meetingRouter);
 
-app.use('/api/form', formRouter);
-app.use('/api/webhook', webhookRouter);
+app.use("/api/form", formRouter);
+app.use("/api/webhook", webhookRouter);
 
 app.use((req, res) => {
-  res.sendFile(path.join(client, 'index.html'));
+  res.sendFile(path.join(client, "index.html"));
 });
 
 // webhook setup
 const PORT = process.env.PORT || 3080;
 app.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;
-  console.log(`\n\n[server]: 🟢🟢 Server is running at \u001b]8;;${url}\u001b\\${url}\u001b]8;;\u001b\\ 🟢🟢`);
+  console.log(
+    `\n\n[server]: 🟢🟢 Server is running at \u001b]8;;${url}\u001b\\${url}\u001b]8;;\u001b\\ 🟢🟢`,
+  );
 });

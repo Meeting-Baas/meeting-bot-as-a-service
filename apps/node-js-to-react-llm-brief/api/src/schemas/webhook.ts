@@ -12,9 +12,9 @@ export const webhookSchema = z.object({
             start: z.number(),
             end: z.number(),
             word: z.string(),
-          })
+          }),
         ),
-      })
+      }),
     ),
     speakers: z.array(z.string()),
     mp4: z.string().url(),

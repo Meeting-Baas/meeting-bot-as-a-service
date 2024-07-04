@@ -5,10 +5,7 @@ export interface BotDetailsParams {
   apiKey: string;
 }
 
-export async function fetchBotDetails({
-  botId,
-  apiKey
-}: BotDetailsParams) {
+export async function fetchBotDetails({ botId, apiKey }: BotDetailsParams) {
   try {
     const response = await axios.get(
       "https://api.meetingbaas.com/bots/meeting_data",
@@ -21,7 +18,7 @@ export async function fetchBotDetails({
         headers: {
           "x-spoke-api-key": apiKey || process.env.BASS_API_KEY,
         },
-      }
+      },
     );
 
     console.log(`Bot details fetched, with id: ${response.data?.id}`);

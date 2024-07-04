@@ -29,7 +29,7 @@ export async function summarizeTranscript(transcript: TranscriptEntry[]) {
                 (entry: TranscriptEntry) =>
                   `${entry.speaker}: ${entry.words
                     .map((word) => word.word)
-                    .join(" ")}`
+                    .join(" ")}`,
               )
               .join("\n"),
           },
