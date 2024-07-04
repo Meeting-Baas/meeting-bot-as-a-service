@@ -170,7 +170,7 @@ function MeetingTable() {
   
   const table = useReactTable({
     data,
-    columns: columns(deleteMeeting, fetchData),
+    columns: columns(deleteMeeting),
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),
