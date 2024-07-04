@@ -1,47 +1,51 @@
-import './player.css';
+import "./player.css";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 import {
   isHLSProvider,
   MediaPlayer,
   MediaProvider,
   Poster,
+  useMediaRemote,
   Track,
   type MediaCanPlayDetail,
   type MediaCanPlayEvent,
   type MediaPlayerInstance,
   type MediaProviderAdapter,
   type MediaProviderChangeEvent,
-} from '@vidstack/react';
+  useMediaProvider,
+} from "@vidstack/react";
 import {
   DefaultAudioLayout,
   defaultLayoutIcons,
   DefaultVideoLayout,
-} from '@vidstack/react/player/layouts/default';
+} from "@vidstack/react/player/layouts/default";
 
 interface PlayerProps {
-    src: string;
-    onTimeUpdate: (time: number) => void;
+  setPlayer: (player: MediaPlayerInstance) => void;
+  src: string;
+  onTimeUpdate: (time: number) => void;
 }
 
-export function Player({ src, onTimeUpdate }: PlayerProps) {
-  let player = useRef<MediaPlayerInstance>(null);
+export function Player({ setPlayer, src, onTimeUpdate }: PlayerProps) {
+  let player = useRef<MediaPlayerInstance>(null),
+    provider = useMediaProvider();
 
   useEffect(() => {
     // Subscribe to state updates.
-    
+
     return player.current!.subscribe(({ paused, viewType, currentTime }) => {
-        console.log('current time', '->', currentTime);
-        onTimeUpdate(currentTime);
-    //   console.log('is paused?', '->', paused);
+      console.log("current time", "->", currentTime);
+      onTimeUpdate(currentTime);
+      //   console.log('is paused?', '->', paused);
       // console.log('is audio view?', '->', viewType === 'audio');
     });
   }, []);
 
   function onProviderChange(
     provider: MediaProviderAdapter | null,
-    nativeEvent: MediaProviderChangeEvent,
+    nativeEvent: MediaProviderChangeEvent
   ) {
     // We can configure provider's here.
     if (isHLSProvider(provider)) {
@@ -50,7 +54,13 @@ export function Player({ src, onTimeUpdate }: PlayerProps) {
   }
 
   // We can listen for the `can-play` event to be notified when the player is ready.
-  function onCanPlay(detail: MediaCanPlayDetail, nativeEvent: MediaCanPlayEvent) {
+  function onCanPlay(
+    detail: MediaCanPlayDetail,
+    nativeEvent: MediaCanPlayEvent
+  ) {
+    provider?.setCurrentTime(((82.59722 / 100) * 600));
+
+    setPlayer(player.current!);
     // ...
   }
 
@@ -65,7 +75,7 @@ export function Player({ src, onTimeUpdate }: PlayerProps) {
         onProviderChange={onProviderChange}
         onCanPlay={onCanPlay}
         onProgress={(detail) => {
-            console.log('progress', '->', detail);
+          console.log("progress", "->", detail);
         }}
         ref={player}
       >

@@ -35,7 +35,7 @@ const Transcript: React.FC<TranscriptProps> = ({
 }) => {
     return (
         <div
-            className="flex w-full h-full max-w-full overflow-y-auto overflow-x-hidden flex-col p-2"
+            className="flex w-full h-full max-w-full overflow-y-auto overflow-x-hidden flex-col"
         >
             {transcript.map((entry, index) => (
                 <div

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Player as VideoPlayer } from "@/components/spoke/video-player/video-player";
 import Transcript from "@/components/spoke/video-player/transcript";
+import { MediaPlayerInstance, PlayerSrc } from "@vidstack/react";
 
 export type MeetingInfo = {
   data: {
@@ -87,6 +88,7 @@ function Meeting() {
       ],
     },
   ]);
+  const [player, setPlayer] = React.useState<MediaPlayerInstance>(null);
 
   const fetchData = async () => {
     try {
@@ -100,6 +102,23 @@ function Meeting() {
       setIsLoading(false);
     }
   };
+
+  const handleTimeUpdate = React.useCallback((time: number) => {
+    setCurrentTime(time);
+  }, []);
+
+  const handleSeek = React.useCallback(
+    (time: number) => {
+      if (player) {
+        console.log(player)
+      }
+    },
+    [player]
+  );
+
+  const setPlayerRef = React.useCallback((player: MediaPlayerInstance) => {
+    setPlayer(player);
+  }, []);
 
   React.useEffect(() => {
     fetchData();
@@ -124,22 +143,33 @@ function Meeting() {
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
-      <div className="flex flex-col lg:flex-row my-4 gap-4">
-        <div className="w-full h-full">
+      <div className="flex flex-col md:flex-row gap-6 md:gap-8 w-full mx-auto py-8 md:py-12">
+        <div className="flex-1 rounded-lg overflow-hidden">
           <VideoPlayer
             // src={data?.data.meeting.video_url}
-            onTimeUpdate={(time) => {
-              setCurrentTime(time);
-            }}
-            // setPlayerRef={() => {}}
+            src={"https://files.vidstack.io/sprite-fight/720p.mp4"}
+            onTimeUpdate={handleTimeUpdate}
+            setPlayer={setPlayerRef}
           />
         </div>
-        <div className="max-h-[88vh] overflow-auto bg-muted rounded-md lg:w-1/2">
-          {isLoading && <div className="flex items-center justify-center w-full h-full">Loading...</div>}
+        <div className="flex-1 bg-background rounded-lg border p-6 md:p-8 space-y-2">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              Meeting Transcript
+            </h2>
+            {/* <p className="text-muted-foreground">
+              A detailed transcript of the video meeting.
+            </p> */}
+          </div>
+          {isLoading && (
+            <div className="flex items-center justify-center w-full h-full">
+              Loading...
+            </div>
+          )}
           <Transcript
             transcript={transcripts}
             currentTime={currentTime}
-            onWordClick={() => {}}
+            onWordClick={handleSeek}
           />
         </div>
       </div>
