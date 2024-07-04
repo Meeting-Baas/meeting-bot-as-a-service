@@ -260,15 +260,15 @@ function Meeting() {
                 <CardHeader className="flex items-center gap-4 p-4 border-b">
                   <div className="text-sm font-medium">ChatGPT</div>
                 </CardHeader>
-                <CardContent className="p-4 flex flex-col gap-4 overflow-auto">
-                  {/* <div className="overflow-auto h-full"> */}
+                <CardContent className="p-4 flex flex-col gap-4 overflow-auto h-full">
+                  <div className="overflow-auto h-full flex flex-col gap-4">
                     {messages.map((message, index) => (
                       <Message key={index} message={message} />
                     ))}
-                  {/* </div> */}
+                  </div>
 
-                  <div className="sticky inset-x-0 bottom-0 w-full">
-                    <form className="relative" onSubmit={handleChatSubmit}>
+                  <div className="flex items-end flex-1">
+                    <form className="relative w-full" onSubmit={handleChatSubmit}>
                       <Textarea
                         placeholder="Type your message..."
                         name="message"
