@@ -124,7 +124,7 @@ export const columns: (
       const meeting = row.original;
 
       return (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-end gap-2">
           <Button size="icon" asChild className="h-8 w-8 p-0">
             <Link to={`/meeting/${meeting.bot_id}`} target="_blank">
               <ExternalLinkIcon className="w-4 h-4" />
