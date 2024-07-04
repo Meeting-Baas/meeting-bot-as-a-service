@@ -32,6 +32,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.0",
+    "react-resizable-panels": "^2.0.20",
     "react-router-dom": "^6.24.0",
     "sonner": "^1.5.0",
     "sort-by": "^1.2.0",
