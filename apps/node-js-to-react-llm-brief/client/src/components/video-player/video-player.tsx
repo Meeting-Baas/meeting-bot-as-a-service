@@ -36,9 +36,7 @@ export function Player({ setPlayer, src, onTimeUpdate }: PlayerProps) {
     });
   }, []);
 
-  function onProviderChange(
-    provider: MediaProviderAdapter | null,
-  ) {
+  function onProviderChange(provider: MediaProviderAdapter | null) {
     // We can configure provider's here.
     if (isHLSProvider(provider)) {
       provider.config = {};
