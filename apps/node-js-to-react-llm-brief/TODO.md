@@ -1,3 +1,5 @@
 - [ ] Save resizable panels state
 - [ ] Save Novel state in db
 - [ ] Make AI Work with context of novel
+- [ ] Fix code highlighting
+- [ ] Fix image upload
