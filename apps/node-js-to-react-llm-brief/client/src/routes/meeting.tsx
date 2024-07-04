@@ -189,7 +189,7 @@ function Meeting() {
     <div className="p-8">
       <Link
         to={`/meetings`}
-        className="flex text-sm items-center py-2 gap-1 hover:text-muted-foreground"
+        className="flex text-sm items-center py-2 gap-1 hover:text-muted-foreground w-min"
       >
         <ArrowLeft />
         <p>Back</p>
