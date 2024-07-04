@@ -1,20 +1,7 @@
 import dotenv from "dotenv";
 import path from 'path';
 
-import express, { Express, Request, Response } from "express";
-import { checkEnvironmentVariables, listDatabases } from "./lib/utils";
-
-import { Client } from "@notionhq/client";
-
-import formRouter from "./routes/form";
-import webhookRouter from "./routes/webhook";
-import meetingsRouter from "./routes/meetings";
-import meetingRouter from "./routes/meeting";
-
-import cors from "cors";
-
-const app: Express = express();
-
+// handle env variable parsing
 var root: string;
 var client: string;
 
@@ -33,6 +20,20 @@ if (process.env?.NODE_ENV === "development") {
     path: path.resolve(root, ".env"),
   });
 }
+
+import express, { Express, Request, Response } from "express";
+import { checkEnvironmentVariables, listDatabases } from "./lib/utils";
+
+import { Client } from "@notionhq/client";
+
+import formRouter from "./routes/form";
+import webhookRouter from "./routes/webhook";
+import meetingsRouter from "./routes/meetings";
+import meetingRouter from "./routes/meeting";
+
+import cors from "cors";
+
+const app: Express = express();
 
 // SANITY CHWECK
 // ENV variables
