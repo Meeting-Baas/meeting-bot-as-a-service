@@ -1,19 +1,25 @@
 import {
+  AIHighlight,
+  CharacterCount,
+  GlobalDragHandle,
+  HorizontalRule,
+  Placeholder,
+  StarterKit,
+  TaskItem,
+  TaskList,
   TiptapImage,
   TiptapLink,
+  Twitter,
   UpdatedImage,
-  TaskList,
-  TaskItem,
-  HorizontalRule,
-  StarterKit,
-  Placeholder,
-  AIHighlight,
+  Youtube,
 } from "novel/extensions";
 import { UploadImagesPlugin } from "novel/plugins";
 
 import { cx } from "class-variance-authority";
 
+//TODO I am using cx here to get tailwind autocomplete working, idk if someone else can write a regex to just capture the class key in objects
 const aiHighlight = AIHighlight;
+//You can overwrite the placeholder with your own configuration
 const placeholder = Placeholder;
 const tiptapLink = TiptapLink.configure({
   HTMLAttributes: {
@@ -85,9 +91,7 @@ const starterKit = StarterKit.configure({
   },
   codeBlock: {
     HTMLAttributes: {
-      class: cx(
-        "rounded-md bg-muted text-muted-foreground border p-5 font-mono font-medium",
-      ),
+      class: cx("rounded-md bg-muted text-muted-foreground border p-5 font-mono font-medium"),
     },
   },
   code: {
@@ -104,6 +108,22 @@ const starterKit = StarterKit.configure({
   gapcursor: false,
 });
 
+const youtube = Youtube.configure({
+  HTMLAttributes: {
+    class: cx("rounded-lg border border-muted"),
+  },
+  inline: false,
+});
+
+const twitter = Twitter.configure({
+  HTMLAttributes: {
+    class: cx("not-prose"),
+  },
+  inline: false,
+});
+
+const characterCount = CharacterCount.configure();
+
 export const defaultExtensions = [
   starterKit,
   placeholder,
@@ -114,4 +134,8 @@ export const defaultExtensions = [
   taskItem,
   horizontalRule,
   aiHighlight,
+  youtube,
+  twitter,
+  characterCount,
+  GlobalDragHandle,
 ];
