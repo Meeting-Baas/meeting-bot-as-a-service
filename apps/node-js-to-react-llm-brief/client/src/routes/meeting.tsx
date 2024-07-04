@@ -152,7 +152,7 @@ function Meeting() {
         direction="horizontal"
         className="flex flex-col md:flex-row w-full mx-auto py-8 md:py-12"
       >
-        <ResizablePanel defaultSize={55}>
+        <ResizablePanel defaultSize={55} minSize={25}>
           <div className="flex flex-1 rounded-l-lg overflow-hidden">
             <VideoPlayer
               // src={data?.data.meeting.video_url}
@@ -163,7 +163,7 @@ function Meeting() {
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={45}>
+        <ResizablePanel defaultSize={45} minSize={15}>
           <div className="flex-1 bg-background rounded-r-lg border p-6 md:p-8 space-y-2 min-h-full">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold">
