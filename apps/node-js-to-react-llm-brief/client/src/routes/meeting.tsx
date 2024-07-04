@@ -262,6 +262,11 @@ function Meeting() {
                 </CardHeader>
                 <CardContent className="p-4 flex flex-col gap-4 overflow-auto h-full">
                   <div className="overflow-auto h-full flex flex-col gap-4">
+                    {messages.length === 0 && (
+                      <div className="text-muted-foreground text-center flex w-full h-full items-center justify-center">
+                        Start a conversation with ChatGPT
+                      </div>
+                    )}
                     {messages.map((message, index) => (
                       <Message key={index} message={message} />
                     ))}
