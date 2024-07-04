@@ -30,6 +30,7 @@ import formRouter from "./routes/form";
 import webhookRouter from "./routes/webhook";
 import meetingsRouter from "./routes/meetings";
 import meetingRouter from "./routes/meeting";
+import chatRouter from "./routes/chat";
 
 import cors from "cors";
 
@@ -62,6 +63,8 @@ app.get("/health", (_req: Request, res: Response) =>
 
 app.use("/api/meetings", meetingsRouter);
 app.use("/api/meeting", meetingRouter);
+
+app.use("/api/chat", chatRouter);
 
 app.use("/api/form", formRouter);
 app.use("/api/webhook", webhookRouter);

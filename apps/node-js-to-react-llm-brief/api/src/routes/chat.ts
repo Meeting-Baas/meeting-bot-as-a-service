@@ -1,11 +1,11 @@
 import express from "express";
 import { validateData } from "../middleware/zod";
-import { formSchema } from "../schemas/form";
+import { chatSchema } from "../schemas/chat";
 
 const chatRouter = express.Router();
 
 import { chat } from "./chatController";
 
-chatRouter.post("/", validateData(formSchema), chat);
+chatRouter.post("/", validateData(chatSchema), chat);
 
 export default chatRouter;

@@ -15,11 +15,11 @@ export async function summarizeTranscript(transcript: TranscriptEntry[]) {
   try {
     if (process.env.OPENAI_API_KEY) {
       const openai = new OpenAI({
-        baseURL: process.env.OPENAI_BASE_URL || "https://api.openai.com/v1",
+        baseURL: process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1",
         apiKey: process.env.OPENAI_API_KEY,
       });
       const completion = await openai.chat.completions.create({
-        model: process.env.OPENAI_MODEL || "gpt-3.5-turbo",
+        model: process.env.OPENAI_MODEL ?? "gpt-3.5-turbo",
         messages: [
           { role: "system", content: SYSTEM_PROMPT_DESCRIPTION },
           {

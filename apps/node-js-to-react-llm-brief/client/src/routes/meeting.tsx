@@ -102,6 +102,8 @@ function Meeting() {
   const [player, setPlayer] = React.useState<MediaPlayerInstance>();
   const [currentTime, setCurrentTime] = React.useState(0);
 
+  const [input, setInput] = React.useState("");
+
   const [isLoading, setIsLoading] = React.useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
@@ -117,6 +119,23 @@ function Meeting() {
       setIsLoading(false);
     }
   };
+
+  const handleChatSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    // axios handling
+    try {
+      const res = await axios.post("/api/chat", {
+        messages: [
+          { role: "user", content: input },
+        ]
+      });
+
+      console.log("response", res);
+    } catch (error) {
+      console.error("error", error);
+    }
+  }
 
   const handleTimeUpdate = React.useCallback((time: number) => {
     setCurrentTime(time);
@@ -261,12 +280,14 @@ function Meeting() {
                   </div>
 
                   <div className="absolute left-0 bottom-0 w-full">
-                    <div className="relative p-2">
+                    <form className="relative p-2" onSubmit={handleChatSubmit}>
                       <Textarea
                         placeholder="Type your message..."
                         name="message"
                         id="message"
                         rows={1}
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
                         className="min-h-[48px] rounded-2xl resize-none p-4 border shadow-sm"
                       />
                       <Button
@@ -277,7 +298,7 @@ function Meeting() {
                         <ArrowUpIcon className="w-4 h-4" />
                         <span className="sr-only">Send</span>
                       </Button>
-                    </div>
+                    </form>
                   </div>
                 </CardContent>
               </Card>
