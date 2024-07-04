@@ -24,8 +24,6 @@ import { Button } from "@/components/ui/button";
 import Editor from "@/components/editor";
 import Message from "@/components/chat/message";
 
-import { ScrollArea } from "@/components/ui/scroll-area"
-
 export type MeetingInfo = {
   data: {
     id: string;
@@ -105,7 +103,9 @@ function Meeting() {
   const [currentTime, setCurrentTime] = React.useState(0);
 
   const [input, setInput] = React.useState("");
-  const [messages, setMessages] = React.useState<{ content: string; role: string; }[]>([]);
+  const [messages, setMessages] = React.useState<
+    { content: string; role: string }[]
+  >([]);
 
   const [isLoading, setIsLoading] = React.useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -125,16 +125,27 @@ function Meeting() {
 
   const handleChatSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    const messagesList = [
-      ...messages,
+    setMessages((prev) => [
+      ...prev, 
       { content: input, role: "user" }
-    ];
-    setMessages(messagesList);
+    ]);
     // setIsLoading(true);
 
     // axios handling
     try {
+      let messagesList = [];
+
+      transcripts.forEach((transcript) => {
+        let text: string = "";
+        transcript.words.forEach((word) => {
+          text += word.text + " ";
+        });
+        messagesList.push({ content: text, role: "user" });
+      });
+
+      messagesList.push(...messages);
+      messagesList.push({ content: input, role: "user" })
+
       const res = await axios.post("/api/chat", {
         messages: messagesList,
       });
@@ -274,7 +285,10 @@ function Meeting() {
                   </div>
 
                   <div className="flex items-end flex-1">
-                    <form className="relative w-full" onSubmit={handleChatSubmit}>
+                    <form
+                      className="relative w-full"
+                      onSubmit={handleChatSubmit}
+                    >
                       <Textarea
                         placeholder="Type your message..."
                         name="message"

@@ -13,7 +13,7 @@ export const chat = async (req: Request, res: Response) => {
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL ?? "gpt-3.5-turbo",
       messages: [
-        { role: "system", content: "You are a helpful assistant." },
+        { role: "system", content: "You are a helpful assistant named AI Meeting Bot. You will be given a context of a meeting and some meeting notes, you will answer questions based on the context." },
         ...messages,
       ],
     });
