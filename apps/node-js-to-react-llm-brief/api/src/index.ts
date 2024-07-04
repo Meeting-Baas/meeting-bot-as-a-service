@@ -20,8 +20,16 @@ import cors from "cors";
 
 const app: Express = express();
 
-const root = path.resolve(__dirname, '..', '..');
-const client = path.resolve(root, 'client', 'dist');
+var root: string;
+var client: string;
+
+if (process.env?.NODE_ENV === "development") {
+  var root = path.resolve(__dirname, '..');
+  var client = path.resolve(root, 'client', 'dist');
+} else  {
+  var root = path.resolve(__dirname, '..',  '..', '..');
+  var client = path.resolve(root, 'client', 'dist');
+}
 
 // SANITY CHWECK
 // ENV variables
