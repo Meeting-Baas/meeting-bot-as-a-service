@@ -6,13 +6,16 @@ use whisper_rs::{WhisperContext, WhisperContextParameters, FullParams, SamplingS
 use anyhow::{Result, Context};
 use reqwest::blocking::Client;
 use indicatif::{ProgressBar, ProgressStyle};
+use hound::WavReader;
+use whisper_rs::convert_integer_to_float_audio;
 
-const MODEL_NAME: &str = "ggml-base.en.bin";
-const MODEL_PATH: &str = "ggml-base.en.bin";
+
+const MODEL_NAME: &str = "ggml-large-v3.bin";
+const MODEL_PATH: &str = "ggml-large-v3.bin";
 
 fn main() -> Result<()> {
     if !Path::new(MODEL_PATH).exists() {
-        println!("🔍 Model not found. Downloading...");
+        println!("🔍 Model: {} not found. Downloading...", MODEL_PATH);
         download_model().context("Failed to download model")?;
     } else {
         println!("✅ Model already installed");
@@ -29,8 +32,31 @@ fn main() -> Result<()> {
         download_model().context("Failed to download model")?;
     }
 
-    let _params = FullParams::new(SamplingStrategy::Greedy { best_of: 1 });
+    let params = FullParams::new(SamplingStrategy::Greedy { best_of: 1 });
+
+
     println!("🎙️ Ready for transcription!");
+    let mut reader = WavReader::open("./customer_service_akward_puppets.wav")?;
+    let samples: Vec<i16> = reader.samples::<i16>().filter_map(Result::ok).collect();
+    
+    let mut audio_samples = vec![0.0f32; samples.len()];
+    convert_integer_to_float_audio(&samples, &mut audio_samples).context("Failed to convert audio samples")?;
+
+    let mut state = ctx_result?.create_state().context("Failed to create state")?;
+    state.full(params, &audio_samples).context("Failed to run model")?;
+
+
+
+    let num_segments = state.full_n_segments().context("Failed to get number of segments")?;
+    for i in 0..num_segments {
+        let segment = state.full_get_segment_text(i).context("Failed to get segment")?;
+        let start = state.full_get_segment_t0(i).context("Failed to get segment start")?;
+        let end = state.full_get_segment_t1(i).context("Failed to get segment end")?;
+        println!("[{} - {}]: {}", start, end, segment);
+    };
+
+
+
     // Add your transcription logic here
     Ok(())
 }
