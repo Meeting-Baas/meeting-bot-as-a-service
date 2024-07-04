@@ -188,7 +188,7 @@ function Meeting() {
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={15}>
-              <div className="flex-1 bg-background rounded-t-none border-y border-l p-4 md:p-6 space-y-2 min-h-full">
+              <div className="flex-1 bg-background rounded-t-none border-y border-l p-4 md:p-6 space-y-2 max-h-full h-full overflow-auto">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold px-0.5">
                     Meeting Transcript
@@ -228,7 +228,7 @@ function Meeting() {
                 <CardHeader className="flex items-center gap-4 p-4 border-b">
                   <div className="text-sm font-medium">ChatGPT</div>
                 </CardHeader>
-                <CardContent className="p-4 flex flex-col gap-4 h-[calc(100%-7.125rem)]">
+                <CardContent className="p-4 flex flex-col gap-4">
                   <div className="flex items-start gap-4">
                     <Avatar className="w-8 h-8 border">
                       <AvatarImage src="/placeholder-user.jpg" />
