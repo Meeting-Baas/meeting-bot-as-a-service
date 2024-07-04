@@ -1,5 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { 
+  // useState 
+} from "react";
 import {
   EditorRoot,
   EditorCommand,
@@ -29,9 +31,9 @@ interface EditorProp {
   onChange: (value: JSONContent) => void;
 }
 const Editor = ({ initialValue, onChange }: EditorProp) => {
-  const [openNode, setOpenNode] = useState(false);
-  const [openColor, setOpenColor] = useState(false);
-  const [openLink, setOpenLink] = useState(false);
+  const [openNode, setOpenNode] = React.useState(false);
+  const [openColor, setOpenColor] = React.useState(false);
+  const [openLink, setOpenLink] = React.useState(false);
 
   return (
     <EditorRoot>

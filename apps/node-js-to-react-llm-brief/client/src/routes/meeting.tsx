@@ -17,7 +17,7 @@ import {
   Card,
   CardHeader,
   CardContent,
-  CardFooter,
+  // CardFooter,
 } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Textarea } from "@/components/ui/textarea";
@@ -218,7 +218,7 @@ function Meeting() {
             className={cn("flex w-full h-full")}
           >
             <ResizablePanel defaultSize={50} minSize={25}>
-              <Editor initialValue={null} onChange={(v) => {
+              <Editor initialValue={undefined} onChange={(v) => {
                 console.log("editor changed", v);
               }} />
             </ResizablePanel>

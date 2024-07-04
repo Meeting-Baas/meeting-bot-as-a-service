@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils";
 import { useEditor } from "novel";
 import { Check, Trash } from "lucide-react";
 import {
-  type Dispatch,
-  type FC,
-  type SetStateAction,
+  // type Dispatch,
+  // type FC,
+  // type SetStateAction,
   useEffect,
   useRef,
 } from "react";
