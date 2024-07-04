@@ -9,6 +9,8 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import { useMediaQuery } from "@/hooks/use-media-query";
+import { cn } from "@/lib/utils";
 
 export type MeetingInfo = {
   data: {
@@ -94,6 +96,7 @@ function Meeting() {
     },
   ]);
   const [player, setPlayer] = React.useState<MediaPlayerInstance>(null);
+  const isDesktop = useMediaQuery("(min-width: 768px)")
 
   const fetchData = async () => {
     try {
@@ -149,11 +152,13 @@ function Meeting() {
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
       <ResizablePanelGroup
-        direction="horizontal"
-        className="flex flex-col md:flex-row w-full mx-auto py-8 md:py-12"
+        direction={isDesktop ? "horizontal" : "vertical"}
+        className={cn("flex w-full mx-auto py-6 md:py-8", {
+          "min-h-[calc(85dvh)]": !isDesktop,
+        })}
       >
         <ResizablePanel defaultSize={55} minSize={25}>
-          <div className="flex flex-1 rounded-l-lg overflow-hidden">
+          <div className="flex flex-1 h-full rounded-b-none sm:rounded-l-lg overflow-hidden">
             <VideoPlayer
               // src={data?.data.meeting.video_url}
               src={"https://files.vidstack.io/sprite-fight/720p.mp4"}
@@ -164,7 +169,7 @@ function Meeting() {
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={45} minSize={15}>
-          <div className="flex-1 bg-background rounded-r-lg border p-6 md:p-8 space-y-2 min-h-full">
+          <div className="flex-1 bg-background rounded-t-none sm:rounded-r-lg border p-6 md:p-8 space-y-2 min-h-full">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold">
                 Meeting Transcript
@@ -178,7 +183,7 @@ function Meeting() {
                 Loading...
               </div>
             )}
-            <Transcript
+          <Transcript
               transcript={transcripts}
               currentTime={currentTime}
               onWordClick={handleSeek}
