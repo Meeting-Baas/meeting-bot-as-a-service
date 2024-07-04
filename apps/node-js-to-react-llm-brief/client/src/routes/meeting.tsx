@@ -175,7 +175,7 @@ function Meeting() {
             direction="vertical"
             className={cn("flex w-full h-full")}
           >
-            <ResizablePanel defaultSize={55} minSize={25}>
+            <ResizablePanel defaultSize={50} minSize={25}>
               <div className="flex flex-1 h-full rounded-b-none overflow-hidden">
                 <VideoPlayer
                   // src={data?.data.meeting.video_url}
@@ -186,7 +186,7 @@ function Meeting() {
               </div>
             </ResizablePanel>
             <ResizableHandle withHandle />
-            <ResizablePanel defaultSize={45} minSize={15}>
+            <ResizablePanel defaultSize={50} minSize={15}>
               <div className="flex-1 bg-background rounded-t-none border-y border-l p-6 md:p-8 space-y-2 min-h-full">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold px-0.5">
@@ -212,64 +212,71 @@ function Meeting() {
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={50} minSize={25}>
-          <Card className="h-full w-full mx-auto rounded-none relative border-0 border-y border-r">
-            <CardHeader className="flex items-center gap-4 p-4 border-b">
-              <div className="text-sm font-medium">ChatGPT</div>
-            </CardHeader>
-            <CardContent className="p-4 flex flex-col gap-4 h-[calc(100%-7.125rem)]">
-              <div className="flex items-start gap-4">
-                <Avatar className="w-8 h-8 border">
-                  <AvatarImage src="/placeholder-user.jpg" />
-                  <AvatarFallback>YO</AvatarFallback>
-                </Avatar>
-                <div className="bg-muted rounded-lg p-3 max-w-[70%] text-sm">
-                  <p>Hi there!</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 justify-end">
-                <div className="bg-primary rounded-lg p-3 max-w-[70%] text-sm text-primary-foreground">
-                  <p>
-                    Hi! How can I assist you today?
-                  </p>
-                </div>
-                <Avatar className="w-8 h-8 border">
-                  <AvatarImage src="/placeholder-user.jpg" />
-                  <AvatarFallback>GPT</AvatarFallback>
-                </Avatar>
-              </div>
-              <div className="flex items-start gap-4">
-                <Avatar className="w-8 h-8 border">
-                  <AvatarImage src="/placeholder-user.jpg" />
-                  <AvatarFallback>YO</AvatarFallback>
-                </Avatar>
-                <div className="bg-muted rounded-lg p-3 max-w-[70%] text-sm">
-                  <p>
-                    I need help with...
-                  </p>
-                </div>
-              </div>
+          <ResizablePanelGroup
+            direction="vertical"
+            className={cn("flex w-full h-full")}
+          >
+            <ResizablePanel defaultSize={50} minSize={25}>
+              EditorJS / Novel Here
+            </ResizablePanel>
+            <ResizableHandle withHandle />
+            <ResizablePanel defaultSize={50} minSize={25}>
+              <Card className="h-full w-full mx-auto rounded-none relative border-0 border-b border-r">
+                <CardHeader className="flex items-center gap-4 p-4 border-b">
+                  <div className="text-sm font-medium">ChatGPT</div>
+                </CardHeader>
+                <CardContent className="p-4 flex flex-col gap-4 h-[calc(100%-7.125rem)]">
+                  <div className="flex items-start gap-4">
+                    <Avatar className="w-8 h-8 border">
+                      <AvatarImage src="/placeholder-user.jpg" />
+                      <AvatarFallback>YO</AvatarFallback>
+                    </Avatar>
+                    <div className="bg-muted rounded-lg p-3 max-w-[70%] text-sm">
+                      <p>Hi there!</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 justify-end">
+                    <div className="bg-primary rounded-lg p-3 max-w-[70%] text-sm text-primary-foreground">
+                      <p>Hi! How can I assist you today?</p>
+                    </div>
+                    <Avatar className="w-8 h-8 border">
+                      <AvatarImage src="/placeholder-user.jpg" />
+                      <AvatarFallback>GPT</AvatarFallback>
+                    </Avatar>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Avatar className="w-8 h-8 border">
+                      <AvatarImage src="/placeholder-user.jpg" />
+                      <AvatarFallback>YO</AvatarFallback>
+                    </Avatar>
+                    <div className="bg-muted rounded-lg p-3 max-w-[70%] text-sm">
+                      <p>I need help with...</p>
+                    </div>
+                  </div>
 
-              <div className="absolute left-0 bottom-0 w-full">
-                <div className="relative p-2">
-                  <Textarea
-                    placeholder="Type your message..."
-                    name="message"
-                    id="message"
-                    rows={1}
-                    className="min-h-[48px] rounded-2xl resize-none p-4 border shadow-sm"
-                  />
-                  <Button
-                    type="submit"
-                    size="icon"
-                    className="absolute w-8 h-8 top-[18px] right-5"
-                  >
-                    <ArrowUpIcon className="w-4 h-4" />
-                    <span className="sr-only">Send</span>
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+                  <div className="absolute left-0 bottom-0 w-full">
+                    <div className="relative p-2">
+                      <Textarea
+                        placeholder="Type your message..."
+                        name="message"
+                        id="message"
+                        rows={1}
+                        className="min-h-[48px] rounded-2xl resize-none p-4 border shadow-sm"
+                      />
+                      <Button
+                        type="submit"
+                        size="icon"
+                        className="absolute w-8 h-8 top-[18px] right-5"
+                      >
+                        <ArrowUpIcon className="w-4 h-4" />
+                        <span className="sr-only">Send</span>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </ResizablePanel>
+          </ResizablePanelGroup>
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
