@@ -1,20 +1,14 @@
 import "./player.css";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import {
   isHLSProvider,
   MediaPlayer,
   MediaProvider,
   Poster,
-  useMediaRemote,
-  Track,
-  type MediaCanPlayDetail,
-  type MediaCanPlayEvent,
   type MediaPlayerInstance,
   type MediaProviderAdapter,
-  type MediaProviderChangeEvent,
-  useMediaProvider,
 } from "@vidstack/react";
 import {
   DefaultAudioLayout,
@@ -34,7 +28,7 @@ export function Player({ setPlayer, src, onTimeUpdate }: PlayerProps) {
   useEffect(() => {
     // Subscribe to state updates.
 
-    return player.current!.subscribe(({ paused, viewType, currentTime }) => {
+    return player.current!.subscribe(({ currentTime }) => {
       console.log("current time", "->", currentTime);
       onTimeUpdate(currentTime);
       //   console.log('is paused?', '->', paused);
@@ -44,7 +38,6 @@ export function Player({ setPlayer, src, onTimeUpdate }: PlayerProps) {
 
   function onProviderChange(
     provider: MediaProviderAdapter | null,
-    nativeEvent: MediaProviderChangeEvent
   ) {
     // We can configure provider's here.
     if (isHLSProvider(provider)) {
@@ -53,10 +46,7 @@ export function Player({ setPlayer, src, onTimeUpdate }: PlayerProps) {
   }
 
   // We can listen for the `can-play` event to be notified when the player is ready.
-  function onCanPlay(
-    detail: MediaCanPlayDetail,
-    nativeEvent: MediaCanPlayEvent
-  ) {
+  function onCanPlay() {
     setPlayer(player.current!);
     // ...
   }
