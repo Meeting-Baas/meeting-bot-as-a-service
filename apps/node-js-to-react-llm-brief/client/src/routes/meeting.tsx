@@ -256,19 +256,19 @@ function Meeting() {
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={25}>
-              <Card className="h-full w-full mx-auto rounded-none relative border-0 border-b border-r">
+              <Card className="h-full w-full mx-auto rounded-none relative border-0 border-b border-r flex flex-col">
                 <CardHeader className="flex items-center gap-4 p-4 border-b">
                   <div className="text-sm font-medium">ChatGPT</div>
                 </CardHeader>
-                <CardContent className="p-4 flex flex-col gap-4 h-full overflow-auto">
-                  {/* <div className="overflow-auto"> */}
+                <CardContent className="p-4 flex flex-col gap-4 overflow-auto">
+                  {/* <div className="overflow-auto h-full"> */}
                     {messages.map((message, index) => (
                       <Message key={index} message={message} />
                     ))}
                   {/* </div> */}
 
-                  <div className="sticky left-0 bottom-0 w-full">
-                    <form className="relative p-2" onSubmit={handleChatSubmit}>
+                  <div className="sticky inset-x-0 bottom-0 w-full">
+                    <form className="relative" onSubmit={handleChatSubmit}>
                       <Textarea
                         placeholder="Type your message..."
                         name="message"
@@ -281,7 +281,7 @@ function Meeting() {
                       <Button
                         type="submit"
                         size="icon"
-                        className="absolute w-8 h-8 top-[18px] right-5"
+                        className="absolute w-8 h-8 top-2.5 right-3"
                       >
                         <ArrowUpIcon className="w-4 h-4" />
                         <span className="sr-only">Send</span>
