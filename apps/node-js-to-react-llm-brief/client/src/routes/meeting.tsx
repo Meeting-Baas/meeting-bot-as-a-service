@@ -19,10 +19,12 @@ import {
   CardContent,
   // CardFooter,
 } from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Editor from "@/components/editor";
+import Message from "@/components/chat/message";
+
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 export type MeetingInfo = {
   data: {
@@ -39,17 +41,17 @@ export type MeetingInfo = {
                   start_time: number;
                   end_time: number;
                   text: string;
-                },
+                }
               ];
-            },
+            }
           ];
         };
-      },
+      }
     ];
     assets: [
       {
         mp4_s3_path: string;
-      },
+      }
     ];
   };
 };
@@ -103,6 +105,7 @@ function Meeting() {
   const [currentTime, setCurrentTime] = React.useState(0);
 
   const [input, setInput] = React.useState("");
+  const [messages, setMessages] = React.useState<{ content: string; role: string; }[]>([]);
 
   const [isLoading, setIsLoading] = React.useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -123,19 +126,26 @@ function Meeting() {
   const handleChatSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
+    setMessages((prev) => [
+      ...prev,
+      { content: input, role: "user" },
+    ]);
+    // setIsLoading(true);
+
     // axios handling
     try {
       const res = await axios.post("/api/chat", {
-        messages: [
-          { role: "user", content: input },
-        ]
+        messages: messages,
       });
 
-      console.log("response", res);
+      setMessages((prev) => [
+        ...prev,
+        { content: res.data.response, role: "assistant" },
+      ]);
     } catch (error) {
       console.error("error", error);
     }
-  }
+  };
 
   const handleTimeUpdate = React.useCallback((time: number) => {
     setCurrentTime(time);
@@ -149,7 +159,7 @@ function Meeting() {
         player.pause();
       }
     },
-    [player],
+    [player]
   );
 
   const setPlayerRef = React.useCallback((player: MediaPlayerInstance) => {
@@ -250,36 +260,14 @@ function Meeting() {
                 <CardHeader className="flex items-center gap-4 p-4 border-b">
                   <div className="text-sm font-medium">ChatGPT</div>
                 </CardHeader>
-                <CardContent className="p-4 flex flex-col gap-4">
-                  <div className="flex items-start gap-4">
-                    <Avatar className="w-8 h-8 border">
-                      <AvatarImage src="/placeholder-user.jpg" />
-                      <AvatarFallback>YO</AvatarFallback>
-                    </Avatar>
-                    <div className="bg-muted rounded-lg p-3 max-w-[70%] text-sm">
-                      <p>Hi there!</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4 justify-end">
-                    <div className="bg-primary rounded-lg p-3 max-w-[70%] text-sm text-primary-foreground">
-                      <p>Hi! How can I assist you today?</p>
-                    </div>
-                    <Avatar className="w-8 h-8 border">
-                      <AvatarImage src="/placeholder-user.jpg" />
-                      <AvatarFallback>GPT</AvatarFallback>
-                    </Avatar>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <Avatar className="w-8 h-8 border">
-                      <AvatarImage src="/placeholder-user.jpg" />
-                      <AvatarFallback>YO</AvatarFallback>
-                    </Avatar>
-                    <div className="bg-muted rounded-lg p-3 max-w-[70%] text-sm">
-                      <p>I need help with...</p>
-                    </div>
-                  </div>
+                <CardContent className="p-4 flex flex-col gap-4 h-full overflow-auto">
+                  {/* <div className="overflow-auto"> */}
+                    {messages.map((message, index) => (
+                      <Message key={index} message={message} />
+                    ))}
+                  {/* </div> */}
 
-                  <div className="absolute left-0 bottom-0 w-full">
+                  <div className="sticky left-0 bottom-0 w-full">
                     <form className="relative p-2" onSubmit={handleChatSubmit}>
                       <Textarea
                         placeholder="Type your message..."
