@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { fetchBotDetails } from "../lib/fetchBotDetails";
+import { deleteMeeting } from "../db/queries";
 
 export const meeting = async (req: Request, res: Response) => {
   const botId = req.params.botId;
@@ -11,3 +12,11 @@ export const meeting = async (req: Request, res: Response) => {
 
   res.json(details);
 };
+
+export const deleteController = async (req: Request, res: Response) => {
+  const botId = req.params.botId;
+  const response = await deleteMeeting(parseInt(botId) || 0);
+  console.log('deleted', response);
+
+  res.json({ botId });
+}

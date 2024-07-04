@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import {
-//   CaretSortIcon,
+  //   CaretSortIcon,
   ChevronDownIcon,
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons";
@@ -27,7 +27,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-//   DropdownMenuSeparator,
+  //   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
@@ -42,8 +42,9 @@ import {
 
 import axios from "axios";
 import { Badge } from "./ui/badge";
-import { ExternalLinkIcon } from "lucide-react";
+import { CopyIcon, ExternalLinkIcon, TrashIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 export type Meeting = {
   id: string;
@@ -136,16 +137,19 @@ export const columns: (
                 <DotsHorizontalIcon className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+            <DropdownMenuContent align="end" className="space-y-1">
+              {/* <DropdownMenuLabel>Actions</DropdownMenuLabel> */}
               <DropdownMenuItem
                 onClick={() => navigator.clipboard.writeText(meeting.bot_id)}
               >
+                <CopyIcon className="mr-2 h-4 w-4" />
                 Copy Bot ID
               </DropdownMenuItem>
               <DropdownMenuItem
+                className="bg-red-500/30 text-red-500 focus:bg-red-500/50 focus:text-red-600"
                 onClick={() => deleteMeeting(meeting.id)}
               >
+                <TrashIcon className="mr-2 h-4 w-4" />
                 Delete
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -167,7 +171,7 @@ function MeetingTable() {
 
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState<Meeting[]>([]);
-  
+
   const table = useReactTable({
     data,
     columns: columns(deleteMeeting),
@@ -198,16 +202,18 @@ function MeetingTable() {
       console.error("error", error);
       setIsLoading(false);
     }
-  };
+  }
 
   async function deleteMeeting(botId: string) {
     try {
       await axios.delete(`/api/meeting/${botId}`);
       fetchData();
+
+      toast.success("Successfully deleted meeting.");
     } catch (error) {
       console.error("error", error);
     }
-  };
+  }
 
   React.useEffect(() => {
     fetchData();

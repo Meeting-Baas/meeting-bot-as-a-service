@@ -1,9 +1,13 @@
 import { db } from '.';
-import { desc, sql } from 'drizzle-orm';
-import { InsertMeeting, meetingsTable } from './schema';
+import { asc, between, count, desc, eq, getTableColumns, sql } from 'drizzle-orm';
+import { InsertMeeting, SelectMeeting, meetingsTable } from './schema';
 
 export async function createMeeting(data: InsertMeeting) {
   await db.insert(meetingsTable).values(data);
+}
+
+export async function deleteMeeting(id: SelectMeeting['id']) {
+  await db.delete(meetingsTable).where(eq(meetingsTable.id, id));
 }
 
 // export async function getMeetings(
@@ -46,5 +50,6 @@ export async function getMeetings(): Promise<
       attendees: meetingsTable.attendees,
       createdAt: meetingsTable.createdAt,
     })
-    .from(meetingsTable);
+    .from(meetingsTable)
+    .orderBy(desc(meetingsTable.createdAt));
 }
