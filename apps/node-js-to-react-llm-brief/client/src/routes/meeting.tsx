@@ -22,6 +22,7 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Editor from "@/components/editor";
 
 export type MeetingInfo = {
   data: {
@@ -217,7 +218,9 @@ function Meeting() {
             className={cn("flex w-full h-full")}
           >
             <ResizablePanel defaultSize={50} minSize={25}>
-              EditorJS / Novel Here
+              <Editor initialValue={null} onChange={(v) => {
+                console.log("editor changed", v);
+              }} />
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={25}>
