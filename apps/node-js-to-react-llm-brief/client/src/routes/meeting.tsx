@@ -126,16 +126,17 @@ function Meeting() {
   const handleChatSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    setMessages((prev) => [
-      ...prev,
-      { content: input, role: "user" },
-    ]);
+    const messagesList = [
+      ...messages,
+      { content: input, role: "user" }
+    ];
+    setMessages(messagesList);
     // setIsLoading(true);
 
     // axios handling
     try {
       const res = await axios.post("/api/chat", {
-        messages: messages,
+        messages: messagesList,
       });
 
       setMessages((prev) => [
