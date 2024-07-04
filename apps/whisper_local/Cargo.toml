@@ -1,0 +1,15 @@
+[package]
+name = "whisper_local"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+whisper-rs = { git = "https://github.com/tazz4843/whisper-rs.git", branch = "master" }
+anyhow = "1.0"
+reqwest = { version = "0.11", features = ["blocking"] }
+indicatif = "0.17"
+
+[package.metadata.whisper]
+download-base-url = "https://huggingface.co/ggerganov/whisper.cpp/resolve/main"
