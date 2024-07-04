@@ -125,6 +125,8 @@ function Meeting() {
 
   const handleChatSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    setInput("");
     setMessages((prev) => [
       ...prev, 
       { content: input, role: "user" }
@@ -137,7 +139,7 @@ function Meeting() {
 
       transcripts.forEach((transcript) => {
         let text: string = "";
-        transcript.words.forEach((word) => {
+        transcript.words.forEach((word: { text: string }) => {
           text += word.text + " ";
         });
         messagesList.push({ content: text, role: "user" });
@@ -297,6 +299,12 @@ function Meeting() {
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         className="min-h-[48px] rounded-2xl resize-none p-4 border shadow-sm"
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" && !e.shiftKey && "form" in e.target) {
+                            e.preventDefault();
+                            (e.target.form as HTMLFormElement).requestSubmit();
+                          }
+                        }}
                       />
                       <Button
                         type="submit"
