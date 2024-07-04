@@ -11,7 +11,17 @@ import {
 } from "@/components/ui/resizable";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowUpIcon } from "lucide-react";
+
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 export type MeetingInfo = {
   data: {
@@ -157,13 +167,13 @@ function Meeting() {
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
       <ResizablePanelGroup
-        className="flex min-h-[100dvh] py-6"
+        className="flex py-6 min-h-[85dvh]"
         direction={isDesktop ? "horizontal" : "vertical"}
       >
         <ResizablePanel defaultSize={50} minSize={25}>
           <ResizablePanelGroup
             direction="vertical"
-            className={cn("flex w-full min-h-[100 dvh]")}
+            className={cn("flex w-full h-full")}
           >
             <ResizablePanel defaultSize={55} minSize={25}>
               <div className="flex flex-1 h-full rounded-b-none overflow-hidden">
@@ -202,7 +212,64 @@ function Meeting() {
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={50} minSize={25}>
-          <p>Hello World</p>
+          <Card className="h-full w-full mx-auto rounded-none relative border-0 border-y border-r">
+            <CardHeader className="flex items-center gap-4 p-4 border-b">
+              <div className="text-sm font-medium">ChatGPT</div>
+            </CardHeader>
+            <CardContent className="p-4 flex flex-col gap-4 h-[calc(100%-7.125rem)]">
+              <div className="flex items-start gap-4">
+                <Avatar className="w-8 h-8 border">
+                  <AvatarImage src="/placeholder-user.jpg" />
+                  <AvatarFallback>YO</AvatarFallback>
+                </Avatar>
+                <div className="bg-muted rounded-lg p-3 max-w-[70%] text-sm">
+                  <p>Hi there!</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 justify-end">
+                <div className="bg-primary rounded-lg p-3 max-w-[70%] text-sm text-primary-foreground">
+                  <p>
+                    Hi! How can I assist you today?
+                  </p>
+                </div>
+                <Avatar className="w-8 h-8 border">
+                  <AvatarImage src="/placeholder-user.jpg" />
+                  <AvatarFallback>GPT</AvatarFallback>
+                </Avatar>
+              </div>
+              <div className="flex items-start gap-4">
+                <Avatar className="w-8 h-8 border">
+                  <AvatarImage src="/placeholder-user.jpg" />
+                  <AvatarFallback>YO</AvatarFallback>
+                </Avatar>
+                <div className="bg-muted rounded-lg p-3 max-w-[70%] text-sm">
+                  <p>
+                    I need help with...
+                  </p>
+                </div>
+              </div>
+
+              <div className="absolute left-0 bottom-0 w-full">
+                <div className="relative p-2">
+                  <Textarea
+                    placeholder="Type your message..."
+                    name="message"
+                    id="message"
+                    rows={1}
+                    className="min-h-[48px] rounded-2xl resize-none p-4 border shadow-sm"
+                  />
+                  <Button
+                    type="submit"
+                    size="icon"
+                    className="absolute w-8 h-8 top-[18px] right-5"
+                  >
+                    <ArrowUpIcon className="w-4 h-4" />
+                    <span className="sr-only">Send</span>
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
