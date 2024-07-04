@@ -26,7 +26,7 @@ import {
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
+  // DropdownMenuLabel,
   //   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -42,7 +42,7 @@ import {
 
 import axios from "axios";
 import { Badge } from "./ui/badge";
-import { CopyIcon, ExternalLinkIcon, TrashIcon } from "lucide-react";
+import { CopyIcon, EyeIcon, TrashIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
@@ -126,8 +126,8 @@ export const columns: (
       return (
         <div className="flex items-center justify-end gap-2">
           <Button size="icon" asChild className="h-8 w-8 p-0">
-            <Link to={`/meeting/${meeting.bot_id}`} target="_blank">
-              <ExternalLinkIcon className="w-4 h-4" />
+            <Link to={`/meeting/${meeting.bot_id}`}>
+              <EyeIcon className="w-4 h-4" />
             </Link>
           </Button>
           <DropdownMenu>

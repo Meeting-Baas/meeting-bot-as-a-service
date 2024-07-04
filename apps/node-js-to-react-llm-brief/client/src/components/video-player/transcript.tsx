@@ -42,7 +42,7 @@ const Transcript: React.FC<TranscriptProps> = ({
                     className="flex flex-col w-full user-select-none"
                     key={index}
                 >
-                    <h6 className="text-md font-bold">
+                    <h6 className="text-md font-bold px-0.5">
                         {entry.speaker}
                     </h6>
 

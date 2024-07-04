@@ -1,6 +1,6 @@
 import * as React from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Player as VideoPlayer } from "@/components/video-player/video-player";
 import Transcript from "@/components/video-player/transcript";
 import { MediaPlayerInstance } from "@vidstack/react";
@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/resizable";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
+import { ArrowLeft } from "lucide-react";
 
 export type MeetingInfo = {
   data: {
@@ -145,6 +146,10 @@ function Meeting() {
 
   return (
     <div className="p-8">
+      <Link to={`/meetings`} className="flex text-sm items-center py-2 gap-1 hover:text-muted-foreground">
+        <ArrowLeft /> 
+        <p>Back</p>
+      </Link>
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
@@ -168,7 +173,7 @@ function Meeting() {
         <ResizablePanel defaultSize={45} minSize={15}>
           <div className="flex-1 bg-background rounded-t-none sm:rounded-r-lg border p-6 md:p-8 space-y-2 min-h-full">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold">
+              <h2 className="text-2xl md:text-3xl font-bold px-0.5">
                 Meeting Transcript
               </h2>
               {/* <p className="text-muted-foreground">
@@ -176,7 +181,7 @@ function Meeting() {
             </p> */}
             </div>
             {isLoading && (
-              <div className="flex items-center justify-center w-full h-full">
+              <div className="flex items-center w-full h-full px-0.5">
                 Loading...
               </div>
             )}
