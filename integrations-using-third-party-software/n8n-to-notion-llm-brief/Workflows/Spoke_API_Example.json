@@ -52,7 +52,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.spoke.app/bots",
+        "url": "https://api.meetingbaas.com/bots",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [

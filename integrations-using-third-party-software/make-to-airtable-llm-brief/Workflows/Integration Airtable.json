@@ -281,7 +281,7 @@
             "mapper": {
                 "ca": "",
                 "qs": [],
-                "url": "https://api.spoke.app/bots",
+                "url": "https://api.meetingbaas.com/bots",
                 "data": "{\n           \"meeting_url\": \"{{3.`Meeting URL`}}\",\n           \"bot_name\": \"{{ifempty(3.`Meeting Bot Name`; \"Make Meeting Bot\")}}\",\n           \"bot_image\": \"{{3.`Meeting Bot Image`[].url}}https://www.make.com/assets/hq/img/make_logo_white.svg\",\n           \"entry_message\": \"{{ifempty(3.`Meeting Bot Entry Message`; \"Hello - recording this meeting\")}}\",\n           \"reserved\": false,\n           \"speech_to_text\": \"Gladia\"\n}",
                 "gzip": true,
                 "method": "post",
