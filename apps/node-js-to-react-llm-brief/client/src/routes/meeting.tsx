@@ -1,9 +1,9 @@
 import * as React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Player as VideoPlayer } from "@/components/spoke/video-player/video-player";
-import Transcript from "@/components/spoke/video-player/transcript";
-import { MediaPlayerInstance, PlayerSrc } from "@vidstack/react";
+import { Player as VideoPlayer } from "@/components/video-player/video-player";
+import Transcript from "@/components/video-player/transcript";
+import { MediaPlayerInstance } from "@vidstack/react";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -34,9 +34,6 @@ export type MeetingInfo = {
         };
       }
     ];
-    meeting: {
-      video_url: string;
-    };
     assets: [
       {
         mp4_s3_path: string;
@@ -70,9 +67,6 @@ function Meeting() {
           },
         },
       ],
-      meeting: {
-        video_url: "",
-      },
       assets: [
         {
           mp4_s3_path: "",
@@ -80,9 +74,6 @@ function Meeting() {
       ],
     },
   });
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [currentTime, setCurrentTime] = React.useState(0);
-
   const [transcripts, setTranscripts] = React.useState<any[]>([
     {
       speaker: "",
@@ -95,7 +86,11 @@ function Meeting() {
       ],
     },
   ]);
-  const [player, setPlayer] = React.useState<MediaPlayerInstance>(null);
+
+  const [player, setPlayer] = React.useState<MediaPlayerInstance>();
+  const [currentTime, setCurrentTime] = React.useState(0);
+
+  const [isLoading, setIsLoading] = React.useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)")
 
   const fetchData = async () => {
@@ -118,7 +113,9 @@ function Meeting() {
   const handleSeek = React.useCallback(
     (time: number) => {
       if (player) {
-        console.log(player);
+        console.log(time);
+        // todo: implement this
+        player.pause()
       }
     },
     [player]
