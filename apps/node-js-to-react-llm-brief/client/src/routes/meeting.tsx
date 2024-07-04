@@ -92,7 +92,7 @@ function Meeting() {
   const [currentTime, setCurrentTime] = React.useState(0);
 
   const [isLoading, setIsLoading] = React.useState(true);
-  const isDesktop = useMediaQuery("(min-width: 768px)")
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const fetchData = async () => {
     try {
@@ -116,7 +116,7 @@ function Meeting() {
       if (player) {
         console.log(time);
         // todo: implement this
-        player.pause()
+        player.pause();
       }
     },
     [player]
@@ -146,51 +146,63 @@ function Meeting() {
 
   return (
     <div className="p-8">
-      <Link to={`/meetings`} className="flex text-sm items-center py-2 gap-1 hover:text-muted-foreground">
-        <ArrowLeft /> 
+      <Link
+        to={`/meetings`}
+        className="flex text-sm items-center py-2 gap-1 hover:text-muted-foreground"
+      >
+        <ArrowLeft />
         <p>Back</p>
       </Link>
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
       <ResizablePanelGroup
+        className="flex min-h-[100dvh] py-6"
         direction={isDesktop ? "horizontal" : "vertical"}
-        className={cn("flex w-full mx-auto py-6 md:py-8", {
-          "min-h-[calc(85dvh)]": !isDesktop,
-        })}
       >
-        <ResizablePanel defaultSize={55} minSize={25}>
-          <div className="flex flex-1 h-full rounded-b-none sm:rounded-l-lg overflow-hidden">
-            <VideoPlayer
-              // src={data?.data.meeting.video_url}
-              src={"https://files.vidstack.io/sprite-fight/720p.mp4"}
-              onTimeUpdate={handleTimeUpdate}
-              setPlayer={setPlayerRef}
-            />
-          </div>
+        <ResizablePanel defaultSize={50} minSize={25}>
+          <ResizablePanelGroup
+            direction="vertical"
+            className={cn("flex w-full min-h-[100 dvh]")}
+          >
+            <ResizablePanel defaultSize={55} minSize={25}>
+              <div className="flex flex-1 h-full rounded-b-none overflow-hidden">
+                <VideoPlayer
+                  // src={data?.data.meeting.video_url}
+                  src={"https://files.vidstack.io/sprite-fight/720p.mp4"}
+                  onTimeUpdate={handleTimeUpdate}
+                  setPlayer={setPlayerRef}
+                />
+              </div>
+            </ResizablePanel>
+            <ResizableHandle withHandle />
+            <ResizablePanel defaultSize={45} minSize={15}>
+              <div className="flex-1 bg-background rounded-t-none border-y border-l p-6 md:p-8 space-y-2 min-h-full">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold px-0.5">
+                    Meeting Transcript
+                  </h2>
+                  {/* <p className="text-muted-foreground">
+                  A detailed transcript of the video meeting.
+                </p> */}
+                </div>
+                {isLoading && (
+                  <div className="flex items-center w-full h-full px-0.5">
+                    Loading...
+                  </div>
+                )}
+                <Transcript
+                  transcript={transcripts}
+                  currentTime={currentTime}
+                  onWordClick={handleSeek}
+                />
+              </div>
+            </ResizablePanel>
+          </ResizablePanelGroup>
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={45} minSize={15}>
-          <div className="flex-1 bg-background rounded-t-none sm:rounded-r-lg border p-6 md:p-8 space-y-2 min-h-full">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold px-0.5">
-                Meeting Transcript
-              </h2>
-              {/* <p className="text-muted-foreground">
-              A detailed transcript of the video meeting.
-            </p> */}
-            </div>
-            {isLoading && (
-              <div className="flex items-center w-full h-full px-0.5">
-                Loading...
-              </div>
-            )}
-          <Transcript
-              transcript={transcripts}
-              currentTime={currentTime}
-              onWordClick={handleSeek}
-            />
-          </div>
+        <ResizablePanel defaultSize={50} minSize={25}>
+          <p>Hello World</p>
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
