@@ -1,4 +1,8 @@
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { 
+    Avatar, 
+    // AvatarImage, 
+    AvatarFallback 
+} from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { BotMessageSquareIcon, UserIcon } from "lucide-react";
 
