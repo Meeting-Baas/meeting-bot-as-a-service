@@ -53,7 +53,9 @@ export type Meeting = {
   createdAt: Date;
 };
 
-export const columns: ColumnDef<Meeting>[] = [
+export const columns: (
+  deleteMeeting: (id: string) => void
+) => ColumnDef<Meeting>[] = (deleteMeeting) => [
   {
     id: "select",
     header: ({ table }) => (
@@ -95,7 +97,7 @@ export const columns: ColumnDef<Meeting>[] = [
       return (
         <div className="text-right font-medium flex gap-2">
           {attendees.map((attendee) => (
-            <Badge>{attendee}</Badge>
+            <Badge key={attendee}>{attendee}</Badge>
           ))}
         </div>
       );
@@ -105,11 +107,11 @@ export const columns: ColumnDef<Meeting>[] = [
     accessorKey: "createdAt",
     header: "Created At",
     cell: ({ row }) => {
-      const date = new Date(row.getValue("createdAt"))
+      const date = new Date(row.getValue("createdAt"));
       const formatted = new Intl.DateTimeFormat("en-US", {
-        dateStyle: 'short',
-        timeStyle: 'short',
-      }).format(date)
+        dateStyle: "short",
+        timeStyle: "short",
+      }).format(date);
 
       return <div className="font-medium">{formatted}</div>;
     },
@@ -141,6 +143,11 @@ export const columns: ColumnDef<Meeting>[] = [
               >
                 Copy Bot ID
               </DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => deleteMeeting(meeting.id)}
+              >
+                Delete
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -160,10 +167,10 @@ function MeetingTable() {
 
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState<Meeting[]>([]);
-
+  
   const table = useReactTable({
     data,
-    columns,
+    columns: columns(deleteMeeting, fetchData),
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),
@@ -180,7 +187,7 @@ function MeetingTable() {
     },
   });
 
-  const fetchData = async () => {
+  async function fetchData() {
     try {
       const res = await axios.get<Meeting[]>("/api/meetings");
 
@@ -190,6 +197,15 @@ function MeetingTable() {
     } catch (error) {
       console.error("error", error);
       setIsLoading(false);
+    }
+  };
+
+  async function deleteMeeting(botId: string) {
+    try {
+      await axios.delete(`/api/meeting/${botId}`);
+      fetchData();
+    } catch (error) {
+      console.error("error", error);
     }
   };
 
