@@ -1,8 +1,9 @@
-import React from "react";
-
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowUpIcon } from "lucide-react";
+import { 
+    // ArrowLeft, 
+    ArrowUpIcon 
+} from "lucide-react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -12,10 +13,10 @@ import { z } from "zod";
 import {
   Form,
   FormControl,
-  FormDescription,
+//   FormDescription,
   FormField,
   FormItem,
-  FormLabel,
+//   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "sonner";
@@ -29,7 +30,7 @@ export const formSchema = z.object({
 function ChatInput({
   handleSubmit,
 }: {
-  handleSubmit: (formData: FormData) => void;
+  handleSubmit: (values: z.infer<typeof formSchema>) => void;
 }) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
