@@ -29,8 +29,7 @@ interface PlayerProps {
 }
 
 export function Player({ setPlayer, src, onTimeUpdate }: PlayerProps) {
-  let player = useRef<MediaPlayerInstance>(null),
-    provider = useMediaProvider();
+  let player = useRef<MediaPlayerInstance>(null);
 
   useEffect(() => {
     // Subscribe to state updates.
@@ -58,8 +57,6 @@ export function Player({ setPlayer, src, onTimeUpdate }: PlayerProps) {
     detail: MediaCanPlayDetail,
     nativeEvent: MediaCanPlayEvent
   ) {
-    provider?.setCurrentTime(((82.59722 / 100) * 600));
-
     setPlayer(player.current!);
     // ...
   }
