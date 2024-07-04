@@ -1,11 +1,6 @@
 import dotenv from "dotenv";
 import path from 'path';
 
-// todo: make this dynamic
-dotenv.config({
-  path: path.resolve(__dirname, "..", "..", "..", ".env"),
-});
-
 import express, { Express, Request, Response } from "express";
 import { checkEnvironmentVariables, listDatabases } from "./lib/utils";
 
@@ -24,11 +19,19 @@ var root: string;
 var client: string;
 
 if (process.env?.NODE_ENV === "development") {
-  var root = path.resolve(__dirname, '..');
+  var root = path.resolve(__dirname, '..', '..');
   var client = path.resolve(root, 'client', 'dist');
+
+  dotenv.config({
+    path: path.resolve(root, ".env"),
+  });
 } else  {
   var root = path.resolve(__dirname, '..',  '..', '..');
   var client = path.resolve(root, 'client', 'dist');
+
+  dotenv.config({
+    path: path.resolve(root, ".env"),
+  });
 }
 
 // SANITY CHWECK

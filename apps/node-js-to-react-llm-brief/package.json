@@ -10,13 +10,11 @@
         "start": "npm run backend",
         "build": "npm run backend:build && npm run frontend:build",
         "dev": "npm run frontend:dev & npm run backend:dev",
-
         "backend": "cd api && npm start",
         "backend:build": "cd api && npm run build",
-        "backend:dev": "cd api && npm run dev",
-
+        "backend:dev": "cd api && cross-env NODE_ENV=development npm run dev",
         "frontend:build": "cd client && npm run build",
-        "frontend:dev": "cd client && npm run dev"
+        "frontend:dev": "cd client && cross-env NODE_ENV=development npm run dev"
     },
     "keywords": [],
     "author": "",
