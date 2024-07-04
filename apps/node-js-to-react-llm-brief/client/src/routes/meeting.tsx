@@ -19,10 +19,10 @@ import {
   CardContent,
   // CardFooter,
 } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import Editor from "@/components/editor";
 import Message from "@/components/chat/message";
+import ChatInput, { formSchema as chatSchema } from "@/components/chat/chat-input";
+import { z } from "zod";
 
 export type MeetingInfo = {
   data: {
@@ -102,7 +102,6 @@ function Meeting() {
   const [player, setPlayer] = React.useState<MediaPlayerInstance>();
   const [currentTime, setCurrentTime] = React.useState(0);
 
-  const [input, setInput] = React.useState("");
   const [messages, setMessages] = React.useState<
     { content: string; role: string }[]
   >([]);
@@ -123,13 +122,11 @@ function Meeting() {
     }
   };
 
-  const handleChatSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    setInput("");
+  const handleChatSubmit = async (values: z.infer<typeof chatSchema>) => {
+    const message = values.message;
     setMessages((prev) => [
       ...prev, 
-      { content: input, role: "user" }
+      { content: message, role: "user" }
     ]);
     // setIsLoading(true);
 
@@ -146,7 +143,7 @@ function Meeting() {
       });
 
       messagesList.push(...messages);
-      messagesList.push({ content: input, role: "user" })
+      messagesList.push({ content: message, role: "user" })
 
       const res = await axios.post("/api/chat", {
         messages: messagesList,
@@ -287,34 +284,7 @@ function Meeting() {
                   </div>
 
                   <div className="flex items-end flex-1">
-                    <form
-                      className="relative w-full"
-                      onSubmit={handleChatSubmit}
-                    >
-                      <Textarea
-                        placeholder="Type your message..."
-                        name="message"
-                        id="message"
-                        rows={1}
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        className="min-h-[48px] rounded-2xl resize-none p-4 border shadow-sm"
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" && !e.shiftKey && "form" in e.target) {
-                            e.preventDefault();
-                            (e.target.form as HTMLFormElement).requestSubmit();
-                          }
-                        }}
-                      />
-                      <Button
-                        type="submit"
-                        size="icon"
-                        className="absolute w-8 h-8 top-2.5 right-3"
-                      >
-                        <ArrowUpIcon className="w-4 h-4" />
-                        <span className="sr-only">Send</span>
-                      </Button>
-                    </form>
+                    <ChatInput handleSubmit={handleChatSubmit} />
                   </div>
                 </CardContent>
               </Card>
