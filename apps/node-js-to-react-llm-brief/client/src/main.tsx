@@ -4,6 +4,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+import "@/styles/prosemirror.css";
 import "@/styles/globals.css";
 
 import Root from "@/routes/root";
