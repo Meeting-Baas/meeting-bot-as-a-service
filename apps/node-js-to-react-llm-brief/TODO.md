@@ -4,3 +4,6 @@
 - [ ] Fix code highlighting
 - [ ] Fix image upload
 - [ ] Add ratelimitng openai
+- [ ] Use assistants rag
+- [ ] Store chat convos & text notes in db
+- [ ] Pull from two sources and respond with notion and meeting transcript
