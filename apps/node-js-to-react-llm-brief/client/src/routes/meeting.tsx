@@ -168,9 +168,8 @@ function Meeting() {
   const handleSeek = React.useCallback(
     (time: number) => {
       if (player) {
-        console.log(time);
-        // todo: implement this
-        player.pause();
+        // seek on click
+        player.currentTime = time;
       }
     },
     [player]
