@@ -28,6 +28,22 @@ import { z } from "zod";
 
 import data from "@/data/meeting.json";
 
+interface Word {
+  start_time: number;
+  end_time: number;
+  text: string;
+}
+
+interface Transcript {
+  id: number;
+  speaker: string;
+  video_id: number;
+  words: Word[];
+  original_words: never[];
+  google_lang: string;
+  matching: null | string;
+}
+
 export type PlayerInfo = {
   data: {
     id: string;
@@ -35,18 +51,7 @@ export type PlayerInfo = {
     editors: [
       {
         video: {
-          transcripts: [
-            {
-              speaker: string;
-              words: [
-                {
-                  start_time: number;
-                  end_time: number;
-                  text: string;
-                }
-              ];
-            }
-          ];
+          transcripts: Transcript[];
         };
       }
     ];
@@ -79,7 +84,7 @@ function Player() {
     { content: string; role: string }[]
   >([]);
 
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading,] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const handleChatSubmit = async (values: z.infer<typeof chatSchema>) => {
@@ -136,7 +141,7 @@ function Player() {
   React.useEffect(() => {
     if (data?.data.editors.length > 0) {
       const editors = data?.data.editors;
-      const transcripts: PlayerInfo["data"]["editors"][0]["video"]["transcripts"][0][] =
+      const transcripts: { speaker: string; words: Word[] }[] =
         [];
       editors.forEach((editor) => {
         transcripts.push(...editor.video.transcripts);
