@@ -28,7 +28,7 @@ import { z } from "zod";
 
 import data from "@/data/meeting.json";
 
-export type MeetingInfo = {
+export type PlayerInfo = {
   data: {
     id: string;
     name: string;
@@ -58,7 +58,7 @@ export type MeetingInfo = {
   };
 };
 
-function Meeting() {
+function Player() {
   const [transcripts, setTranscripts] = React.useState<any[]>([
     {
       speaker: "",
@@ -136,7 +136,7 @@ function Meeting() {
   React.useEffect(() => {
     if (data?.data.editors.length > 0) {
       const editors = data?.data.editors;
-      const transcripts: MeetingInfo["data"]["editors"][0]["video"]["transcripts"][0][] =
+      const transcripts: PlayerInfo["data"]["editors"][0]["video"]["transcripts"][0][] =
         [];
       editors.forEach((editor) => {
         transcripts.push(...editor.video.transcripts);
@@ -249,4 +249,4 @@ function Meeting() {
   );
 }
 
-export default Meeting;
+export default Player;

@@ -6,7 +6,7 @@ import "@/styles/prosemirror.css";
 import "@/styles/globals.css";
 
 import Root from "@/routes/root";
-import Meeting from "@/routes/meeting";
+import Player from "@/routes/player";
 import NotFound from "@/routes/not-found";
 
 import { Toaster } from "@/components/ui/sonner";
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/player",
-    element: <Meeting />,
+    element: <Player />,
   },
   {
     path: "*",
