@@ -240,7 +240,7 @@ function Meeting() {
                 </p> */}
                 </div>
                 {isLoading && (
-                  <div className="flex items-center w-full h-full px-0.5">
+                  <div className="flex px-0.5">
                     Loading...
                   </div>
                 )}
