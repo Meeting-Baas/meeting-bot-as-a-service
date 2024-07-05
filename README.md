@@ -1,4 +1,4 @@
-# Meeting Baas 🐟 Integration Examples
+# 🐟 Meeting Baas 🐟 Integration Examples
 ![Header](./GithubPreview.png)
 
 Using [Meeting Baas' API](https://meetingbaas.com/) and open-source examples, this repository contains programs that either:
