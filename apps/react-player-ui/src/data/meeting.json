@@ -1,0 +1,397 @@
+{
+  "data": {
+    "id": "",
+    "name": "",
+    "editors": [
+      {
+        "video": {
+          "transcripts": [
+            {
+              "id": 25897144,
+              "speaker": "Anirudh Sriram",
+              "video_id": 25730322,
+              "words": [
+                {
+                  "id": 1345995288,
+                  "text": "Hello,",
+                  "start_time": 0.5600000000000014,
+                  "end_time": 1.12,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995289,
+                  "text": "testing",
+                  "start_time": 1.26,
+                  "end_time": 1.76,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995290,
+                  "text": "1,",
+                  "start_time": 1.76,
+                  "end_time": 2.16,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995291,
+                  "text": "2,",
+                  "start_time": 2.28,
+                  "end_time": 2.52,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995292,
+                  "text": "3,",
+                  "start_time": 2.54,
+                  "end_time": 2.9,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995293,
+                  "text": "um,",
+                  "start_time": 3.1,
+                  "end_time": 3.6,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995294,
+                  "text": "testing",
+                  "start_time": 3.7,
+                  "end_time": 4.24,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995295,
+                  "text": "1,",
+                  "start_time": 4.24,
+                  "end_time": 4.6,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995296,
+                  "text": "2,",
+                  "start_time": 4.72,
+                  "end_time": 4.92,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995297,
+                  "text": "3,",
+                  "start_time": 4.92,
+                  "end_time": 5.26,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995298,
+                  "text": "uh,",
+                  "start_time": 5.32,
+                  "end_time": 6.16,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995299,
+                  "text": "like",
+                  "start_time": 6.4,
+                  "end_time": 7.22,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995300,
+                  "text": "react",
+                  "start_time": 7.22,
+                  "end_time": 7.78,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995301,
+                  "text": "LLM",
+                  "start_time": 7.78,
+                  "end_time": 8.56,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995302,
+                  "text": "brief,",
+                  "start_time": 8.56,
+                  "end_time": 8.92,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995303,
+                  "text": "um,",
+                  "start_time": 9.2,
+                  "end_time": 9.56,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995304,
+                  "text": "testing",
+                  "start_time": 9.72,
+                  "end_time": 10.98,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995305,
+                  "text": "1,",
+                  "start_time": 10.98,
+                  "end_time": 11.22,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995306,
+                  "text": "2,",
+                  "start_time": 11.28,
+                  "end_time": 11.4,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995307,
+                  "text": "3,",
+                  "start_time": 11.42,
+                  "end_time": 11.72,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995308,
+                  "text": "testing",
+                  "start_time": 11.74,
+                  "end_time": 12.7,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995309,
+                  "text": "1,",
+                  "start_time": 12.7,
+                  "end_time": 13.08,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995310,
+                  "text": "2,",
+                  "start_time": 13.16,
+                  "end_time": 13.34,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995311,
+                  "text": "3,",
+                  "start_time": 13.34,
+                  "end_time": 13.6,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995312,
+                  "text": "something,",
+                  "start_time": 13.62,
+                  "end_time": 14.08,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995313,
+                  "text": "something",
+                  "start_time": 14.2,
+                  "end_time": 14.54,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995314,
+                  "text": "interesting,",
+                  "start_time": 14.54,
+                  "end_time": 15.04,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995315,
+                  "text": "next",
+                  "start_time": 15.38,
+                  "end_time": 15.62,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995316,
+                  "text": "JS,",
+                  "start_time": 15.62,
+                  "end_time": 15.94,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995317,
+                  "text": "BAS,",
+                  "start_time": 16.22,
+                  "end_time": 17.08,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995318,
+                  "text": "uh,",
+                  "start_time": 17.3,
+                  "end_time": 17.5,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995319,
+                  "text": "meeting",
+                  "start_time": 17.7,
+                  "end_time": 18,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995320,
+                  "text": "BAS,",
+                  "start_time": 18,
+                  "end_time": 18.72,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995321,
+                  "text": "uh,",
+                  "start_time": 18.74,
+                  "end_time": 18.92,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995322,
+                  "text": "LLM,",
+                  "start_time": 19.1,
+                  "end_time": 19.98,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995323,
+                  "text": "GPD,",
+                  "start_time": 19.98,
+                  "end_time": 20.7,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995324,
+                  "text": "something,",
+                  "start_time": 20.86,
+                  "end_time": 21.5,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995325,
+                  "text": "cool,",
+                  "start_time": 21.74,
+                  "end_time": 22.4,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995326,
+                  "text": "okay,",
+                  "start_time": 22.52,
+                  "end_time": 23.06,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995327,
+                  "text": "that's",
+                  "start_time": 23.16,
+                  "end_time": 23.64,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995328,
+                  "text": "it,",
+                  "start_time": 23.64,
+                  "end_time": 23.88,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995329,
+                  "text": "that's",
+                  "start_time": 23.88,
+                  "end_time": 24.2,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995330,
+                  "text": "enough,",
+                  "start_time": 24.2,
+                  "end_time": 24.48,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995331,
+                  "text": "okay,",
+                  "start_time": 24.58,
+                  "end_time": 24.9,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995332,
+                  "text": "cool,",
+                  "start_time": 24.94,
+                  "end_time": 25.28,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                },
+                {
+                  "id": 1345995333,
+                  "text": "bye.",
+                  "start_time": 25.42,
+                  "end_time": 25.74,
+                  "transcript_id": 25897144,
+                  "video_id": 25730322
+                }
+              ],
+              "original_words": [],
+              "google_lang": "",
+              "matching": null
+            }
+          ]
+        }
+      }
+    ],
+    "assets": [
+      {
+        "mp4_s3_path": "https://files.vidstack.io/sprite-fight/720p.mp4"
+      }
+    ]
+  }
+}
