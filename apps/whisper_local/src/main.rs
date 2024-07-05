@@ -32,7 +32,24 @@ fn main() -> Result<()> {
         download_model().context("Failed to download model")?;
     }
 
-    let params = FullParams::new(SamplingStrategy::Greedy { best_of: 1 });
+    let mut params = FullParams::new(SamplingStrategy::BeamSearch {
+        beam_size: 5,
+        patience: 1.0,
+    });
+
+    params.set_n_max_text_ctx(16384);  // Equivalent to setting a large context size
+    params.set_translate(false);
+    params.set_language(Some("auto"));
+    params.set_temperature(0.0);
+    // params.set_best_of(5);
+    params.set_suppress_blank(true);
+    params.set_suppress_non_speech_tokens(true);
+    // params.set_condition_on_previous_text(false);
+    params.set_temperature_inc(0.2);
+    // params.set_compression_ratio_threshold(2.4);
+    // params.set_logprob_threshold(-1.0);
+    // params.set_no_speech_threshold(0.6);
+    // params.set_word_timestamps(true);
 
 
     println!("🎙️ Ready for transcription!");
