@@ -210,6 +210,7 @@ function Meeting() {
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
       <ResizablePanelGroup
+        // 50+50+50+50 = 200
         className="flex py-6 min-h-[200dvh] lg:min-h-[85dvh]"
         direction={isDesktop ? "horizontal" : "vertical"}
       >
