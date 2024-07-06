@@ -22,7 +22,7 @@ import {
 import { toast } from "sonner";
 
 export const formSchema = z.object({
-  message: z.string().min(2, {
+  message: z.string().trim().min(2, {
     message: "Message must be at least 2 characters.",
   }),
 });
