@@ -22,8 +22,8 @@ async fn submit_meeting(payload: MeetingPayload) -> Result<MeetingResponse, Stri
     let client = Client::new();
     let mut request = client
         // .post("http://localhost:3001/bots/join")
-        .post("http://127.0.0.1:3001/bots/join")
-        // .post("https://api.meetingbaas.com/bots")
+        // .post("http://127.0.0.1:3001/bots/join")
+        .post("https://api.meetingbaas.com/bots")
         .header("Content-Type", "application/json");
 
     if let Some(api_key) = payload.api_key.clone() {
