@@ -4,7 +4,7 @@ This tutorial will guide you through setting up a tiny desktop app that can send
 
 Combined with a system to harmonize the collected notes (through your own software, Notion,....) it allows you to record desired meetings at scale by sharing a small app.
 
-This simple example sends a bot to a meeting on Zoom, Google Meet or Microsoft Teams using your Meeting Bass 🐟 API key.
+This simple example sends a bot to a meeting on Zoom, Google Meet or Microsoft Teams using your Meeting Baas 🐟 API key.
 Of course, you may re-use this example to other ends (including commercial).
 
 The app is built with Tauri and Rust and weighs 4.5MB.
@@ -14,13 +14,13 @@ Feel free to rename the app, change default values, ...
 ## Features
 
 - Light-weight cross-platform desktop application (Windows, macOS, Linux)
-- Integration with the Meeting Bass 🐟 API
+- Integration with the Meeting Baas 🐟 API
 - A simple form to input meeting details and send a bot to join a meeting
 
 ## Prerequisites
 
 - Rust and Cargo installed on your machine
-- Meeting Bass API key (You can obtain a free API key at [https://meetingbass.com](https://meetingbass.com))
+- Meeting Baas API key (You can obtain a free API key at [https://meetingbaas.com](https://meetingbaas.com))
 
 ## Step 1: Cloning the Repository
 
@@ -57,8 +57,8 @@ You can rename the app, redistribute it and also change the default environment 
 
 To change the app icon, change this file to an icns file with your icon: `icons/icon.icns`.
 To rename the app identifier, modify the following lines in `./src-tauri/tauri.conf.json`:
-`"productName": "meeting-to-desktop-app-with-code", `
-` "title": "meeting-to-desktop-app-with-code",`
+`"productName": "Meeting Baas", `
+` "title": "Meeting Baas",`
 `... `
 `"identifier": "com.Spoke.app",`
 `"identifier": "com.Spoke.app",`

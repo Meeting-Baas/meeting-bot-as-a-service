@@ -54,7 +54,7 @@ async fn main() {
     tauri::Builder::default()
         .setup(|app| {
             let window = app.get_window("main").unwrap();
-            window.set_title("🐟  Meeting Bass  🐟").unwrap();
+            window.set_title("🐟  Meeting Baas  🐟").unwrap();
 
             // Make the window resizable
             window.set_resizable(true).unwrap();
