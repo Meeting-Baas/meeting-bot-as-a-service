@@ -210,7 +210,7 @@ function Meeting() {
       {/* url={data?.data.assets[0].mp4_s3_path} */}
       {/* data?.data.editors[0].video.transcripts */}
       <ResizablePanelGroup
-        className="flex py-6 min-h-[85dvh]"
+        className="flex py-6 min-h-[200dvh] lg:min-h-[85dvh]"
         direction={isDesktop ? "horizontal" : "vertical"}
       >
         <ResizablePanel defaultSize={50} minSize={25}>
@@ -219,7 +219,7 @@ function Meeting() {
             className={cn("flex w-full h-full")}
           >
             <ResizablePanel defaultSize={50} minSize={25}>
-              <div className="flex flex-1 h-full rounded-b-none overflow-hidden">
+              <div className="flex flex-1 h-full rounded-b-none overflow-hidden border-0 border-t border-x lg:border-0 lg:border-t lg:border-l">
                 <VideoPlayer
                   // src={data?.data.meeting.video_url}
                   src={"https://files.vidstack.io/sprite-fight/720p.mp4"}
@@ -230,7 +230,7 @@ function Meeting() {
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={15}>
-              <div className="flex-1 bg-background rounded-t-none border-y border-l p-4 md:p-6 space-y-2 max-h-full h-full overflow-auto">
+              <div className="flex-1 bg-background rounded-t-none border-0 border-x lg:border-0 lg:border-l p-4 md:p-6 space-y-2 max-h-full h-full overflow-auto">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold px-0.5">
                     Meeting Transcript
@@ -269,7 +269,7 @@ function Meeting() {
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={25}>
-              <Card className="h-full w-full mx-auto rounded-none relative border-0 border-b border-r flex flex-col">
+              <Card className="h-full w-full mx-auto rounded-none relative border-0 border-x lg:border-0 lg:border-r flex flex-col">
                 <CardHeader className="flex items-center gap-4 p-4 border-b">
                   <div className="text-sm font-medium">ChatGPT</div>
                 </CardHeader>
