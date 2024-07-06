@@ -1,8 +1,10 @@
+import * as React from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { 
     // ArrowLeft, 
-    ArrowUpIcon 
+    ArrowUpIcon, 
+    LoaderCircleIcon
 } from "lucide-react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -27,11 +29,14 @@ export const formSchema = z.object({
   }),
 });
 
+interface ChatInputProps {
+  handleSubmit: (values: z.infer<typeof formSchema>) => void;
+}
+
 function ChatInput({
   handleSubmit,
-}: {
-  handleSubmit: (values: z.infer<typeof formSchema>) => void;
-}) {
+}: ChatInputProps) {
+  const [isLoading, setIsLoading] = React.useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,15 +46,17 @@ function ChatInput({
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      handleSubmit(values);
+      setIsLoading(true);
+      await handleSubmit(values);
 
+      setIsLoading(false);
       form.reset({ message: "" });
-      toast.success("Message sent successfully");
     } catch (error) {
       console.error("Error sending message:", error);
 
+      setIsLoading(false);
       form.reset({ message: "" });
-      toast.error("Failed to send message");
+      toast.error("Ooops! Something went wrong. Please try again.");
     }
   }
 
@@ -76,6 +83,7 @@ function ChatInput({
                       (e.target.form as HTMLFormElement).requestSubmit();
                     }
                   }}
+                  disabled={isLoading}
                   {...field}
                 />
               </FormControl>
@@ -87,8 +95,13 @@ function ChatInput({
           type="submit"
           size="icon"
           className="absolute w-8 h-8 top-2.5 right-3"
+          disabled={isLoading}
         >
-          <ArrowUpIcon className="w-4 h-4" />
+          {isLoading ? (
+            <LoaderCircleIcon className="h-4 w-4 animate-spin" />
+          ) : (
+            <ArrowUpIcon className="w-4 h-4" />
+          )}
           <span className="sr-only">Send</span>
         </Button>
       </form>

@@ -10,6 +10,9 @@ export const meeting = async (req: Request, res: Response) => {
     apiKey: process.env.BASS_API_KEY || "",
   });
 
+  if ("error" in details) {
+    return res.status(500).json(details);
+  }
   res.json(details);
 };
 

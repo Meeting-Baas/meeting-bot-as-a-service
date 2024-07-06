@@ -11,21 +11,16 @@ import {
 } from "@/components/ui/resizable";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
-import { 
-  ArrowLeft, 
-  // ArrowUpIcon 
+import {
+  ArrowLeft,
+  // ArrowUpIcon
 } from "lucide-react";
 
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  // CardFooter,
-} from "@/components/ui/card";
 import Editor from "@/components/editor";
-import Message from "@/components/chat/message";
-import ChatInput, { formSchema as chatSchema } from "@/components/chat/chat-input";
+import { formSchema as chatSchema } from "@/components/chat/chat-input";
 import { z } from "zod";
+import { toast } from "sonner";
+import Chat, { Message } from "@/components/chat";
 
 export type MeetingInfo = {
   data: {
@@ -105,11 +100,9 @@ function Meeting() {
   const [player, setPlayer] = React.useState<MediaPlayerInstance>();
   const [currentTime, setCurrentTime] = React.useState(0);
 
-  const [messages, setMessages] = React.useState<
-    { content: string; role: string }[]
-  >([]);
-
+  const [messages, setMessages] = React.useState<Message[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
+
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const fetchData = async () => {
@@ -121,16 +114,14 @@ function Meeting() {
       setIsLoading(false);
     } catch (error) {
       console.error("error", error);
+      toast.error("Failed to fetch meeting data");
       setIsLoading(false);
     }
   };
 
   const handleChatSubmit = async (values: z.infer<typeof chatSchema>) => {
     const message = values.message;
-    setMessages((prev) => [
-      ...prev, 
-      { content: message, role: "user" }
-    ]);
+    setMessages((prev) => [...prev, { content: message, role: "user" }]);
     // setIsLoading(true);
 
     // axios handling
@@ -146,7 +137,7 @@ function Meeting() {
       });
 
       messagesList.push(...messages);
-      messagesList.push({ content: message, role: "user" })
+      messagesList.push({ content: message, role: "user" });
 
       const res = await axios.post("/api/chat", {
         messages: messagesList,
@@ -207,10 +198,7 @@ function Meeting() {
         <p>Back</p>
       </Link>
       <h1 className="text-2xl font-bold">Viewing Meeting - {botId}</h1>
-      {/* url={data?.data.assets[0].mp4_s3_path} */}
-      {/* data?.data.editors[0].video.transcripts */}
       <ResizablePanelGroup
-        // 50+50+50+50 = 200
         className="flex py-6 min-h-[200dvh] lg:min-h-[85dvh]"
         direction={isDesktop ? "horizontal" : "vertical"}
       >
@@ -240,11 +228,7 @@ function Meeting() {
                   A detailed transcript of the video meeting.
                 </p> */}
                 </div>
-                {isLoading && (
-                  <div className="flex px-0.5">
-                    Loading...
-                  </div>
-                )}
+                {isLoading && <div className="flex px-0.5">Loading...</div>}
                 <Transcript
                   transcript={transcripts}
                   currentTime={currentTime}
@@ -270,27 +254,7 @@ function Meeting() {
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={25}>
-              <Card className="h-full w-full mx-auto rounded-none relative border-0 border-x border-b lg:border-0 lg:border-b lg:border-r flex flex-col">
-                <CardHeader className="flex items-center gap-4 p-4 border-b">
-                  <div className="text-sm font-medium">ChatGPT</div>
-                </CardHeader>
-                <CardContent className="p-4 flex flex-col gap-4 overflow-auto h-full">
-                  <div className="overflow-auto h-full flex flex-col gap-4">
-                    {messages.length === 0 && (
-                      <div className="text-muted-foreground text-center flex w-full h-full items-center justify-center">
-                        Start a conversation with ChatGPT
-                      </div>
-                    )}
-                    {messages.map((message, index) => (
-                      <Message key={index} message={message} />
-                    ))}
-                  </div>
-
-                  <div className="flex items-end flex-1">
-                    <ChatInput handleSubmit={handleChatSubmit} />
-                  </div>
-                </CardContent>
-              </Card>
+              <Chat messages={messages} handleSubmit={handleChatSubmit} />
             </ResizablePanel>
           </ResizablePanelGroup>
         </ResizablePanel>

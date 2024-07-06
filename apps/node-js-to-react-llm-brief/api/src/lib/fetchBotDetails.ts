@@ -24,7 +24,7 @@ export async function fetchBotDetails({ botId, apiKey }: BotDetailsParams) {
     console.log(`Bot details fetched, with id: ${response.data?.id}`);
     return { data: response.data };
   } catch (error: any) {
-    console.error("Error joining meeting:", error);
+    console.error("Error fetching meeting:", error);
     return { error: error.message || "Unknown error" };
   }
 }
