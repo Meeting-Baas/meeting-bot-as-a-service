@@ -214,7 +214,7 @@ function Meeting() {
         className="flex py-6 min-h-[200dvh] lg:min-h-[85dvh]"
         direction={isDesktop ? "horizontal" : "vertical"}
       >
-        <ResizablePanel defaultSize={50} minSize={25}>
+        <ResizablePanel defaultSize={100} minSize={25}>
           <ResizablePanelGroup
             direction="vertical"
             className={cn("flex w-full h-full")}
@@ -255,7 +255,7 @@ function Meeting() {
           </ResizablePanelGroup>
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={50} minSize={25}>
+        <ResizablePanel defaultSize={100} minSize={25}>
           <ResizablePanelGroup
             direction="vertical"
             className={cn("flex w-full h-full")}
