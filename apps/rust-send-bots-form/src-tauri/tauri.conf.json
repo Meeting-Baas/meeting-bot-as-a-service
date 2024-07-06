@@ -7,7 +7,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "meeting-to-desktop-app-with-code",
+    "productName": "Meeting Baas",
     "version": "0.1.0"
   },
   "tauri": {
@@ -53,7 +53,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "meeting-to-desktop-app-with-code",
+        "title": "Meeting Baas",
         "width": 800
       }
     ]
