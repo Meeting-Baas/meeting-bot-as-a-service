@@ -1,8 +1,8 @@
 import * as React from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-import { Player as VideoPlayer } from "@/components/video-player/video-player";
-import Transcript from "@/components/video-player/transcript";
+import { Player as VideoPlayer } from "@/components/video-player";
+import Transcript from "@/components/transcript";
 import { MediaPlayerInstance } from "@vidstack/react";
 import {
   ResizableHandle,
@@ -210,8 +210,8 @@ function Meeting() {
             <ResizablePanel defaultSize={50} minSize={25}>
               <div className="flex flex-1 h-full rounded-b-none overflow-hidden border-0 border-t border-x border-b lg:border-0 lg:border-b lg:border-t lg:border-l">
                 <VideoPlayer
-                  // src={data?.data.meeting.video_url}
-                  src={"https://files.vidstack.io/sprite-fight/720p.mp4"}
+                  src={data?.data?.assets[0]?.mp4_s3_path || "https://files.vidstack.io/sprite-fight/720p.mp4"}
+                  // src={}
                   onTimeUpdate={handleTimeUpdate}
                   setPlayer={setPlayerRef}
                 />
