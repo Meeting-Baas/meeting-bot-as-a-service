@@ -184,8 +184,8 @@ function Meeting() {
   }, []);
 
   React.useEffect(() => {
-    if (data?.data.editors.length > 0) {
-      const editors = data?.data.editors;
+    if (data?.data?.editors?.length > 0) {
+      const editors = data.data.editors;
       const transcripts: MeetingInfo["data"]["editors"][0]["video"]["transcripts"][0][] =
         [];
       editors.forEach((editor) => {
