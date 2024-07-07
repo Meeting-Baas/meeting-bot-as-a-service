@@ -1,5 +1,5 @@
 [package]
-name = "Meeting Baas"
+name = "MeetingBaas"
 version = "0.1.0"
 edition = "2021"
 
@@ -10,6 +10,7 @@ edition = "2021"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 tauri = { version = "1.6.8", features = ["api-all"] }
+
 
 
 reqwest = { version = "0.12", features = ["json"] }
