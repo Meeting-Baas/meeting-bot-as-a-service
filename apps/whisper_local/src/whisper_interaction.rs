@@ -59,7 +59,7 @@ fn create_full_params() -> FullParams<'static, 'static> {
     //    beam_size: 5,
     //    patience: 1.0,
     //});
-    
+
     params.set_n_threads(62);
     params.set_translate(true);
     params.set_language(Some("en"));
@@ -68,9 +68,9 @@ fn create_full_params() -> FullParams<'static, 'static> {
     params.set_print_realtime(true);
     params.set_print_timestamps(false);
     params.set_token_timestamps(true);
-    
+
     // params.set_n_max_text_ctx(16384);
-    params.set_n_max_text_ctx(32768);  // Increase context size
+    params.set_n_max_text_ctx(32768); // Increase context size
     params.set_suppress_blank(true);
     params.set_suppress_non_speech_tokens(true);
     params.set_temperature(0.0);
@@ -78,7 +78,6 @@ fn create_full_params() -> FullParams<'static, 'static> {
 
     params
 }
-
 
 // Loads and converts audio samples from a WAV file
 fn load_audio_samples(file_path: &str) -> Result<Vec<f32>> {
@@ -117,7 +116,10 @@ fn transcribe_audio(ctx: &WhisperContext, params: FullParams, audio_samples: &[f
 }
 
 fn download_model() -> Result<()> {
-    let url = format!("https://huggingface.co/ggerganov/whisper.cpp/resolve/main/{}", MODEL_NAME);
+    let url = format!(
+        "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/{}",
+        MODEL_NAME
+    );
     let client = Client::new();
     let mut res = client.get(&url).send()?;
     let total_size = res.content_length().unwrap_or(0);
@@ -133,7 +135,9 @@ fn download_model() -> Result<()> {
 
     let mut buffer = [0; 8192]; // 8KB buffer
     while let Ok(size) = res.read(&mut buffer) {
-        if size == 0 { break; }
+        if size == 0 {
+            break;
+        }
         file.write_all(&buffer[..size])?;
         downloaded += size as u64;
         pb.set_position(downloaded);
