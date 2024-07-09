@@ -1,4 +1,4 @@
-cd ../../
+cd ~
 rm -rf baas-examples-internal
 git clone https://github.com/Lazare-42/baas-examples-internal
 rm -rf baas-examples-internal/*
