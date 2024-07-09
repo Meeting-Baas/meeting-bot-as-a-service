@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
-import { Player as VideoPlayer } from "@/components/video-player/video-player";
-import Transcript from "@/components/video-player/transcript";
+import { Link, useParams } from "react-router-dom";
+import { Player as VideoPlayer } from "@/components/video-player";
+import Transcript from "@/components/transcript";
 import { MediaPlayerInstance } from "@vidstack/react";
 import {
   ResizableHandle,
@@ -10,21 +10,16 @@ import {
 } from "@/components/ui/resizable";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
-import { 
-  ArrowLeft, 
-  // ArrowUpIcon 
+import {
+  ArrowLeft,
+  // ArrowUpIcon
 } from "lucide-react";
 
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  // CardFooter,
-} from "@/components/ui/card";
 import Editor from "@/components/editor";
-import Message from "@/components/chat/message";
-import ChatInput, { formSchema as chatSchema } from "@/components/chat/chat-input";
+import { formSchema as chatSchema } from "@/components/chat/chat-input";
 import { z } from "zod";
+import { toast } from "sonner";
+import Chat, { Message } from "@/components/chat";
 
 import data from "@/data/meeting.json";
 
@@ -80,19 +75,14 @@ function Player() {
   const [player, setPlayer] = React.useState<MediaPlayerInstance>();
   const [currentTime, setCurrentTime] = React.useState(0);
 
-  const [messages, setMessages] = React.useState<
-    { content: string; role: string }[]
-  >([]);
+  const [messages, setMessages] = React.useState<Message[]>([]);
+  const [isLoading, setIsLoading] = React.useState(false);
 
-  const [isLoading,] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const handleChatSubmit = async (values: z.infer<typeof chatSchema>) => {
     const message = values.message;
-    setMessages((prev) => [
-      ...prev, 
-      { content: message, role: "user" }
-    ]);
+    setMessages((prev) => [...prev, { content: message, role: "user" }]);
     // setIsLoading(true);
 
     // axios handling
@@ -108,7 +98,7 @@ function Player() {
       });
 
       messagesList.push(...messages);
-      messagesList.push({ content: message, role: "user" })
+      messagesList.push({ content: message, role: "user" });
 
       setMessages((prev) => [
         ...prev,
@@ -126,9 +116,8 @@ function Player() {
   const handleSeek = React.useCallback(
     (time: number) => {
       if (player) {
-        console.log(time);
-        // todo: implement this
-        player.pause();
+        // seek on click
+        player.currentTime = time;
       }
     },
     [player]
@@ -139,8 +128,8 @@ function Player() {
   }, []);
 
   React.useEffect(() => {
-    if (data?.data.editors.length > 0) {
-      const editors = data?.data.editors;
+    if (data?.data?.editors?.length > 0) {
+      const editors = data.data.editors;
       const transcripts: { speaker: string; words: Word[] }[] =
         [];
       editors.forEach((editor) => {
@@ -162,23 +151,20 @@ function Player() {
         <p>Back</p>
       </Link>
       <h1 className="text-2xl font-bold">Video Player</h1>
-      {/* url={data?.data.assets[0].mp4_s3_path} */}
-      {/* data?.data.editors[0].video.transcripts */}
       <ResizablePanelGroup
-        className="flex py-6 min-h-[85dvh]"
+        className="flex py-6 min-h-[200dvh] lg:min-h-[85dvh]"
         direction={isDesktop ? "horizontal" : "vertical"}
       >
-        <ResizablePanel defaultSize={50} minSize={25}>
+        <ResizablePanel defaultSize={100} minSize={25}>
           <ResizablePanelGroup
             direction="vertical"
             className={cn("flex w-full h-full")}
           >
             <ResizablePanel defaultSize={50} minSize={25}>
-              <div className="flex flex-1 h-full rounded-b-none overflow-hidden">
+              <div className="flex flex-1 h-full rounded-b-none overflow-hidden border-0 border-t border-x border-b lg:border-0 lg:border-b lg:border-t lg:border-l">
                 <VideoPlayer
-                  // src={data?.data.meeting.video_url}
-                  // src={"https://files.vidstack.io/sprite-fight/720p.mp4"}
-                  src={data?.data.assets[0].mp4_s3_path}
+                  src={data?.data?.assets[0]?.mp4_s3_path || "https://files.vidstack.io/sprite-fight/720p.mp4"}
+                  // src={}
                   onTimeUpdate={handleTimeUpdate}
                   setPlayer={setPlayerRef}
                 />
@@ -186,7 +172,7 @@ function Player() {
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={15}>
-              <div className="flex-1 bg-background rounded-t-none border-y border-l p-4 md:p-6 space-y-2 max-h-full h-full overflow-auto">
+              <div className="flex-1 bg-background rounded-t-none border-0 border-x lg:border-0 lg:border-b lg:border-l p-4 md:p-6 space-y-2 max-h-full h-full overflow-auto">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold px-0.5">
                     Meeting Transcript
@@ -195,11 +181,7 @@ function Player() {
                   A detailed transcript of the video meeting.
                 </p> */}
                 </div>
-                {isLoading && (
-                  <div className="flex items-center w-full h-full px-0.5">
-                    Loading...
-                  </div>
-                )}
+                {isLoading && <div className="flex px-0.5">Loading...</div>}
                 <Transcript
                   transcript={transcripts}
                   currentTime={currentTime}
@@ -210,7 +192,7 @@ function Player() {
           </ResizablePanelGroup>
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={50} minSize={25}>
+        <ResizablePanel defaultSize={100} minSize={25}>
           <ResizablePanelGroup
             direction="vertical"
             className={cn("flex w-full h-full")}
@@ -225,27 +207,7 @@ function Player() {
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={25}>
-              <Card className="h-full w-full mx-auto rounded-none relative border-0 border-b border-r flex flex-col">
-                <CardHeader className="flex items-center gap-4 p-4 border-b">
-                  <div className="text-sm font-medium">ChatGPT</div>
-                </CardHeader>
-                <CardContent className="p-4 flex flex-col gap-4 overflow-auto h-full">
-                  <div className="overflow-auto h-full flex flex-col gap-4">
-                    {messages.length === 0 && (
-                      <div className="text-muted-foreground text-center flex w-full h-full items-center justify-center">
-                        Start a conversation with ChatGPT
-                      </div>
-                    )}
-                    {messages.map((message, index) => (
-                      <Message key={index} message={message} />
-                    ))}
-                  </div>
-
-                  <div className="flex items-end flex-1">
-                    <ChatInput handleSubmit={handleChatSubmit} />
-                  </div>
-                </CardContent>
-              </Card>
+              <Chat messages={messages} handleSubmit={handleChatSubmit} />
             </ResizablePanel>
           </ResizablePanelGroup>
         </ResizablePanel>
