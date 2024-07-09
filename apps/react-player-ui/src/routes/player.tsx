@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Player as VideoPlayer } from "@/components/video-player";
 import Transcript from "@/components/transcript";
 import { MediaPlayerInstance } from "@vidstack/react";
@@ -18,7 +18,6 @@ import {
 import Editor from "@/components/editor";
 import { formSchema as chatSchema } from "@/components/chat/chat-input";
 import { z } from "zod";
-import { toast } from "sonner";
 import Chat, { Message } from "@/components/chat";
 
 import data from "@/data/meeting.json";
@@ -76,7 +75,7 @@ function Player() {
   const [currentTime, setCurrentTime] = React.useState(0);
 
   const [messages, setMessages] = React.useState<Message[]>([]);
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading,] = React.useState(false);
 
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
