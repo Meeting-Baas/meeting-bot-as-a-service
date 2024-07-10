@@ -6,6 +6,7 @@ import { Card } from './components/Card'
 import Editor from './components/Editor'
 import Transcript from './components/Transcript'
 import { VideoPlayer } from './components/VideoPlayer'
+import videoExample from './fakeData/customer_service_480x360.mp4'
 import jsonData from './fakeData/fakedata.json'
 import { VideoData } from './type'
 
@@ -84,7 +85,7 @@ const App: React.FC = () => {
                 gap="4"
             >
                 <VideoPlayer
-                    url={videoData.data.mp4}
+                    url={videoExample}
                     onTimeUpdate={handleTimeUpdate}
                     setPlayerRef={setPlayerRef}
                 />

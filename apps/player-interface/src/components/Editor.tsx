@@ -3,7 +3,9 @@ import React, { useEffect, useRef } from 'react'
 import { Flex } from '@chakra-ui/react'
 import EditorJS from '@editorjs/editorjs'
 import Header from '@editorjs/header'
+// @ts-ignore
 import List from '@editorjs/list'
+// @ts-ignore
 import Paragraph from '@editorjs/paragraph'
 
 interface EditorProps {
@@ -38,7 +40,7 @@ const Editor: React.FC<EditorProps> = ({ data, onChange }) => {
             if (editorRef.current && editorRef.current.destroy) {
                 editorRef.current
                     .destroy()
-                    .catch((e) => console.error('Error destroying editor:', e))
+                  
             }
         }
     }, [])

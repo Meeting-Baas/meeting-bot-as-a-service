@@ -1,4055 +1,2405 @@
 {
-    "event": "complete",
     "data": {
-        "bot_id": "cf8d2cf0-15bc-488d-8d3b-477b1de6294a",
+        "bot_id": "616267",
+        "mp4": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "speakers": ["Sarah", "speaker 0"],
         "transcript": [
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 0.86,
-                        "end": 1.04,
-                        "word": "va"
+                        "end": 5.26574,
+                        "start": 4.96271,
+                        "word": "Customer"
                     },
                     {
-                        "start": 1.04,
-                        "end": 1.16,
-                        "word": "un"
-                    },
-                    {
-                        "start": 1.16,
-                        "end": 1.32,
-                        "word": "truc"
-                    },
-                    {
-                        "start": 1.32,
-                        "end": 3.58,
-                        "word": "et"
-                    },
-                    {
-                        "start": 3.58,
-                        "end": 3.82,
-                        "word": "j"
-                    },
-                    {
-                        "start": 3.82,
-                        "end": 3.92,
-                        "word": "'ai"
-                    },
-                    {
-                        "start": 3.92,
-                        "end": 3.94,
-                        "word": "une"
-                    },
-                    {
-                        "start": 3.94,
-                        "end": 4.22,
-                        "word": "question"
-                    },
-                    {
-                        "start": 4.22,
-                        "end": 4.44,
-                        "word": "là"
-                    },
-                    {
-                        "start": 4.44,
-                        "end": 4.66,
-                        "word": "par"
-                    },
-                    {
-                        "start": 4.66,
-                        "end": 4.98,
-                        "word": "rapport"
-                    },
-                    {
-                        "start": 4.98,
-                        "end": 7.44,
-                        "word": "au"
-                    },
-                    {
-                        "start": 7.44,
-                        "end": 18.18,
-                        "word": "web"
-                    },
-                    {
-                        "start": 18.18,
-                        "end": 18.36,
-                        "word": "ou"
-                    },
-                    {
-                        "start": 18.36,
-                        "end": 18.68,
-                        "word": "là"
+                        "end": 5.750590000000001,
+                        "start": 5.30614,
+                        "word": "service."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 30.800000000000004,
-                        "end": 31.200000000000003,
-                        "word": "pour"
+                        "end": 6.2946800000000005,
+                        "start": 6.05307,
+                        "word": "Hi,"
                     },
                     {
-                        "start": 31.200000000000003,
-                        "end": 31.6,
-                        "word": "les"
+                        "end": 6.757770000000001,
+                        "start": 6.576560000000001,
+                        "word": "yeah,"
                     },
                     {
-                        "start": 31.6,
-                        "end": 32,
-                        "word": "webbooks"
+                        "end": 7.1604600000000005,
+                        "start": 7.03965,
+                        "word": "I'm"
                     },
                     {
-                        "start": 32.5,
-                        "end": 32.9,
-                        "word": "toi"
+                        "end": 7.744350000000001,
+                        "start": 7.34166,
+                        "word": "calling"
                     },
                     {
-                        "start": 32.9,
-                        "end": 33.08,
-                        "word": "tu"
+                        "end": 8.16717,
+                        "start": 7.84502,
+                        "word": "because"
                     },
                     {
-                        "start": 33.08,
-                        "end": 33.2,
-                        "word": "m"
+                        "end": 8.30811,
+                        "start": 8.16717,
+                        "word": "there's"
                     },
                     {
-                        "start": 33.2,
-                        "end": 33.22,
-                        "word": "'as"
+                        "end": 8.52958,
+                        "start": 8.328240000000001,
+                        "word": "something"
                     },
                     {
-                        "start": 33.22,
-                        "end": 33.54,
-                        "word": "expliqué"
+                        "end": 8.67052,
+                        "start": 8.54972,
+                        "word": "wrong"
                     },
                     {
-                        "start": 33.54,
-                        "end": 33.68,
-                        "word": "que"
+                        "end": 8.751059999999999,
+                        "start": 8.67052,
+                        "word": "with"
                     },
                     {
-                        "start": 33.68,
-                        "end": 33.76,
-                        "word": "si"
+                        "end": 8.79133,
+                        "start": 8.751059999999999,
+                        "word": "my"
                     },
                     {
-                        "start": 33.76,
-                        "end": 33.94,
-                        "word": "jamais"
-                    },
-                    {
-                        "start": 33.94,
-                        "end": 34.14,
-                        "word": "le"
-                    },
-                    {
-                        "start": 34.14,
-                        "end": 34.3,
-                        "word": "truc"
-                    },
-                    {
-                        "start": 34.3,
-                        "end": 34.52,
-                        "word": "était"
-                    },
-                    {
-                        "start": 34.52,
-                        "end": 34.86,
-                        "word": "down"
-                    },
-                    {
-                        "start": 34.86,
-                        "end": 35.04,
-                        "word": "il"
-                    },
-                    {
-                        "start": 35.04,
-                        "end": 35.24,
-                        "word": "fallait"
-                    },
-                    {
-                        "start": 35.24,
-                        "end": 35.38,
-                        "word": "que"
-                    },
-                    {
-                        "start": 35.38,
-                        "end": 35.5,
-                        "word": "tous"
-                    },
-                    {
-                        "start": 35.5,
-                        "end": 35.56,
-                        "word": "les"
-                    },
-                    {
-                        "start": 35.56,
-                        "end": 35.88,
-                        "word": "webbooks"
-                    },
-                    {
-                        "start": 35.88,
-                        "end": 36.48,
-                        "word": "reprennent"
-                    },
-                    {
-                        "start": 36.48,
-                        "end": 36.68,
-                        "word": "c"
-                    },
-                    {
-                        "start": 36.68,
-                        "end": 37.62,
-                        "word": "'est"
-                    },
-                    {
-                        "start": 37.62,
-                        "end": 37.68,
-                        "word": "ça"
-                    },
-                    {
-                        "start": 38.3,
-                        "end": 38.7,
-                        "word": "ouais"
+                        "end": 8.892,
+                        "start": 8.79133,
+                        "word": "phone."
                     }
                 ]
             },
             {
-                "speaker": "Vincent COMBEY",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 40.26,
-                        "end": 40.66,
-                        "word": "ouais"
+                        "end": 9.57887,
+                        "start": 9.27584,
+                        "word": "Customer"
+                    },
+                    {
+                        "end": 10.32634,
+                        "start": 9.67988,
+                        "word": "service."
+                    },
+                    {
+                        "end": 10.81119,
+                        "start": 10.629370000000002,
+                        "word": "Hello?"
+                    },
+                    {
+                        "end": 11.45387,
+                        "start": 11.29334,
+                        "word": "Yeah,"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 42,
-                        "end": 42.4,
-                        "word": "et"
+                        "end": 12.01575,
+                        "start": 11.81508,
+                        "word": "hi,"
                     },
                     {
-                        "start": 42.4,
-                        "end": 42.8,
-                        "word": "Mika"
+                        "end": 12.49735,
+                        "start": 12.37695,
+                        "word": "I'm"
                     },
                     {
-                        "start": 42.8,
-                        "end": 43.16,
-                        "word": "il"
+                        "end": 13.019089999999998,
+                        "start": 12.63782,
+                        "word": "calling"
                     },
                     {
-                        "start": 43.16,
-                        "end": 43.42,
-                        "word": "fait"
+                        "end": 13.34016,
+                        "start": 13.07929,
+                        "word": "because"
                     },
                     {
-                        "start": 43.42,
-                        "end": 43.54,
-                        "word": "un"
+                        "end": 13.48063,
+                        "start": 13.34016,
+                        "word": "there's"
                     },
                     {
-                        "start": 43.54,
-                        "end": 43.96,
-                        "word": "truc"
+                        "end": 13.70136,
+                        "start": 13.500699999999998,
+                        "word": "something"
                     },
                     {
-                        "start": 43.96,
-                        "end": 44.28,
-                        "word": "je"
+                        "end": 14.06257,
+                        "start": 13.8017,
+                        "word": "wrong"
                     },
                     {
-                        "start": 44.28,
-                        "end": 44.48,
-                        "word": "sais"
+                        "end": 14.2231,
+                        "start": 14.1027,
+                        "word": "with"
                     },
                     {
-                        "start": 44.48,
-                        "end": 44.66,
-                        "word": "pas"
+                        "end": 14.40371,
+                        "start": 14.2833,
+                        "word": "my"
                     },
                     {
-                        "start": 44.66,
-                        "end": 44.78,
-                        "word": "si"
+                        "end": 14.86524,
+                        "start": 14.52411,
+                        "word": "phone."
                     },
                     {
-                        "start": 44.78,
-                        "end": 44.86,
-                        "word": "c"
+                        "end": 15.60772,
+                        "start": 15.48732,
+                        "word": "My"
                     },
                     {
-                        "start": 44.86,
-                        "end": 44.86,
-                        "word": "'est"
+                        "end": 16.00906,
+                        "start": 15.66792,
+                        "word": "text"
                     },
                     {
-                        "start": 44.86,
-                        "end": 45.06,
-                        "word": "lié"
+                        "end": 16.22979,
+                        "start": 16.06926,
+                        "word": "won't"
                     },
                     {
-                        "start": 45.06,
-                        "end": 45.16,
-                        "word": "à"
-                    },
-                    {
-                        "start": 45.16,
-                        "end": 45.36,
-                        "word": "ça"
+                        "end": 16.5308,
+                        "start": 16.26993,
+                        "word": "send."
                     }
                 ]
             },
             {
-                "speaker": "Vincent COMBEY",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 54.16,
-                        "end": 54.599999999999994,
-                        "word": "est"
+                        "end": 18.18493,
+                        "start": 17.05362,
+                        "word": "Mm-hmm."
+                    },
+                    {
+                        "end": 18.46776,
+                        "start": 18.22533,
+                        "word": "Okay."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 54.599999999999994,
-                        "end": 55.04,
-                        "word": "-ce"
+                        "end": 19.45766,
+                        "start": 19.17483,
+                        "word": "Um,"
                     },
                     {
-                        "start": 55.04,
-                        "end": 55.1,
-                        "word": "que"
+                        "end": 20.16473,
+                        "start": 20.02331,
+                        "word": "can"
                     },
                     {
-                        "start": 55.1,
-                        "end": 55.24,
-                        "word": "vous"
+                        "end": 20.28594,
+                        "start": 20.16473,
+                        "word": "you"
                     },
                     {
-                        "start": 55.24,
-                        "end": 55.54,
-                        "word": "trouvez"
+                        "end": 20.71018,
+                        "start": 20.58897,
+                        "word": "help"
                     },
                     {
-                        "start": 55.54,
-                        "end": 55.7,
-                        "word": "ça"
+                        "end": 20.79099,
+                        "start": 20.71018,
+                        "word": "me"
                     },
                     {
-                        "start": 55.7,
-                        "end": 56.12,
-                        "word": "normal"
+                        "end": 20.8516,
+                        "start": 20.77079,
+                        "word": "fix"
                     },
                     {
-                        "start": 59.06,
-                        "end": 59.5,
-                        "word": "et"
-                    },
-                    {
-                        "start": 59.5,
-                        "end": 59.92,
-                        "word": "après"
-                    },
-                    {
-                        "start": 59.92,
-                        "end": 60.12,
-                        "word": "mais"
-                    },
-                    {
-                        "start": 60.12,
-                        "end": 60.26,
-                        "word": "c"
-                    },
-                    {
-                        "start": 60.26,
-                        "end": 60.96,
-                        "word": "'est"
-                    },
-                    {
-                        "start": 60.96,
-                        "end": 61.32,
-                        "word": "toujours"
-                    },
-                    {
-                        "start": 61.32,
-                        "end": 62.94,
-                        "word": "exécuté"
-                    },
-                    {
-                        "start": 62.94,
-                        "end": 63,
-                        "word": "à"
-                    },
-                    {
-                        "start": 63,
-                        "end": 63.04,
-                        "word": "la"
-                    },
-                    {
-                        "start": 63.04,
-                        "end": 63.28,
-                        "word": "fin"
-                    },
-                    {
-                        "start": 63.28,
-                        "end": 63.46,
-                        "word": "non"
-                    },
-                    {
-                        "start": 63.46,
-                        "end": 64.3,
-                        "word": "c"
-                    },
-                    {
-                        "start": 64.3,
-                        "end": 64.54,
-                        "word": "'est"
-                    },
-                    {
-                        "start": 64.54,
-                        "end": 64.58,
-                        "word": "une"
-                    },
-                    {
-                        "start": 64.58,
-                        "end": 64.8,
-                        "word": "question"
-                    },
-                    {
-                        "start": 64.8,
-                        "end": 65.02,
-                        "word": "qu"
-                    },
-                    {
-                        "start": 65.02,
-                        "end": 65.04,
-                        "word": "'il"
-                    },
-                    {
-                        "start": 65.04,
-                        "end": 65.24,
-                        "word": "pose"
-                    },
-                    {
-                        "start": 66.58,
-                        "end": 67.02,
-                        "word": "oui"
+                        "end": 20.892,
+                        "start": 20.8516,
+                        "word": "it?"
                     }
                 ]
             },
             {
-                "speaker": "Vincent COMBEY",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 70.26,
-                        "end": 70.7,
-                        "word": "partage"
+                        "end": 22.01952,
+                        "start": 21.77791,
+                        "word": "Yeah,"
                     },
                     {
-                        "start": 70.7,
-                        "end": 70.82,
-                        "word": "ton"
+                        "end": 22.07992,
+                        "start": 22.01952,
+                        "word": "I'm"
                     },
                     {
-                        "start": 70.82,
-                        "end": 71.18,
-                        "word": "écran"
+                        "end": 22.22086,
+                        "start": 22.07992,
+                        "word": "gonna"
                     },
                     {
-                        "start": 71.18,
-                        "end": 71.36,
-                        "word": "parce"
+                        "end": 22.4222,
+                        "start": 22.26113,
+                        "word": "need"
                     },
                     {
-                        "start": 71.36,
-                        "end": 71.54,
-                        "word": "que"
+                        "end": 22.54301,
+                        "start": 22.4222,
+                        "word": "your"
                     },
                     {
-                        "start": 71.54,
-                        "end": 71.76,
-                        "word": "là"
+                        "end": 22.82489,
+                        "start": 22.56314,
+                        "word": "name"
+                    },
+                    {
+                        "end": 23.26784,
+                        "start": 23.14703,
+                        "word": "and"
+                    },
+                    {
+                        "end": 23.36851,
+                        "start": 23.2477,
+                        "word": "your"
+                    },
+                    {
+                        "end": 23.56985,
+                        "start": 23.38864,
+                        "word": "phone"
+                    },
+                    {
+                        "end": 23.77119,
+                        "start": 23.58999,
+                        "word": "number,"
+                    },
+                    {
+                        "end": 23.892,
+                        "start": 23.77119,
+                        "word": "please."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 74.34,
-                        "end": 74.74000000000001,
-                        "word": "ouais"
+                        "end": 24.15374,
+                        "start": 23.99267,
+                        "word": "Yeah,"
                     },
                     {
-                        "start": 74.74000000000001,
-                        "end": 75.14,
-                        "word": "mais"
+                        "end": 24.37522,
+                        "start": 24.15374,
+                        "word": "it's"
                     },
                     {
-                        "start": 75.14,
-                        "end": 76.34,
-                        "word": "t"
+                        "end": 24.85844,
+                        "start": 24.39536,
+                        "word": "Sarah."
                     },
                     {
-                        "start": 76.34,
-                        "end": 76.44,
-                        "word": "'as"
+                        "end": 25.3618,
+                        "start": 25.20072,
+                        "word": "And"
                     },
                     {
-                        "start": 76.44,
-                        "end": 76.74,
-                        "word": "quitté"
+                        "end": 25.74435,
+                        "start": 25.52287,
+                        "word": "why"
                     },
                     {
-                        "start": 76.74,
-                        "end": 76.94,
-                        "word": "en"
+                        "end": 25.90542,
+                        "start": 25.78462,
+                        "word": "do"
                     },
                     {
-                        "start": 76.94,
-                        "end": 77.1,
-                        "word": "fait"
+                        "end": 26.0665,
+                        "start": 25.94569,
+                        "word": "you"
                     },
                     {
-                        "start": 77.1,
-                        "end": 77.3,
-                        "word": "c"
+                        "end": 26.34838,
+                        "start": 26.1873,
+                        "word": "need"
                     },
                     {
-                        "start": 77.3,
-                        "end": 77.38,
-                        "word": "'est"
+                        "end": 26.46918,
+                        "start": 26.34838,
+                        "word": "my"
                     },
                     {
-                        "start": 77.38,
-                        "end": 77.38,
-                        "word": "pour"
-                    },
-                    {
-                        "start": 77.38,
-                        "end": 77.5,
-                        "word": "ça"
-                    },
-                    {
-                        "start": 77.5,
-                        "end": 77.66,
-                        "word": "que"
-                    },
-                    {
-                        "start": 77.66,
-                        "end": 77.72,
-                        "word": "tu"
-                    },
-                    {
-                        "start": 77.72,
-                        "end": 77.72,
-                        "word": "as"
-                    },
-                    {
-                        "start": 77.72,
-                        "end": 77.88,
-                        "word": "pu"
-                    },
-                    {
-                        "start": 77.88,
-                        "end": 78,
-                        "word": "m"
-                    },
-                    {
-                        "start": 78,
-                        "end": 78.2,
-                        "word": "'inscrire"
-                    },
-                    {
-                        "start": 78.2,
-                        "end": 79.26,
-                        "word": "ouais"
-                    },
-                    {
-                        "start": 84.64000000000001,
-                        "end": 85.04,
-                        "word": "et"
+                        "end": 26.79133,
+                        "start": 26.52958,
+                        "word": "number?"
                     }
                 ]
             },
             {
-                "speaker": "Vincent COMBEY",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 96.16,
-                        "end": 97.08,
-                        "word": "Et"
+                        "end": 27.39705,
+                        "start": 27.15463,
+                        "word": "Yeah,"
                     },
                     {
-                        "start": 97.08,
-                        "end": 97.28,
-                        "word": "c"
+                        "end": 27.45766,
+                        "start": 27.39705,
+                        "word": "I'm"
                     },
                     {
-                        "start": 97.28,
-                        "end": 97.48,
-                        "word": "'est"
+                        "end": 27.57887,
+                        "start": 27.45766,
+                        "word": "gonna"
                     },
                     {
-                        "start": 97.48,
-                        "end": 97.52,
-                        "word": "quoi"
+                        "end": 27.74048,
+                        "start": 27.61927,
+                        "word": "need"
                     },
                     {
-                        "start": 97.52,
-                        "end": 97.9,
-                        "word": "ça"
+                        "end": 27.8617,
+                        "start": 27.74048,
+                        "word": "your"
                     },
                     {
-                        "start": 97.9,
-                        "end": 98.02,
-                        "word": "?"
+                        "end": 28.14453,
+                        "start": 27.8819,
+                        "word": "number."
                     },
                     {
-                        "start": 98.02,
-                        "end": 98.64,
-                        "word": "API"
+                        "end": 28.79099,
+                        "start": 28.58897,
+                        "word": "Um..."
                     },
                     {
-                        "start": 98.64,
-                        "end": 100.02,
-                        "word": ".retryWeb."
+                        "end": 30.00475,
+                        "start": 29.78259,
+                        "word": "Just"
                     },
                     {
-                        "start": 103.02,
-                        "end": 103.94,
-                        "word": "Info"
+                        "end": 30.26729,
+                        "start": 30.10573,
+                        "word": "come"
                     },
                     {
-                        "start": 103.94,
-                        "end": 104.5,
-                        "word": ".ro"
+                        "end": 30.34808,
+                        "start": 30.26729,
+                        "word": "and"
                     },
                     {
-                        "start": 104.5,
-                        "end": 105.42,
-                        "word": ".original."
+                        "end": 30.46925,
+                        "start": 30.34808,
+                        "word": "read"
                     },
                     {
-                        "start": 116.52,
-                        "end": 116.9,
-                        "word": "Ah"
+                        "end": 30.55004,
+                        "start": 30.46925,
+                        "word": "your"
                     },
                     {
-                        "start": 116.9,
-                        "end": 117.08,
-                        "word": "bah"
+                        "end": 30.752,
+                        "start": 30.55004,
+                        "word": "number."
+                    }
+                ]
+            },
+            {
+                "speaker": "Sarah",
+                "words": [
+                    {
+                        "end": 31.14277,
+                        "start": 31.01354,
+                        "word": "Sure."
+                    }
+                ]
+            },
+            {
+                "speaker": "speaker 0",
+                "words": [
+                    {
+                        "end": 31.75277,
+                        "start": 31.53212,
+                        "word": "It's"
                     },
                     {
-                        "start": 117.08,
-                        "end": 117.26,
-                        "word": "oui"
+                        "end": 38.272,
+                        "start": 31.97342,
+                        "word": "555-21-555-218."
                     },
                     {
-                        "start": 118.82,
-                        "end": 119.2,
-                        "word": "ça"
+                        "end": 38.744,
+                        "start": 38.555,
+                        "word": "Okay,"
                     },
                     {
-                        "start": 119.2,
-                        "end": 119.58,
-                        "word": "devrait"
+                        "end": 38.891000000000005,
+                        "start": 38.765,
+                        "word": "okay."
                     },
                     {
-                        "start": 119.58,
-                        "end": 119.8,
-                        "word": "être"
+                        "end": 39.12133,
+                        "start": 38.972,
+                        "word": "Calm"
                     },
                     {
-                        "start": 119.8,
-                        "end": 119.9,
-                        "word": "un"
+                        "end": 39.24933,
+                        "start": 39.12133,
+                        "word": "down."
+                    }
+                ]
+            },
+            {
+                "speaker": "Sarah",
+                "words": [
+                    {
+                        "end": 42.14853,
+                        "start": 40.61597,
+                        "word": "218-182."
+                    }
+                ]
+            },
+            {
+                "speaker": "speaker 0",
+                "words": [
+                    {
+                        "end": 43.14026,
+                        "start": 42.976780000000005,
+                        "word": "Stop"
                     },
                     {
-                        "start": 119.9,
-                        "end": 120.18,
-                        "word": "catch"
+                        "end": 43.34461,
+                        "start": 43.18113,
+                        "word": "going"
                     },
                     {
-                        "start": 120.18,
-                        "end": 120.62,
-                        "word": "plutôt"
+                        "end": 43.46722,
+                        "start": 43.34461,
+                        "word": "so"
                     },
                     {
-                        "start": 120.62,
-                        "end": 120.86,
-                        "word": "qu"
+                        "end": 43.692,
+                        "start": 43.50809,
+                        "word": "fast."
                     },
                     {
-                        "start": 120.86,
-                        "end": 120.92,
-                        "word": "'un"
+                        "end": 45.00486,
+                        "start": 44.83343,
+                        "word": "Got"
                     },
                     {
-                        "start": 120.92,
-                        "end": 122.52,
-                        "word": "finali"
+                        "end": 45.112,
+                        "start": 45.00486,
+                        "word": "it."
                     },
                     {
-                        "start": 128.70000000000002,
-                        "end": 129.08,
-                        "word": "Non"
+                        "end": 45.34367,
+                        "start": 45.21367,
+                        "word": "Got"
                     },
                     {
-                        "start": 129.08,
-                        "end": 129.44,
-                        "word": "ça"
+                        "end": 45.452,
+                        "start": 45.34367,
+                        "word": "it."
+                    }
+                ]
+            },
+            {
+                "speaker": "Sarah",
+                "words": [
+                    {
+                        "end": 47.394549999999995,
+                        "start": 47.09152,
+                        "word": "Okay,"
                     },
                     {
-                        "start": 129.44,
-                        "end": 129.54,
+                        "end": 47.67737,
+                        "start": 47.47535,
+                        "word": "now"
+                    },
+                    {
+                        "end": 47.919799999999995,
+                        "start": 47.73798,
+                        "word": "what?"
+                    }
+                ]
+            },
+            {
+                "speaker": "speaker 0",
+                "words": [
+                    {
+                        "end": 48.970299999999995,
+                        "start": 48.72788,
+                        "word": "Sarah,"
+                    },
+                    {
+                        "end": 49.07131,
+                        "start": 48.970299999999995,
+                        "word": "are"
+                    },
+                    {
+                        "end": 49.17232,
+                        "start": 49.07131,
+                        "word": "you"
+                    },
+                    {
+                        "end": 49.53596,
+                        "start": 49.19253,
+                        "word": "married?"
+                    }
+                ]
+            },
+            {
+                "speaker": "Sarah",
+                "words": [
+                    {
+                        "end": 50.49102,
+                        "start": 50.36857,
+                        "word": "No."
+                    }
+                ]
+            },
+            {
+                "speaker": "speaker 0",
+                "words": [
+                    {
+                        "end": 51.450199999999995,
+                        "start": 51.28694,
+                        "word": "Okay,"
+                    },
+                    {
+                        "end": 51.531839999999995,
+                        "start": 51.450199999999995,
+                        "word": "do"
+                    },
+                    {
+                        "end": 51.593059999999994,
+                        "start": 51.531839999999995,
+                        "word": "you"
+                    },
+                    {
+                        "end": 51.715509999999995,
+                        "start": 51.593059999999994,
+                        "word": "have"
+                    },
+                    {
+                        "end": 51.73592,
+                        "start": 51.715509999999995,
                         "word": "a"
                     },
                     {
-                        "start": 129.54,
-                        "end": 129.7,
-                        "word": "pas"
+                        "end": 51.94,
+                        "start": 51.73592,
+                        "word": "boyfriend?"
                     },
                     {
-                        "start": 129.7,
-                        "end": 129.8,
-                        "word": "de"
-                    },
-                    {
-                        "start": 129.8,
-                        "end": 129.96,
-                        "word": "rapport"
-                    },
-                    {
-                        "start": 129.96,
-                        "end": 130.16,
-                        "word": "ce"
-                    },
-                    {
-                        "start": 130.16,
-                        "end": 130.26,
-                        "word": "que"
-                    },
-                    {
-                        "start": 130.26,
-                        "end": 130.38,
-                        "word": "tu"
-                    },
-                    {
-                        "start": 130.38,
-                        "end": 130.62,
-                        "word": "dis"
-                    },
-                    {
-                        "start": 130.62,
-                        "end": 131.2,
-                        "word": "Philippe,"
-                    },
-                    {
-                        "start": 131.2,
-                        "end": 131.62,
-                        "word": "là"
-                    },
-                    {
-                        "start": 131.62,
-                        "end": 131.8,
-                        "word": "c"
-                    },
-                    {
-                        "start": 131.8,
-                        "end": 131.84,
-                        "word": "'est"
-                    },
-                    {
-                        "start": 131.84,
-                        "end": 131.9,
-                        "word": "le"
-                    },
-                    {
-                        "start": 131.9,
-                        "end": 132.12,
-                        "word": "quad"
-                    },
-                    {
-                        "start": 132.12,
-                        "end": 132.26,
-                        "word": "en"
-                    },
-                    {
-                        "start": 132.26,
-                        "end": 132.5,
-                        "word": "fond"
-                    },
-                    {
-                        "start": 133.18,
-                        "end": 133.56,
-                        "word": "donc"
-                    },
-                    {
-                        "start": 133.56,
-                        "end": 133.64,
-                        "word": "c"
-                    },
-                    {
-                        "start": 133.64,
-                        "end": 133.74,
-                        "word": "'est"
-                    },
-                    {
-                        "start": 133.74,
-                        "end": 133.88,
-                        "word": "juste"
-                    },
-                    {
-                        "start": 133.88,
-                        "end": 134.04,
-                        "word": "ça"
-                    },
-                    {
-                        "start": 134.04,
-                        "end": 134.3,
-                        "word": "devrait"
-                    },
-                    {
-                        "start": 134.3,
-                        "end": 134.48,
-                        "word": "être"
-                    },
-                    {
-                        "start": 134.48,
-                        "end": 134.58,
-                        "word": "un"
-                    },
-                    {
-                        "start": 134.58,
-                        "end": 134.8,
-                        "word": "catch"
-                    },
-                    {
-                        "start": 134.8,
-                        "end": 135.1,
-                        "word": "plutôt"
-                    },
-                    {
-                        "start": 135.1,
-                        "end": 135.3,
-                        "word": "qu"
-                    },
-                    {
-                        "start": 135.3,
-                        "end": 135.38,
-                        "word": "'un"
-                    },
-                    {
-                        "start": 135.38,
-                        "end": 135.82,
-                        "word": "finali,"
-                    },
-                    {
-                        "start": 135.9,
-                        "end": 136.22,
-                        "word": "voilà"
-                    },
-                    {
-                        "start": 136.22,
-                        "end": 136.5,
-                        "word": "c"
-                    },
-                    {
-                        "start": 136.5,
-                        "end": 136.6,
-                        "word": "'est"
-                    },
-                    {
-                        "start": 136.6,
-                        "end": 136.76,
-                        "word": "tout"
-                    },
-                    {
-                        "start": 145.04,
-                        "end": 158.86,
-                        "word": "Merci."
+                        "end": 52.40465,
+                        "start": 52.28343,
+                        "word": "No."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 182.483,
-                        "end": 182.883,
-                        "word": "Du"
+                        "end": 53.051109999999994,
+                        "start": 52.9299,
+                        "word": "What"
                     },
                     {
-                        "start": 182.883,
-                        "end": 183.063,
-                        "word": "coup,"
+                        "end": 53.17232,
+                        "start": 53.051109999999994,
+                        "word": "the"
                     },
                     {
-                        "start": 183.163,
-                        "end": 183.183,
-                        "word": "qu"
+                        "end": 53.35414,
+                        "start": 53.19253,
+                        "word": "hell"
                     },
                     {
-                        "start": 183.183,
-                        "end": 183.243,
-                        "word": "'est"
-                    },
-                    {
-                        "start": 183.243,
-                        "end": 183.283,
-                        "word": "-ce"
-                    },
-                    {
-                        "start": 183.283,
-                        "end": 183.423,
-                        "word": "que"
-                    },
-                    {
-                        "start": 183.423,
-                        "end": 183.563,
-                        "word": "je"
-                    },
-                    {
-                        "start": 183.563,
-                        "end": 183.683,
-                        "word": "dis"
-                    },
-                    {
-                        "start": 183.683,
-                        "end": 183.883,
-                        "word": "là"
-                    },
-                    {
-                        "start": 183.883,
-                        "end": 184.163,
-                        "word": "?"
-                    },
-                    {
-                        "start": 185.623,
-                        "end": 186.023,
-                        "word": "Oula,"
-                    },
-                    {
-                        "start": 186.103,
-                        "end": 186.323,
-                        "word": "je"
-                    },
-                    {
-                        "start": 186.323,
-                        "end": 186.563,
-                        "word": "reçois"
-                    },
-                    {
-                        "start": 186.563,
-                        "end": 186.823,
-                        "word": "plein"
-                    },
-                    {
-                        "start": 186.823,
-                        "end": 186.883,
-                        "word": "de"
-                    },
-                    {
-                        "start": 186.883,
-                        "end": 187.083,
-                        "word": "choses."
-                    },
-                    {
-                        "start": 199.063,
-                        "end": 199.463,
-                        "word": "Ok."
-                    },
-                    {
-                        "start": 228.203,
-                        "end": 228.603,
-                        "word": "Ok,"
-                    },
-                    {
-                        "start": 228.803,
-                        "end": 229.143,
-                        "word": "voilà,"
-                    },
-                    {
-                        "start": 229.403,
-                        "end": 229.763,
-                        "word": "du"
-                    },
-                    {
-                        "start": 229.763,
-                        "end": 229.943,
-                        "word": "coup"
-                    },
-                    {
-                        "start": 229.943,
-                        "end": 230.103,
-                        "word": "j"
-                    },
-                    {
-                        "start": 230.103,
-                        "end": 230.183,
-                        "word": "'ai"
-                    },
-                    {
-                        "start": 230.183,
-                        "end": 230.203,
-                        "word": "une"
-                    },
-                    {
-                        "start": 230.203,
-                        "end": 230.563,
-                        "word": "vidéo"
-                    },
-                    {
-                        "start": 230.563,
-                        "end": 230.883,
-                        "word": "avec"
-                    },
-                    {
-                        "start": 230.883,
-                        "end": 231.743,
-                        "word": "potentiellement"
-                    },
-                    {
-                        "start": 231.743,
-                        "end": 231.823,
-                        "word": "un"
-                    },
-                    {
-                        "start": 231.823,
-                        "end": 232.143,
-                        "word": "transcript,"
-                    },
-                    {
-                        "start": 232.303,
-                        "end": 232.383,
-                        "word": "non"
-                    },
-                    {
-                        "start": 232.383,
-                        "end": 232.683,
-                        "word": "?"
-                    },
-                    {
-                        "start": 236.243,
-                        "end": 236.643,
-                        "word": "Je"
-                    },
-                    {
-                        "start": 236.643,
-                        "end": 236.983,
-                        "word": "peux"
-                    },
-                    {
-                        "start": 236.983,
-                        "end": 238.163,
-                        "word": "qu"
-                    },
-                    {
-                        "start": 238.163,
-                        "end": 238.243,
-                        "word": "'il"
-                    },
-                    {
-                        "start": 238.243,
-                        "end": 238.343,
-                        "word": "ait"
-                    },
-                    {
-                        "start": 238.343,
-                        "end": 238.443,
-                        "word": "le"
-                    },
-                    {
-                        "start": 238.443,
-                        "end": 238.563,
-                        "word": "bot,"
-                    },
-                    {
-                        "start": 238.663,
-                        "end": 238.723,
-                        "word": "là"
-                    },
-                    {
-                        "start": 238.723,
-                        "end": 238.923,
-                        "word": "?"
-                    }
-                ]
-            },
-            {
-                "speaker": "Vincent COMBEY",
-                "words": [
-                    {
-                        "start": 240.503,
-                        "end": 240.903,
-                        "word": "Euh,"
-                    },
-                    {
-                        "start": 240.903,
-                        "end": 241.303,
-                        "word": "ouais,"
-                    },
-                    {
-                        "start": 241.363,
-                        "end": 241.503,
-                        "word": "tu"
-                    },
-                    {
-                        "start": 241.503,
-                        "end": 241.763,
-                        "word": "peux,"
-                    },
-                    {
-                        "start": 241.843,
-                        "end": 242.043,
-                        "word": "ouais."
-                    },
-                    {
-                        "start": 244.643,
-                        "end": 245.043,
-                        "word": "Ah,"
-                    }
-                ]
-            },
-            {
-                "speaker": "Philippe Drion",
-                "words": [
-                    {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
+                        "end": 53.45515,
+                        "start": 53.35414,
                         "word": "does"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 53.53596,
+                        "start": 53.45515,
+                        "word": "that"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
+                        "end": 53.616769999999995,
+                        "start": 53.53596,
+                        "word": "have"
                     },
                     {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
+                        "end": 53.65717,
+                        "start": 53.616769999999995,
+                        "word": "to"
                     },
                     {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
+                        "end": 53.697579999999995,
+                        "start": 53.65717,
+                        "word": "do"
                     },
                     {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 53.77838,
+                        "start": 53.697579999999995,
+                        "word": "with"
+                    },
+                    {
+                        "end": 53.94,
+                        "start": 53.77838,
+                        "word": "anything?"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 54.84604,
+                        "start": 54.68497,
+                        "word": "Just"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 55.16819,
+                        "start": 54.886309999999995,
+                        "word": "please"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 55.32926,
+                        "start": 55.18832,
+                        "word": "answer"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 55.4098,
+                        "start": 55.32926,
+                        "word": "the"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 55.75208,
+                        "start": 55.42993,
+                        "word": "questions,"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 55.99369,
+                        "start": 55.79235,
+                        "word": "lady."
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 56.456779999999995,
+                        "start": 56.19503,
+                        "word": "Please."
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 56.47691,
+                        "start": 56.456779999999995,
+                        "word": "I"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 56.63799,
+                        "start": 56.47691,
+                        "word": "need"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 56.75879,
+                        "start": 56.63799,
+                        "word": "to"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
+                        "end": 56.89973,
+                        "start": 56.778929999999995,
+                        "word": "fix"
                     },
                     {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 56.94,
+                        "start": 56.89973,
+                        "word": "it."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 57.06245,
+                        "start": 56.94,
+                        "word": "I'm"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 57.20531,
+                        "start": 57.08286,
+                        "word": "so"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 57.94,
+                        "start": 57.32776,
+                        "word": "confused."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 58.12367,
+                        "start": 58.00122,
+                        "word": "Do"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 58.26653,
+                        "start": 58.12367,
+                        "word": "you"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 58.38898,
+                        "start": 58.26653,
+                        "word": "want"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 58.4298,
+                        "start": 58.36857,
+                        "word": "to"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 58.51143,
+                        "start": 58.4298,
+                        "word": "fix"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 58.61347,
+                        "start": 58.49102,
+                        "word": "the"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 58.75633,
+                        "start": 58.61347,
+                        "word": "yes"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 58.87878,
+                        "start": 58.77673,
+                        "word": "or"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 58.94,
+                        "start": 58.87878,
+                        "word": "no?"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 59.08094,
+                        "start": 58.96013,
+                        "word": "I"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 59.84604,
+                        "start": 59.16148,
+                        "word": "mean,"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 59.98698,
+                        "start": 59.86617,
+                        "word": "I"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 60.208459999999995,
+                        "start": 60.027249999999995,
+                        "word": "would"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 60.49034,
+                        "start": 60.26886,
+                        "word": "like"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 60.61114,
+                        "start": 60.49034,
+                        "word": "to"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 60.83262,
+                        "start": 60.67154,
+                        "word": "fix"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 60.97356,
+                        "start": 60.85275,
+                        "word": "the"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 61.43664,
+                        "start": 61.03395999999999,
+                        "word": "problem,"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 61.73866,
+                        "start": 61.537319999999994,
+                        "word": "yeah,"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 61.94,
+                        "start": 61.81919,
+                        "word": "but..."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 63.47060999999999,
+                        "start": 63.34815999999999,
+                        "word": "Can"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 63.593059999999994,
+                        "start": 63.47060999999999,
+                        "word": "we"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 63.94,
+                        "start": 63.61347,
+                        "word": "continue?"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 66.83373999999999,
+                        "start": 66.71252999999999,
+                        "word": "Can"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 66.93475,
+                        "start": 66.83373999999999,
+                        "word": "we"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 67.41959999999999,
+                        "start": 66.95495,
+                        "word": "continue?"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 68.37836999999999,
+                        "start": 67.97019999999999,
+                        "word": "Yep."
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 68.62326999999999,
+                        "start": 68.50081999999999,
+                        "word": "Okay,"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 68.7049,
+                        "start": 68.60285999999999,
+                        "word": "are"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 68.78653,
+                        "start": 68.7049,
+                        "word": "you"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
+                        "end": 69.13346999999999,
+                        "start": 68.78653,
+                        "word": "attracted"
                     },
                     {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
+                        "end": 69.21509999999999,
+                        "start": 69.13346999999999,
+                        "word": "to"
                     },
                     {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
+                        "end": 69.37836999999999,
+                        "start": 69.21509999999999,
+                        "word": "Hispanic"
                     },
                     {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 69.46,
+                        "start": 69.37836999999999,
+                        "word": "guys?"
+                    },
+                    {
+                        "end": 70.52711,
+                        "start": 69.50027,
+                        "word": "Alright,"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 70.84925999999999,
+                        "start": 70.60764999999999,
+                        "word": "that's"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 70.94993,
+                        "start": 70.84925999999999,
+                        "word": "it."
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 71.07074,
+                        "start": 70.94993,
+                        "word": "What"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 71.21168,
+                        "start": 71.09087,
+                        "word": "the"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 71.41301999999999,
+                        "start": 71.21168,
+                        "word": "hell"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 71.55395999999999,
+                        "start": 71.43315,
+                        "word": "is"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 71.75529999999999,
+                        "start": 71.55395999999999,
+                        "word": "going"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 71.85597,
+                        "start": 71.75529999999999,
+                        "word": "on?"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 71.97677999999999,
+                        "start": 71.85597,
+                        "word": "This"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 72.09758,
+                        "start": 71.97677999999999,
+                        "word": "is"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 72.46,
+                        "start": 72.11771999999999,
+                        "word": "ridiculous."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 72.68449,
+                        "start": 72.48040999999999,
+                        "word": "Okay,"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 72.82735,
+                        "start": 72.68449,
+                        "word": "calm"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 72.99060999999999,
+                        "start": 72.84776,
+                        "word": "down."
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 73.21509999999999,
+                        "start": 73.09264999999999,
+                        "word": "Calm"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 73.39877999999999,
+                        "start": 73.21509999999999,
+                        "word": "down."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 74.04585999999999,
+                        "start": 73.84384,
+                        "word": "No,"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 74.36909,
+                        "start": 74.24788,
+                        "word": "no,"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 74.63172,
+                        "start": 74.51051,
+                        "word": "this"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 74.67211999999999,
+                        "start": 74.63172,
+                        "word": "is"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 74.79333,
+                        "start": 74.67211999999999,
+                        "word": "absurd."
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 74.87414,
+                        "start": 74.79333,
+                        "word": "I'm"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 75.17716999999999,
+                        "start": 74.87414,
+                        "word": "calling"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 75.33878999999999,
+                        "start": 75.19736999999999,
+                        "word": "because"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 75.35898999999999,
+                        "start": 75.33878999999999,
+                        "word": "I"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 75.43979999999999,
+                        "start": 75.35898999999999,
+                        "word": "have"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
+                        "end": 75.46,
+                        "start": 75.43979999999999,
+                        "word": "a-"
                     },
                     {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
+                        "end": 75.82735,
+                        "start": 75.46,
+                        "word": "Excuse"
                     },
                     {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
+                        "end": 75.97019999999999,
+                        "start": 75.84776,
+                        "word": "me,"
                     },
                     {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 76.37836999999999,
+                        "start": 75.99060999999999,
+                        "word": "lady."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 77.01101999999999,
+                        "start": 76.54163,
+                        "word": "Excuse"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 77.19469,
+                        "start": 77.07224,
+                        "word": "me,"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 77.43959,
+                        "start": 77.25591999999999,
+                        "word": "lady."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 77.92939,
+                        "start": 77.50081999999999,
+                        "word": "You're"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 78.11305999999999,
+                        "start": 77.92939,
+                        "word": "blatantly"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
+                        "end": 78.35795999999999,
+                        "start": 78.11305999999999,
+                        "word": "objectifying"
+                    },
+                    {
+                        "end": 78.46,
+                        "start": 78.37836999999999,
+                        "word": "me."
+                    },
+                    {
+                        "end": 78.9498,
+                        "start": 78.46,
+                        "word": "Okay."
+                    },
+                    {
+                        "end": 79.72263,
+                        "start": 79.56101,
+                        "word": "This"
+                    },
+                    {
+                        "end": 79.94484999999999,
+                        "start": 79.82364,
+                        "word": "is"
+                    },
+                    {
+                        "end": 80.26808,
+                        "start": 80.12666999999999,
+                        "word": "so"
+                    },
+                    {
+                        "end": 80.79333,
+                        "start": 80.4499,
+                        "word": "typical"
+                    },
+                    {
+                        "end": 80.85394,
+                        "start": 80.81353999999999,
+                        "word": "of"
+                    },
+                    {
+                        "end": 80.89434,
+                        "start": 80.85394,
                         "word": "a"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 80.99534999999999,
+                        "start": 80.87414,
+                        "word": "man."
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 81.41959999999999,
+                        "start": 81.01556,
+                        "word": "Misogynistic."
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 81.90897999999999,
+                        "start": 81.66408,
+                        "word": "Lady,"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 82.31714,
+                        "start": 81.90897999999999,
+                        "word": "excuse"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 82.46,
+                        "start": 82.33755,
+                        "word": "me."
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 83.41918,
+                        "start": 82.50081999999999,
+                        "word": "Disrespectful."
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 83.66408,
+                        "start": 83.46,
+                        "word": "Please"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 83.78653,
+                        "start": 83.66408,
+                        "word": "don't"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 83.97019999999999,
+                        "start": 83.78653,
+                        "word": "raise"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 84.05184,
+                        "start": 83.97019999999999,
+                        "word": "your"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 84.31714,
+                        "start": 84.05184,
+                        "word": "voice."
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 85.29673,
+                        "start": 84.46,
+                        "word": "Mature."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 85.76612,
+                        "start": 85.54163,
+                        "word": "Please"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 85.99060999999999,
+                        "start": 85.76612,
+                        "word": "don't"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 86.19469,
+                        "start": 85.99060999999999,
+                        "word": "raise"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 86.31714,
+                        "start": 86.19469,
+                        "word": "your"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 86.43959,
+                        "start": 86.31714,
+                        "word": "voice."
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 86.60285999999999,
+                        "start": 86.48040999999999,
+                        "word": "This"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 86.66408,
+                        "start": 86.58245,
+                        "word": "is"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 86.76612,
+                        "start": 86.66408,
+                        "word": "why"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 86.84776,
+                        "start": 86.76612,
+                        "word": "men"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 86.90897999999999,
+                        "start": 86.84776,
+                        "word": "are"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
+                        "end": 87.19469,
+                        "start": 86.90897999999999,
+                        "word": "ruining"
                     },
                     {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
+                        "end": 87.31714,
+                        "start": 87.19469,
+                        "word": "the"
                     },
                     {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
+                        "end": 87.46,
+                        "start": 87.33755,
+                        "word": "world."
                     },
                     {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 88.57110999999999,
+                        "start": 88.34889,
+                        "word": "Okay,"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 88.65191999999999,
+                        "start": 88.57110999999999,
+                        "word": "hmm."
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 88.83373999999999,
+                        "start": 88.65191999999999,
+                        "word": "Please"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 88.95495,
+                        "start": 88.83373999999999,
+                        "word": "don't"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 89.09635999999999,
+                        "start": 88.95495,
+                        "word": "raise"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 89.19736999999999,
+                        "start": 89.09635999999999,
+                        "word": "your"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 89.43979999999999,
+                        "start": 89.21758,
+                        "word": "voice."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 90.59131,
+                        "start": 90.4701,
+                        "word": "I"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 90.77313,
+                        "start": 90.59131,
+                        "word": "want"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 90.87414,
+                        "start": 90.77313,
+                        "word": "to"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 91.05596,
+                        "start": 90.87414,
+                        "word": "speak"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 91.09636,
+                        "start": 91.05596,
+                        "word": "to"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 91.19737,
+                        "start": 91.09636,
+                        "word": "your"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 91.4196,
+                        "start": 91.19737,
+                        "word": "manager."
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 91.58245,
+                        "start": 91.46,
+                        "word": "Okay,"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 91.9702,
+                        "start": 91.60286,
+                        "word": "please"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 92.39878,
+                        "start": 92.01102,
+                        "word": "hold."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 93.01102,
+                        "start": 92.64367,
+                        "word": "Right"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 93.15388,
+                        "start": 93.03143,
+                        "word": "now,"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 93.41918,
+                        "start": 93.19469,
+                        "word": "please."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 95.70328,
+                        "start": 95.39559,
+                        "word": "Customer"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 96.052,
+                        "start": 95.72379,
+                        "word": "service."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 96.43524,
+                        "start": 96.21227,
+                        "word": "Yes,"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 96.84065,
+                        "start": 96.61768,
+                        "word": "hi,"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 97.04335,
+                        "start": 96.92173,
+                        "word": "is"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 97.28659,
+                        "start": 97.10416,
+                        "word": "this"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 97.44876,
+                        "start": 97.32714,
+                        "word": "the"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 97.692,
+                        "start": 97.55011,
+                        "word": "manager?"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 97.97728,
+                        "start": 97.83464,
+                        "word": "Yes,"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 98.11992,
+                        "start": 97.99766,
+                        "word": "that's"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 98.38483,
+                        "start": 98.11992,
+                        "word": "exactly"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 98.52747,
+                        "start": 98.40521,
+                        "word": "who"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 98.62936,
+                        "start": 98.54785,
+                        "word": "I"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 98.73125,
+                        "start": 98.60898,
+                        "word": "am."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 100.19407,
+                        "start": 100.05286,
+                        "word": "Well,"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 100.41597,
+                        "start": 100.29493,
+                        "word": "you"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
+                        "end": 100.87993,
+                        "start": 100.57734,
+                        "word": "sound"
+                    },
+                    {
+                        "end": 100.98079,
+                        "start": 100.87993,
                         "word": "a"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 101.18252,
+                        "start": 101.02114,
+                        "word": "lot"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 101.36407,
+                        "start": 101.22286,
+                        "word": "like"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 101.46493,
+                        "start": 101.36407,
+                        "word": "the"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 101.68683,
+                        "start": 101.4851,
+                        "word": "last"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 101.86838,
+                        "start": 101.707,
+                        "word": "guy"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 101.94907,
+                        "start": 101.86838,
+                        "word": "I"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 102.17097,
+                        "start": 101.94907,
+                        "word": "talked"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 102.292,
+                        "start": 102.17097,
+                        "word": "to."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 102.43458,
+                        "start": 102.352,
+                        "word": "Yeah,"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 102.72361,
+                        "start": 102.43458,
+                        "word": "everybody"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 102.86813,
+                        "start": 102.72361,
+                        "word": "says"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 102.992,
+                        "start": 102.86813,
+                        "word": "that."
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 103.17516,
+                        "start": 103.052,
+                        "word": "Can"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 103.23674,
+                        "start": 103.15463,
+                        "word": "I"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 103.442,
+                        "start": 103.27779,
+                        "word": "help"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 103.54463,
+                        "start": 103.442,
+                        "word": "you"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 103.64726,
+                        "start": 103.54463,
+                        "word": "with"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 103.832,
+                        "start": 103.64726,
+                        "word": "something?"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 106.07428,
+                        "start": 105.87308,
+                        "word": "Yeah,"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 106.57727,
+                        "start": 106.43643,
+                        "word": "um,"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 106.89919,
+                        "start": 106.77847,
+                        "word": "I'm"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 107.34182,
+                        "start": 106.95954,
+                        "word": "trying"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 107.48266,
+                        "start": 107.36194,
+                        "word": "to"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 107.7241,
+                        "start": 107.5229,
+                        "word": "fix"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 107.92529,
+                        "start": 107.80457,
+                        "word": "the"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 108.40817,
+                        "start": 107.94541,
+                        "word": "messaging"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 108.54901,
+                        "start": 108.42829,
+                        "word": "on"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 108.66972,
+                        "start": 108.54901,
+                        "word": "my"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
+                        "end": 109.03188,
+                        "start": 108.81056,
+                        "word": "phone,"
                     },
                     {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
+                        "end": 109.31323,
+                        "start": 109.19218,
+                        "word": "and"
                     },
                     {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
+                        "end": 109.43428,
+                        "start": 109.31323,
+                        "word": "the"
                     },
                     {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 109.65621,
+                        "start": 109.45446,
+                        "word": "last"
+                    },
+                    {
+                        "end": 109.83779,
+                        "start": 109.67639,
+                        "word": "guy"
+                    },
+                    {
+                        "end": 109.89832,
+                        "start": 109.83779,
+                        "word": "I"
+                    },
+                    {
+                        "end": 110.1606,
+                        "start": 109.91849,
+                        "word": "talked"
+                    },
+                    {
+                        "end": 110.2413,
+                        "start": 110.1606,
+                        "word": "to"
+                    },
+                    {
+                        "end": 110.36235,
+                        "start": 110.2413,
+                        "word": "was"
+                    },
+                    {
+                        "end": 110.76586,
+                        "start": 110.46323,
+                        "word": "asking"
+                    },
+                    {
+                        "end": 110.88691,
+                        "start": 110.76586,
+                        "word": "me,"
+                    },
+                    {
+                        "end": 111.06849,
+                        "start": 110.94744,
+                        "word": "like,"
+                    },
+                    {
+                        "end": 111.29042,
+                        "start": 111.06849,
+                        "word": "ridiculous"
+                    },
+                    {
+                        "end": 111.472,
+                        "start": 111.29042,
+                        "word": "questions."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 111.6148,
+                        "start": 111.4924,
+                        "word": "Okay,"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 111.778,
+                        "start": 111.6148,
+                        "word": "I'm"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 111.9412,
+                        "start": 111.7984,
+                        "word": "really"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 112.2064,
+                        "start": 111.9616,
+                        "word": "sorry"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 112.3492,
+                        "start": 112.2268,
+                        "word": "about"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 112.4716,
+                        "start": 112.3492,
+                        "word": "that."
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 112.7545,
+                        "start": 112.632,
+                        "word": "I"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 113.20367,
+                        "start": 112.79533,
+                        "word": "apologize"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 113.612,
+                        "start": 113.2445,
+                        "word": "deeply."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 114.24367,
+                        "start": 114.0145,
+                        "word": "Thank"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 114.452,
+                        "start": 114.30617,
+                        "word": "you."
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 114.73548,
+                        "start": 114.61287,
+                        "word": "I"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 115.24635,
+                        "start": 114.73548,
+                        "word": "appreciate"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 115.49157,
+                        "start": 115.28722,
+                        "word": "that."
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 116.41625,
+                        "start": 116.29475,
+                        "word": "So,"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 116.65925,
+                        "start": 116.49725,
+                        "word": "can"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 116.82125,
+                        "start": 116.69975,
+                        "word": "you"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 117.06425,
+                        "start": 116.9225,
+                        "word": "help"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 117.1655,
+                        "start": 117.06425,
+                        "word": "me"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
+                        "end": 117.30725,
+                        "start": 117.18575,
+                        "word": "with"
                     },
                     {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
+                        "end": 117.42875,
+                        "start": 117.30725,
+                        "word": "my"
                     },
                     {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 117.692,
+                        "start": 117.42875,
+                        "word": "problem?"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 118.17655,
+                        "start": 118.05382,
+                        "word": "Of"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 118.40155,
+                        "start": 118.21745,
+                        "word": "course,"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 118.52427,
+                        "start": 118.40155,
+                        "word": "that's"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 118.66745,
+                        "start": 118.54473,
+                        "word": "why"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 118.74927,
+                        "start": 118.66745,
+                        "word": "I'm"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 118.872,
+                        "start": 118.74927,
+                        "word": "here."
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 119.09927,
+                        "start": 118.95291,
+                        "word": "What's"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 119.20382,
+                        "start": 119.09927,
+                        "word": "your"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 119.32927,
+                        "start": 119.20382,
+                        "word": "name?"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 120.062,
+                        "start": 119.937,
+                        "word": "It's"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 120.312,
+                        "start": 120.08283,
+                        "word": "Sarah."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 120.95577,
+                        "start": 120.79345,
+                        "word": "Okay,"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 121.11809,
+                        "start": 120.99635,
+                        "word": "and"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 121.19925,
+                        "start": 121.11809,
+                        "word": "what"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 121.3007,
+                        "start": 121.19925,
+                        "word": "are"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 121.38186,
+                        "start": 121.28041,
+                        "word": "you"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 121.58475,
+                        "start": 121.38186,
+                        "word": "wearing"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 121.72678,
+                        "start": 121.58475,
+                        "word": "right"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 121.8891,
+                        "start": 121.74707,
+                        "word": "now,"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 122.092,
+                        "start": 121.92968,
+                        "word": "Sarah?"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 122.51726,
+                        "start": 122.39411,
+                        "word": "Are"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 122.61989,
+                        "start": 122.51726,
+                        "word": "you"
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 122.92779,
+                        "start": 122.64042,
+                        "word": "fucking"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 123.092,
+                        "start": 122.92779,
+                        "word": "kidding?"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 124.27298,
+                        "start": 124.15242,
+                        "word": "You"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 124.41362,
+                        "start": 124.29307,
+                        "word": "know"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 124.61454,
+                        "start": 124.45381,
+                        "word": "what?"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 125.65934,
+                        "start": 125.53878,
+                        "word": "A"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 125.84017,
+                        "start": 125.69952,
+                        "word": "guy"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 126.08127,
+                        "start": 125.88035,
+                        "word": "like"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
+                        "end": 126.20181999999998,
+                        "start": 126.08127,
+                        "word": "you"
                     },
                     {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
+                        "end": 126.74430999999998,
+                        "start": 126.46302,
+                        "word": "isn't"
                     },
                     {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
+                        "end": 127.04569999999998,
+                        "start": 126.84476999999998,
+                        "word": "even"
                     },
                     {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 127.38725999999998,
+                        "start": 127.12606,
+                        "word": "worth"
+                    },
+                    {
+                        "end": 127.52791,
+                        "start": 127.40735,
+                        "word": "it."
+                    },
+                    {
+                        "end": 128.54947,
+                        "start": 128.42866999999998,
+                        "word": "You"
+                    },
+                    {
+                        "end": 128.7508,
+                        "start": 128.60987,
+                        "word": "are"
+                    },
+                    {
+                        "end": 129.51586999999998,
+                        "start": 128.85146999999998,
+                        "word": "incredibly"
+                    },
+                    {
+                        "end": 129.9588,
+                        "start": 129.55613,
+                        "word": "pathetic"
+                    },
+                    {
+                        "end": 130.18026999999998,
+                        "start": 130.05946999999998,
+                        "word": "and"
+                    },
+                    {
+                        "end": 130.36147,
+                        "start": 130.24067,
+                        "word": "I"
+                    },
+                    {
+                        "end": 130.54267,
+                        "start": 130.3816,
+                        "word": "feel"
+                    },
+                    {
+                        "end": 130.8648,
+                        "start": 130.60307,
+                        "word": "sorry"
+                    },
+                    {
+                        "end": 131.06613,
+                        "start": 130.94532999999998,
+                        "word": "for"
+                    },
+                    {
+                        "end": 131.26747,
+                        "start": 131.14667,
+                        "word": "you."
+                    },
+                    {
+                        "end": 132.4511,
+                        "start": 132.33006999999998,
+                        "word": "And"
+                    },
+                    {
+                        "end": 132.63266,
+                        "start": 132.51162,
+                        "word": "you"
+                    },
+                    {
+                        "end": 132.75368999999998,
+                        "start": 132.63266,
+                        "word": "know"
+                    },
+                    {
+                        "end": 132.85455,
+                        "start": 132.73352,
+                        "word": "what"
+                    },
+                    {
+                        "end": 132.95541,
+                        "start": 132.83437999999998,
+                        "word": "the"
+                    },
+                    {
+                        "end": 133.25799999999998,
+                        "start": 133.01593,
+                        "word": "sad"
+                    },
+                    {
+                        "end": 133.43955,
+                        "start": 133.29834,
+                        "word": "thing"
+                    },
+                    {
+                        "end": 133.64128,
+                        "start": 133.45971999999998,
+                        "word": "about"
+                    },
+                    {
+                        "end": 133.90352,
+                        "start": 133.66145,
+                        "word": "someone"
+                    },
+                    {
+                        "end": 134.12541,
+                        "start": 133.92369,
+                        "word": "like"
+                    },
+                    {
+                        "end": 134.24644999999998,
+                        "start": 134.12541,
+                        "word": "you"
+                    },
+                    {
+                        "end": 134.38765999999998,
+                        "start": 134.24644999999998,
+                        "word": "is?"
+                    },
+                    {
+                        "end": 135.30999,
+                        "start": 135.10913,
+                        "word": "You're"
+                    },
+                    {
+                        "end": 135.81215999999998,
+                        "start": 135.33007999999998,
+                        "word": "probably"
+                    },
+                    {
+                        "end": 136.15363,
+                        "start": 136.01301999999998,
+                        "word": "so"
+                    },
+                    {
+                        "end": 136.95709,
+                        "start": 136.37457999999998,
+                        "word": "disappointed"
+                    },
+                    {
+                        "end": 137.11777999999998,
+                        "start": 136.99725999999998,
+                        "word": "with"
+                    },
+                    {
+                        "end": 137.25839,
+                        "start": 137.13787,
+                        "word": "your"
+                    },
+                    {
+                        "end": 137.57977,
+                        "start": 137.33874,
+                        "word": "life"
+                    },
+                    {
+                        "end": 137.72037999999998,
+                        "start": 137.59985999999998,
+                        "word": "and"
+                    },
+                    {
+                        "end": 138.04177,
+                        "start": 137.90115999999998,
+                        "word": "so"
+                    },
+                    {
+                        "end": 138.70461999999998,
+                        "start": 138.28280999999998,
+                        "word": "unhappy"
+                    },
+                    {
+                        "end": 138.88539999999998,
+                        "start": 138.76487999999998,
+                        "word": "in"
+                    },
+                    {
+                        "end": 139.00592,
+                        "start": 138.88539999999998,
+                        "word": "your"
+                    },
+                    {
+                        "end": 139.46791,
+                        "start": 139.0461,
+                        "word": "marriage."
+                    },
+                    {
+                        "end": 140.38955,
+                        "start": 140.22852,
+                        "word": "Yeah,"
+                    },
+                    {
+                        "end": 140.6311,
+                        "start": 140.51031999999998,
+                        "word": "I"
+                    },
+                    {
+                        "end": 140.81225999999998,
+                        "start": 140.65123,
+                        "word": "feel"
+                    },
+                    {
+                        "end": 141.07394,
+                        "start": 140.85252,
+                        "word": "sorry"
+                    },
+                    {
+                        "end": 141.23496999999998,
+                        "start": 141.11418999999998,
+                        "word": "for"
+                    },
+                    {
+                        "end": 141.396,
+                        "start": 141.27523,
+                        "word": "your"
+                    },
+                    {
+                        "end": 141.79858,
+                        "start": 141.45639,
+                        "word": "wife."
+                    },
+                    {
+                        "end": 142.52322999999998,
+                        "start": 142.40245,
+                        "word": "She"
+                    },
+                    {
+                        "end": 142.94593999999998,
+                        "start": 142.58361,
+                        "word": "deserves"
+                    },
+                    {
+                        "end": 143.24786999999998,
+                        "start": 143.04657999999998,
+                        "word": "better."
+                    },
+                    {
+                        "end": 143.408,
+                        "start": 143.268,
+                        "word": "Sure."
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "speaker 0",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 148.4949,
+                        "start": 148.31179,
+                        "word": "So,"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
+                        "end": 149.12559,
+                        "start": 148.4949,
+                        "word": "um..."
                     },
                     {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
+                        "end": 150.69348,
+                        "start": 150.57205,
+                        "word": "So"
                     },
                     {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
+                        "end": 150.85538,
+                        "start": 150.73395,
+                        "word": "you're"
                     },
                     {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
+                        "end": 151.05775999999997,
+                        "start": 150.89586,
+                        "word": "not"
                     },
                     {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
+                        "end": 151.26013999999998,
+                        "start": 151.09823999999998,
+                        "word": "going"
                     },
                     {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
+                        "end": 151.32085999999998,
+                        "start": 151.26013999999998,
+                        "word": "to"
                     },
                     {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
+                        "end": 151.44229,
+                        "start": 151.32085999999998,
+                        "word": "tell"
                     },
                     {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
+                        "end": 151.52324,
+                        "start": 151.44229,
+                        "word": "me"
                     },
                     {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
+                        "end": 151.62443,
+                        "start": 151.503,
+                        "word": "what"
                     },
                     {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
+                        "end": 151.7661,
+                        "start": 151.62443,
+                        "word": "you're"
                     },
                     {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 151.928,
+                        "start": 151.7661,
+                        "word": "wearing?"
                     }
                 ]
             },
             {
-                "speaker": "Philippe Drion",
+                "speaker": "Sarah",
                 "words": [
                     {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
+                        "end": 155.19833,
+                        "start": 154.39367,
+                        "word": "Thank"
                     },
                     {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
-                    }
-                ]
-            },
-            {
-                "speaker": "Philippe Drion",
-                "words": [
-                    {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
-                    }
-                ]
-            },
-            {
-                "speaker": "Philippe Drion",
-                "words": [
-                    {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
-                    }
-                ]
-            },
-            {
-                "speaker": "Philippe Drion",
-                "words": [
-                    {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
-                    }
-                ]
-            },
-            {
-                "speaker": "Philippe Drion",
-                "words": [
-                    {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
-                    }
-                ]
-            },
-            {
-                "speaker": "Philippe Drion",
-                "words": [
-                    {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
-                    }
-                ]
-            },
-            {
-                "speaker": "Philippe Drion",
-                "words": [
-                    {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
-                    }
-                ]
-            },
-            {
-                "speaker": "Philippe Drion",
-                "words": [
-                    {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
-                    }
-                ]
-            },
-            {
-                "speaker": "Philippe Drion",
-                "words": [
-                    {
-                        "start": 245.063,
-                        "end": 245.203,
-                        "word": "il"
-                    },
-                    {
-                        "start": 245.203,
-                        "end": 245.323,
-                        "word": "y"
-                    },
-                    {
-                        "start": 245.323,
-                        "end": 245.443,
-                        "word": "a"
-                    },
-                    {
-                        "start": 245.443,
-                        "end": 245.483,
-                        "word": "une"
-                    },
-                    {
-                        "start": 245.483,
-                        "end": 245.703,
-                        "word": "nouvelle"
-                    },
-                    {
-                        "start": 245.703,
-                        "end": 246.463,
-                        "word": "fonctionnalité,"
-                    },
-                    {
-                        "start": 246.523,
-                        "end": 246.703,
-                        "word": "hein."
-                    },
-                    {
-                        "start": 246.783,
-                        "end": 247.143,
-                        "word": "How"
-                    },
-                    {
-                        "start": 247.143,
-                        "end": 247.343,
-                        "word": "does"
-                    },
-                    {
-                        "start": 247.343,
-                        "end": 247.443,
-                        "word": "it"
-                    },
-                    {
-                        "start": 247.443,
-                        "end": 247.683,
-                        "word": "call"
-                    },
-                    {
-                        "start": 247.683,
-                        "end": 247.963,
-                        "word": "off"
-                    },
-                    {
-                        "start": 247.963,
-                        "end": 248.523,
-                        "word": "?"
-                    },
-                    {
-                        "start": 249.983,
-                        "end": 250.383,
-                        "word": "Ouf."
+                        "end": 156.3852,
+                        "start": 155.25868,
+                        "word": "you."
                     }
                 ]
             }
-        ],
-        "speakers": ["Philippe Drion", "Vincent COMBEY"],
-        "mp4": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    }
+        ]
+    },
+    "event": "complete"
 }
