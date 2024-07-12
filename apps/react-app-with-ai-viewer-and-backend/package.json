@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "start": "npm run backend",
-    "build": "npm run shared:build && npm run backend:build && npm run frontend:build",
+    "build": "npm i && npm run shared:build && npm run backend:build && npm run frontend:build",
     "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
     "backend": "cd api && npm start",
     "backend:build": "cd api && npm run build",
