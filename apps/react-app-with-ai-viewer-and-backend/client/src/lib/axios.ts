@@ -4,26 +4,27 @@ import {
   JoinMeetingParams,
 } from "@meeting-baas/shared";
 import axios from "axios";
+import { MeetingInfo } from "./utils";
 
 interface JoinMeetingWrapperProps {
   baasApiKey: string;
-  serverAvailablity: "server" | "local" | "error";
+  serverAvailability: "server" | "local" | "error";
   params: JoinMeetingParams;
 }
 
 interface FetchBotDetailsWrapperProps {
   baasApiKey: string;
-  serverAvailablity: "server" | "local" | "error";
+  serverAvailability: "server" | "local" | "error";
   botId: string;
   raw?: boolean;
 }
 
 export const joinMeetingWrapper = async ({
   baasApiKey,
-  serverAvailablity,
+  serverAvailability,
   params,
 }: JoinMeetingWrapperProps) => {
-  if (serverAvailablity === "server") {
+  if (serverAvailability === "server") {
     return await axios.post("/api/join", params);
   } else {
     console.log("passing the request through proxy on vite to bypass CORS...");
@@ -37,12 +38,34 @@ export const joinMeetingWrapper = async ({
 
 export const fetchBotDetailsWrapper = async ({
   baasApiKey,
-  serverAvailablity,
+  serverAvailability,
   botId,
   raw,
 }: FetchBotDetailsWrapperProps) => {
-  if (serverAvailablity === "server") {
-    return await axios.get(`/api/meeting/${botId}`);
+  if (serverAvailability === "server") {
+    const response = await axios.get(`/api/meeting/${botId}`);
+    const data: MeetingInfo['data'] = response.data['data'];
+
+    if (!raw) {
+      return {
+        data: {
+          id: data.id,
+          name: "New Meeting",
+          attendees: data["attendees"].map((attendee: { name: string }) => {
+            return attendee.name;
+          }),
+          createdAt: new Date(
+            data.created_at.secs_since_epoch * 1000 +
+              data.created_at.nanos_since_epoch / 1000000
+          ),
+        },
+      };
+    }
+
+    return {
+      data: response.data
+    };
+
   } else {
     console.log("passing the request through proxy on vite to bypass CORS...");
     const response = await fetchBotDetails({

@@ -66,7 +66,7 @@ app.use("/api/meeting", meetingRouter);
 
 app.use("/api/chat", chatRouter);
 
-app.use("/api/form", formRouter);
+app.use("/api/join", formRouter);
 app.use("/api/webhook", webhookRouter);
 
 app.use((req, res) => {

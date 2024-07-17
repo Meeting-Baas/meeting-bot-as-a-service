@@ -1,17 +1,22 @@
 import Join from "@/routes/join";
-import Meeting from "@/routes/meeting";
+import Layout from "@/routes/layout";
+import { Meeting } from "@/routes/meeting";
 import Meetings from "@/routes/meetings";
 import NotFound from "@/routes/not-found";
 import Root from "@/routes/root";
-import Layout from "@/routes/layout";
 import Settings from "@/routes/settings";
 
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import { Toaster } from "@/components/ui/sonner";
-import { Provider } from 'jotai'
+import { Provider } from "jotai";
+// import { createFetchDataFunction } from "./lib/utils";
 
 export default function App() {
+  // always useful when you open the app
+  //const [baasApiKey] = useAtom(baasApiKeyAtom);
+  //const [serverAvailability] = useAtom(serverAvailabilityAtom);
+
   return (
     <Provider>
       <Toaster />
@@ -22,10 +27,6 @@ export default function App() {
           <Route path="meetings" element={<Meetings />} />
           <Route path="settings" element={<Settings />} />
           <Route path="/meeting/:botId" element={<Meeting />} />
-
-          {/* Using path="*"" means "match anything", so this route
-                acts like a catch-all for URLs that we don't have explicit
-                routes for. */}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

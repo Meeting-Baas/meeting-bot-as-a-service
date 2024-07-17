@@ -37,7 +37,7 @@ import {
 } from "@/components/ui/table";
 
 import { fetchBotDetailsWrapper as fetchBotDetails } from "@/lib/axios";
-import { baasApiKeyAtom, meetingsAtom, serverAvailablityAtom } from "@/store";
+import { baasApiKeyAtom, meetingsAtom, serverAvailabilityAtom } from "@/store";
 
 import axios from "axios";
 import { useAtom } from "jotai";
@@ -179,7 +179,7 @@ function MeetingTable() {
 
   // meeting will update on state change
   const [baasApiKey] = useAtom(baasApiKeyAtom);
-  const [serverAvailability] = useAtom(serverAvailablityAtom);
+  const [serverAvailability] = useAtom(serverAvailabilityAtom);
 
   const table = useReactTable({
     data,
@@ -205,12 +205,14 @@ function MeetingTable() {
     try {
       const meetingDetails = await Promise.all(
         meetings.map(async (meeting) => {
+          if (!meeting.bot_id) return null;
           try {
             const result = await fetchBotDetails({
               botId: meeting.bot_id,
               baasApiKey: baasApiKey,
-              serverAvailablity: serverAvailability,
+              serverAvailability: serverAvailability,
             });
+            console.log('hmm', result)
 
             // if ("error" in result) {
             //   throw new Error(result.error);
@@ -220,8 +222,8 @@ function MeetingTable() {
               id: meeting.bot_id,
               name: result.data.name || "Unnamed Meeting",
               bot_id: meeting.bot_id,
-              attendees: result.data.attendees || [],
-              createdAt: new Date(result.data.createdAt),
+              attendees: result.data.attendees || ['-'],
+              createdAt: new Date(result.data.createdAt || meeting.createdAt),
             };
           } catch (error) {
             console.error(
@@ -239,6 +241,7 @@ function MeetingTable() {
         })
       );
 
+      console.log(meetingDetails)
       setData(
         meetingDetails.filter((meeting): meeting is Meeting => meeting !== null)
       );
@@ -306,7 +309,7 @@ function MeetingTable() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <div className="rounded-md border flex-grow overflow-auto sm:max-h-[calc(60dvh)]">
+          <div className="rounded-md flex-grow overflow-auto sm:max-h-[calc(60dvh)]">
             <div className="rounded-md border flex-grow overflow-auto">
               <Table>
                 <TableHeader>

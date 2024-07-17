@@ -2,12 +2,12 @@ import axios from "axios";
 import { useEffect } from "react";
 
 import { cn } from "@/lib/utils";
-import { baasApiKeyAtom, serverAvailablityAtom } from "@/store";
+import { baasApiKeyAtom, serverAvailabilityAtom } from "@/store";
 import { useAtom } from "jotai";
 
 function ServerAvailablity() {
-  const [serverAvailablity, setServerAvailablity] = useAtom(
-    serverAvailablityAtom
+  const [serverAvailability, setServerAvailablity] = useAtom(
+    serverAvailabilityAtom
   );
   const [baasApiKey] = useAtom(baasApiKeyAtom);
 
@@ -42,15 +42,15 @@ function ServerAvailablity() {
         className={cn(
           "w-3.5 h-3.5 border-2 border-white dark:border-gray-800 rounded-full",
           {
-            "bg-green-500": serverAvailablity === "server",
-            "bg-yellow-500": serverAvailablity === "local",
-            "bg-red-500": serverAvailablity === "error",
+            "bg-green-500": serverAvailability === "server",
+            "bg-yellow-500": serverAvailability === "local",
+            "bg-red-500": serverAvailability === "error",
           }
         )}
       />
-      {serverAvailablity === "server"
+      {serverAvailability === "server"
         ? "Connected to API Backend"
-        : serverAvailablity === "local"
+        : serverAvailability === "local"
         ? "Running on localstorage"
         : "Invalid or missing API Keys"}
     </div>

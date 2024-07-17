@@ -1,9 +1,15 @@
-import { atom } from 'jotai'
-import { atomWithStorage } from 'jotai/utils'
+import { RecordingInfo, ServerAvailability } from "@/lib/utils";
+import { atom } from "jotai";
+import { atomWithStorage } from "jotai/utils";
 
-export const baasApiKeyAtom = atomWithStorage('baasApiKey', "");
-export const openAIApiKeyAtom = atomWithStorage('openAIApiKey', "");
+// Define the API key atoms
+export const baasApiKeyAtom = atomWithStorage("baasApiKey", "");
+export const openAIApiKeyAtom = atomWithStorage("openAIApiKey", "");
+export const gladiaApiKeyAtom = atomWithStorage("gladiaApiKey", "");
 
-export const serverAvailablityAtom = atom<"server" | "local" | "error">("error");
+// Define the server availability atom, useful not to call the API
+// too many times, for instance table storage view
+export const serverAvailabilityAtom = atom<ServerAvailability>("error");
 
-export const meetingsAtom = atomWithStorage<{ bot_id: string, name: string, attendees: string[], createdAt: Date; }[]>('meetings', []);
+// Define the meetings atom with storage
+export const meetingsAtom = atomWithStorage<RecordingInfo[]>("meetings", []);

@@ -1,7 +1,7 @@
 "use client";
 
 import { joinMeetingWrapper as joinMeeting } from "@/lib/axios";
-import { baasApiKeyAtom, meetingsAtom, serverAvailablityAtom } from "@/store";
+import { baasApiKeyAtom, meetingsAtom, serverAvailabilityAtom } from "@/store";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -95,7 +95,7 @@ export function MeetingAlert(props: { mode: "server" | "local" | "error" }) {
 
 export function MeetingForm() {
   const [baasApiKey] = useAtom(baasApiKeyAtom);
-  const [serverAvailablity] = useAtom(serverAvailablityAtom);
+  const [serverAvailability] = useAtom(serverAvailabilityAtom);
   const [meetings, setMeetings] = useAtom(meetingsAtom);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -113,7 +113,7 @@ export function MeetingForm() {
       const { meetingURL, meetingBotName, meetingBotEntryMessage } = values;
       const result = await joinMeeting({
         baasApiKey,
-        serverAvailablity,
+        serverAvailability,
         params: {
           meetingURL,
           meetingBotName,
@@ -127,7 +127,7 @@ export function MeetingForm() {
       }
 
       const apiSource =
-        serverAvailablity === "server" ? "server API" : "local implementation";
+        serverAvailability === "server" ? "server API" : "local implementation";
 
       const newMeeting = {
         bot_id: result.data.bot_id,
@@ -153,7 +153,7 @@ export function MeetingForm() {
   return (
     <>
       <div className="bg-white">
-        <MeetingAlert mode={serverAvailablity} />
+        <MeetingAlert mode={serverAvailability} />
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -227,6 +227,20 @@ export function MeetingForm() {
               </FormItem>
             )}
           />
+          {/* this doesn't really make sense if you think about it */}
+          {/* <FormField
+            control={form.control}
+            name="apiKey"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>API Key (optional)</FormLabel>
+                <FormControl>
+                  <Input type="text" placeholder="Enter API key" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          /> */}
           <Button type="submit">Submit</Button>
         </form>
       </Form>

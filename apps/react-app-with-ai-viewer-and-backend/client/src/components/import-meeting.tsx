@@ -79,7 +79,10 @@ export function ImportMeeting() {
             </FormItem>
           )}
         />
-        <Button type="submit">Import Meeting</Button>
+
+        <Button type="submit" className="w-1/6 text-lg">
+          Import Meeting
+        </Button>
       </form>
     </Form>
   );
