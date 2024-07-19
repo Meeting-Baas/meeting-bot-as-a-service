@@ -8,10 +8,10 @@ Open-source transcript viewer running in-browser using IndexedDB. Upload recordi
 
 ## Key Features
 
-- Upload video/audio recordings
-- Create meeting bots for Zoom, Google Meet, Teams
+- Upload video/audio recordings, transcribe them using the transcription API of your choice
+- Generate recordings with meta-data on Zoom, Google Meet, Teams, using Meeting Baas' API (https://meetingbaas.com)
 - Chat with transcripts via OpenAI
-- Add notes to recordings
+- Add notes to recordings, or automatically add AI summaries of transcripts as a note 
 - Standalone mode with browser Local Storage
 
 ## Tech Stack
@@ -40,7 +40,7 @@ Open-source transcript viewer running in-browser using IndexedDB. Upload recordi
 
 ## Contributing
 
-See [Contributing Guidelines](CONTRIBUTING.md).
+Open a PR.
 
 ## License
 
