@@ -1,71 +1,73 @@
-import "./player.css";
+import './player.css';
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 import {
   isHLSProvider,
   MediaPlayer,
   MediaProvider,
-  Poster,
   type MediaPlayerInstance,
-  type MediaProviderAdapter,
-} from "@vidstack/react";
+  type MediaProviderAdapter
+} from '@vidstack/react';
 import {
   DefaultAudioLayout,
   defaultLayoutIcons,
-  DefaultVideoLayout,
-} from "@vidstack/react/player/layouts/default";
+  DefaultVideoLayout
+} from '@vidstack/react/player/layouts/default';
+
+import { toast } from 'sonner';
 
 interface PlayerProps {
   setPlayer: (player: MediaPlayerInstance) => void;
   src: string;
   onTimeUpdate: (time: number) => void;
+  assetTitle: string;
 }
 
-export function Player({ setPlayer, src, onTimeUpdate }: PlayerProps) {
+export function Player({ setPlayer, src, onTimeUpdate, assetTitle }: PlayerProps) {
   let player = useRef<MediaPlayerInstance>(null);
 
   useEffect(() => {
     // Subscribe to state updates.
 
-    return player.current!.subscribe(({ currentTime }) => {
-      console.log("current time", "->", currentTime);
+    return player.current!.subscribe(({ currentTime, error }) => {
       onTimeUpdate(currentTime);
-      //   console.log('is paused?', '->', paused);
-      // console.log('is audio view?', '->', viewType === 'audio');
+
+      if (error?.code === 3) {
+        toast.error('Oops! Something went wrong!');
+      }
     });
   }, []);
 
   function onProviderChange(provider: MediaProviderAdapter | null) {
     // We can configure provider's here.
     if (isHLSProvider(provider)) {
-      provider.config = {};
+      provider.library = () => import('hls.js');
     }
   }
 
   // We can listen for the `can-play` event to be notified when the player is ready.
   function onCanPlay() {
     setPlayer(player.current!);
-    // ...
   }
 
   return (
     <>
       <MediaPlayer
         className="player"
-        title="Sprite Fight"
+        title={assetTitle}
         src={src}
         crossOrigin
         playsInline
         onProviderChange={onProviderChange}
         onCanPlay={onCanPlay}
-        onProgress={(detail) => {
-          console.log("progress", "->", detail);
-        }}
         ref={player}
       >
         <MediaProvider>
-          {/* <Poster
+          {/* 
+
+			  // TODO: extract poster using ffmpeg? Or define a Poster
+		<Poster
             className="vds-poster"
             src="https://files.vidstack.io/sprite-fight/poster.webp"
             alt="Girl walks into campfire with gnomes surrounding her friend ready for their next meal!"
@@ -76,7 +78,7 @@ export function Player({ setPlayer, src, onTimeUpdate }: PlayerProps) {
         <DefaultAudioLayout icons={defaultLayoutIcons} />
         <DefaultVideoLayout
           icons={defaultLayoutIcons}
-          thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
+          // thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
         />
       </MediaPlayer>
     </>

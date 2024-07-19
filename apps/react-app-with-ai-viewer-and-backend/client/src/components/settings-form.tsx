@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -7,16 +7,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { baasApiKeyAtom, gladiaApiKeyAtom, openAIApiKeyAtom } from "@/store";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useAtom } from "jotai";
-import { Eye, EyeOff } from "lucide-react";
-import { useEffect, useState } from "react";
-import { useForm, useFormState } from "react-hook-form";
-import { toast } from "sonner";
-import { z } from "zod";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { baasApiKeyAtom, gladiaApiKeyAtom, openAIApiKeyAtom } from '@/store';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useAtom } from 'jotai';
+import { Eye, EyeOff } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useForm, useFormState } from 'react-hook-form';
+import { toast } from 'sonner';
+import { z } from 'zod';
 
 const formSchema = z.object({
   baasApiKey: z.string().optional(),
@@ -33,12 +33,7 @@ interface ApiKeyFieldProps {
   control: any;
 }
 
-const ApiKeyField: React.FC<ApiKeyFieldProps> = ({
-  name,
-  label,
-  description,
-  control,
-}) => {
+const ApiKeyField: React.FC<ApiKeyFieldProps> = ({ name, label, description, control }) => {
   const [showValues, setShowValues] = useState(false);
   const toggleVisibility = () => setShowValues(!showValues);
 
@@ -49,13 +44,11 @@ const ApiKeyField: React.FC<ApiKeyFieldProps> = ({
       render={({ field }) => (
         <FormItem className="space-y-0">
           <FormLabel className="text-lg">{label}</FormLabel>
-          <FormDescription className="text-primary">
-            {description}
-          </FormDescription>
+          <FormDescription className="text-primary">{description}</FormDescription>
           <FormControl>
             <div className="relative flex items-center gap-2">
               <Input
-                type={showValues ? "text" : "password"}
+                type={showValues ? 'text' : 'password'}
                 placeholder="Enter API key"
                 {...field}
                 value={field.value}
@@ -65,10 +58,10 @@ const ApiKeyField: React.FC<ApiKeyFieldProps> = ({
                   type="button"
                   variant="ghost"
                   size="icon"
-                  className="w-10 h-10"
+                  className="h-10 w-10"
                   onClick={toggleVisibility}
                 >
-                  {showValues ? <EyeOff className="size-4" /> : <Eye  className="size-4" />}
+                  {showValues ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
                 </Button>
               )}
             </div>
@@ -96,11 +89,11 @@ export function SettingsForm() {
   const { isDirty } = useFormState({ control: form.control });
 
   const onSubmit = async (values: FormSchema) => {
-    console.log("Submitted values:", values);
+    console.log('Submitted values:', values);
     setBaasApiKey(values.baasApiKey!);
     setOpenAIApiKey(values.openAIApiKey!);
     setGladiaApiKey(values.gladiaApiKey!);
-    toast.success("API keys updated successfully");
+    toast.success('API keys updated successfully');
     form.reset(values);
   };
 
@@ -125,9 +118,8 @@ export function SettingsForm() {
             label="Meeting Baas 🐟"
             description={
               <>
-                Record, transcribe and display video meetings. Get your Meeting
-                Baas API key by visiting{" "}
-                {renderLink("MeetingBaas", "https://meetingbaas.com/login")}.
+                Record, transcribe and display video meetings. Get your Meeting Baas API key by
+                visiting {renderLink('MeetingBaas', 'https://meetingbaas.com/login')}.
               </>
             }
             control={form.control}
@@ -137,9 +129,8 @@ export function SettingsForm() {
             label="OpenAI"
             description={
               <>
-                Optional. Used to "chat with your meetings". Get your key by
-                visiting{" "}
-                {renderLink("OpenAI", "https://platform.openai.com/api-keys")}.
+                Optional. Used to "chat with your meetings". Get your key by visiting{' '}
+                {renderLink('OpenAI', 'https://platform.openai.com/api-keys')}.
               </>
             }
             control={form.control}
@@ -149,13 +140,8 @@ export function SettingsForm() {
             label="Gladia"
             description={
               <>
-                Optional. Used to transcribe file uploads. Get your key by
-                visiting{" "}
-                {renderLink(
-                  "Gladia",
-                  "https://app.gladia.io/auth/signup/?utm_source=MeetingBaas"
-                )}
-                .
+                Optional. Used to transcribe file uploads. Get your key by visiting{' '}
+                {renderLink('Gladia', 'https://app.gladia.io/auth/signup/?utm_source=MeetingBaas')}.
               </>
             }
             control={form.control}

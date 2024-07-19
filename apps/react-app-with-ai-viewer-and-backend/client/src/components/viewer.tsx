@@ -1,91 +1,49 @@
-import Transcript from "@/components/transcript";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/components/ui/resizable";
-import { Player as VideoPlayer } from "@/components/video-player";
-import { useMediaQuery } from "@/hooks/use-media-query";
-import { cn, fetchBotData, MeetingInfo } from "@/lib/utils";
-import { MediaPlayerInstance } from "@vidstack/react";
-import axios from "axios";
-import * as React from "react";
+import Transcript from '@/components/transcript';
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable';
+import { Player as VideoPlayer } from '@/components/video-player';
+import { useMediaQuery } from '@/hooks/use-media-query';
+import { BLANK_MEETING_INFO, cn, MeetingInfo } from '@/lib/utils';
+import { MediaPlayerInstance } from '@vidstack/react';
+import axios from 'axios';
+import * as React from 'react';
 
-import Chat, { Message } from "@/components/chat";
-import { formSchema as chatSchema } from "@/components/chat/chat-input";
-import Editor from "@/components/editor";
-import { fetchBotDetailsWrapper as fetchBotDetails } from "@/lib/axios";
-import { serverAvailabilityAtom } from "@/store";
+import Chat, { Message } from '@/components/chat';
+import { formSchema as chatSchema } from '@/components/chat/chat-input';
+import Editor from '@/components/editor';
+import { openAIApiKeyAtom, serverAvailabilityAtom } from '@/store';
 
-import { toast } from "sonner";
-import { z } from "zod";
+import { z } from 'zod';
 
-import { HeaderTitle } from "@/components/header-title";
+import { HeaderTitle } from '@/components/header-title';
 
-import { baasApiKeyAtom } from "@/store";
-import { useAtom } from "jotai";
-import NotFound from "./../routes/not-found";
+import { baasApiKeyAtom } from '@/store';
+import { useAtom } from 'jotai';
+
+import OpenAI from 'openai';
+import { toast } from 'sonner';
 
 type ViewerProps = {
-  isBaasRecording: boolean;
-  botId?: string;
+  isLoading: boolean;
+  meetingData: MeetingInfo;
 };
 
-export function Viewer({ isBaasRecording = true, botId }: ViewerProps) {
+export function Viewer({ isLoading, meetingData }: ViewerProps) {
   const [serverAvailability] = useAtom(serverAvailabilityAtom);
 
-  if (isBaasRecording) {
-    // this doesn't check if the bot-id is valid in any
-    // case
-    if (!botId) {
-      return <NotFound />;
-    }
-    fetchBotData(botId, serverAvailability);
-  } else {
-  }
+  React.useEffect(() => {
+    if (!baasApiKey) return;
+    setData(meetingData);
+  }, [meetingData]);
 
-  const [data, setData] = React.useState<MeetingInfo>({
-    data: {
-      id: "",
-      name: "",
-      editors: [
-        {
-          video: {
-            transcripts: [
-              {
-                speaker: "",
-                words: [
-                  {
-                    start_time: 0,
-                    end_time: 0,
-                    text: "",
-                  },
-                ],
-              },
-            ],
-          },
-        },
-      ],
-      attendees: [{ name: "-" }],
-      assets: [
-        {
-          mp4_s3_path: "",
-        },
-      ],
-      created_at: {
-        secs_since_epoch: 0,
-        nanos_since_epoch: 0,
-      },
-    },
-  });
+  const [data, setData] = React.useState<MeetingInfo>(BLANK_MEETING_INFO);
   const [transcripts, setTranscripts] = React.useState<any[]>([
     {
-      speaker: "",
+      speaker: '',
       words: [
         {
           start_time: 0,
           end_time: 0,
-          text: "",
+          text: '',
         },
       ],
     },
@@ -95,59 +53,80 @@ export function Viewer({ isBaasRecording = true, botId }: ViewerProps) {
   const [currentTime, setCurrentTime] = React.useState(0);
 
   const [messages, setMessages] = React.useState<Message[]>([]);
-  const [isLoading, setIsLoading] = React.useState(true);
 
-  const [meetingURL, setMeetingURL] = React.useState("");
+  const [meetingURL, setMeetingURL] = React.useState<string | Blob>();
 
   const [baasApiKey] = useAtom(baasApiKeyAtom);
+  const [openAIApiKey] = useAtom(openAIApiKeyAtom);
+
   // const [serverAvailability] = useAtom(serverAvailabilityAtom);
 
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   const handleChatSubmit = async (values: z.infer<typeof chatSchema>) => {
     const message = values.message;
-    setMessages((prev) => [...prev, { content: message, role: "user" }]);
+    setMessages((prev) => [...prev, { content: message, role: 'user' }]);
     // setIsLoading(true);
 
     // axios handling
     try {
-      let messagesList = [];
+      let messagesList: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [];
 
       transcripts.forEach((transcript) => {
-        let text: string = "";
+        let text: string = '';
         transcript.words.forEach((word: { text: string }) => {
-          text += word.text + " ";
+          text += word.text + ' ';
         });
-        messagesList.push({ content: text, role: "user" });
+        messagesList.push({ content: text, role: 'user' });
       });
 
       messagesList.push(...messages);
-      messagesList.push({ content: message, role: "user" });
+      messagesList.push({ content: message, role: 'user' });
 
       let res: {
         data: {
           response: string;
         };
       };
-      if (serverAvailability === "server") {
-        res = await axios.post("/api/chat", {
+      if (serverAvailability === 'server') {
+        res = await axios.post('/api/chat', {
           messages: messagesList,
         });
       } else {
+        if (!openAIApiKey) {
+          toast.error('No OpenAI API Key found!');
+          res = {
+            data: {
+              response: 'No OpenAI API Key found!',
+            },
+          };
+          setMessages((prev) => [...prev, { content: res.data.response, role: 'assistant' }]);
+          return;
+        }
+
+        const openai = new OpenAI({
+          apiKey: openAIApiKey,
+          dangerouslyAllowBrowser: true,
+          // https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety
+        });
+
+        const systemPrompt =
+          'You are a helpful assistant named AI Meeting Bot. You will be given a context of a meeting and some meeting notes, you will answer questions based on the context.';
+        const result = await openai.chat.completions.create({
+          messages: [{ role: 'system', content: systemPrompt }, ...messagesList],
+          model: 'gpt-4o-mini',
+        });
+
         res = {
           data: {
-            response:
-              "This feature is not available without access to the backend",
+            response: result.choices[0]!.message?.content || '',
           },
         };
       }
 
-      setMessages((prev) => [
-        ...prev,
-        { content: res.data.response, role: "assistant" },
-      ]);
+      setMessages((prev) => [...prev, { content: res.data.response, role: 'assistant' }]);
     } catch (error) {
-      console.error("error", error);
+      console.error('error', error);
     }
   };
 
@@ -162,87 +141,38 @@ export function Viewer({ isBaasRecording = true, botId }: ViewerProps) {
         player.currentTime = time;
       }
     },
-    [player]
+    [player],
   );
 
   const setPlayerRef = React.useCallback((player: MediaPlayerInstance) => {
     setPlayer(player);
   }, []);
 
-  // TODO:
-  // if we passed a promise to Meeting itself
-  // it'd be better...
-  // const fetchData = async () => {
-  //   setIsLoading(true);
-  //   try {
-  //     const fetchedData = await fetchDataFunction();
-  //     setData(fetchedData);
-  //     setIsLoading(false);
-  //   } catch (error) {
-  //     console.error("error", error);
-  //     toast.error("Failed to fetch meeting data");
-  //     setIsLoading(false);
-  //   }
-  // };
-  const fetchData = async () => {
-    try {
-      const res = await fetchBotDetails({
-        baasApiKey,
-        serverAvailability,
-        botId: botId || "",
-        raw: true,
-      });
-
-      console.log("response", res);
-
-      setData(res.data);
-      setIsLoading(false);
-    } catch (error) {
-      console.error("error", error);
-      toast.error("Failed to fetch meeting data");
-      setIsLoading(false);
-    }
-  };
-
-  React.useEffect(() => {
-    if (isBaasRecording) {
-      if (!botId) {
-        // Handle the case when botId is not provided
-        toast.error("No bot ID provided");
-        return;
-      }
-      if (!baasApiKey) return;
-      fetchData();
-    } else {
-      // Handle non-Baas recording case
-    }
-  }, [isBaasRecording, botId, serverAvailability]);
-
-  // React.useEffect(() => {
-  //   if (!baasApiKey) return;
-  //   fetchData();
-  // }, []);
-
   // this should come along the loaded data or props and doesn't make sense.
   React.useEffect(() => {
     if (!baasApiKey) return;
-    let url = data?.data?.assets[0]?.mp4_s3_path;
-    if (!url) return;
-    url = url.split("/bots-videos/")[1];
-    if (!url) return;
-    setMeetingURL("/replace/" + url);
+    if (data?.assets?.length > 0) {
+      let url = data?.assets[0]?.mp4_s3_path;
+      if (!url) return;
+
+      if (typeof url === 'string') {
+        url = url.split('/bots-videos/')[1];
+        setMeetingURL('/s3/' + url);
+      } else {
+        setMeetingURL(url);
+      }
+    }
   }, [baasApiKey, data]);
 
   React.useEffect(() => {
-    if (data?.data?.editors?.length > 0) {
-      const editors = data.data.editors;
-      const transcripts: MeetingInfo["data"]["editors"][0]["video"]["transcripts"][0][] =
-        [];
+    if (data?.editors?.length > 0) {
+      const editors = data.editors;
+      const transcripts: MeetingInfo['editors'][0]['video']['transcripts'][0][] = [];
       editors.forEach((editor) => {
         transcripts.push(...editor.video.transcripts);
       });
 
-      console.log(transcripts);
+      console.log('parsed transcript:', transcripts);
       setTranscripts(transcripts);
     }
   }, [data]);
@@ -250,33 +180,35 @@ export function Viewer({ isBaasRecording = true, botId }: ViewerProps) {
   return (
     <>
       <div className="px-4 py-2">
-        <HeaderTitle path="/meetings" title={`Viewing Meeting`} />
+        <HeaderTitle path="/meetings" title={meetingData.name} />
       </div>
       <ResizablePanelGroup
         className="flex min-h-[200dvh] lg:min-h-[85dvh]"
-        direction={isDesktop ? "horizontal" : "vertical"}
+        direction={isDesktop ? 'horizontal' : 'vertical'}
       >
-        <ResizablePanel defaultSize={100} minSize={25}>
-          <ResizablePanelGroup
-            direction="vertical"
-            className={cn("flex w-full h-full")}
-          >
+        <ResizablePanel defaultSize={67} minSize={25}>
+          <ResizablePanelGroup direction="vertical" className={cn('flex h-full w-full')}>
             <ResizablePanel defaultSize={50} minSize={25}>
-              <div className="flex flex-1 h-full rounded-b-none overflow-hidden border-0 border-t border-x border-b lg:border-0 lg:border-b lg:border-t lg:border-l">
-                <VideoPlayer
-                  src={meetingURL}
-                  onTimeUpdate={handleTimeUpdate}
-                  setPlayer={setPlayerRef}
-                />
+              <div className="flex h-full flex-1 overflow-hidden rounded-b-none border-0 border-x border-b border-t lg:border-0 lg:border-b lg:border-l lg:border-t">
+                {meetingURL && (
+                  <VideoPlayer
+                    // @ts-ignore
+                    src={{
+                      src: meetingURL,
+                      type: typeof meetingURL == 'string' ? 'video/mp4' : 'video/object',
+                    }}
+                    onTimeUpdate={handleTimeUpdate}
+                    setPlayer={setPlayerRef}
+                    assetTitle={meetingData.name}
+                  />
+                )}
               </div>
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50} minSize={15}>
-              <div className="flex-1 bg-background rounded-t-none border-0 border-x lg:border-0 lg:border-b lg:border-l p-4 md:p-6 space-y-2 max-h-full h-full overflow-auto">
+              <div className="h-full max-h-full flex-1 space-y-2 overflow-auto rounded-t-none border-0 border-x bg-background p-4 md:p-6 lg:border-0 lg:border-b lg:border-l">
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold px-0.5">
-                    Meeting Transcript
-                  </h2>
+                  <h2 className="px-0.5 text-2xl font-bold md:text-3xl">Meeting Transcript</h2>
                   {/* <p className="text-muted-foreground">
                     A detailed transcript of the video meeting.
                   </p> */}
@@ -292,16 +224,13 @@ export function Viewer({ isBaasRecording = true, botId }: ViewerProps) {
           </ResizablePanelGroup>
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={100} minSize={25}>
-          <ResizablePanelGroup
-            direction="vertical"
-            className={cn("flex w-full h-full")}
-          >
+        <ResizablePanel defaultSize={33} minSize={25}>
+          <ResizablePanelGroup direction="vertical" className={cn('flex h-full w-full')}>
             <ResizablePanel defaultSize={67} minSize={25}>
               <Editor
                 initialValue={undefined}
                 onChange={(v) => {
-                  console.log("editor changed", v);
+                  console.log('editor changed', v);
                 }}
               />
             </ResizablePanel>

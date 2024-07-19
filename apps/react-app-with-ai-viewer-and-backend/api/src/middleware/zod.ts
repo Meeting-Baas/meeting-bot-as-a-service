@@ -3,7 +3,7 @@ import { z, ZodError } from "zod";
 
 export function validateData(schema: z.ZodObject<any, any>) {
   return (req: Request, res: Response, next: NextFunction) => {
-    console.log(req.body);
+    console.log("validation body", req.body);
     try {
       schema.parse(req.body);
       next();
@@ -24,7 +24,6 @@ export function validateData(schema: z.ZodObject<any, any>) {
         // });
         res.status(400).json({ error: "Invalid data", details: errorMessages });
       } else {
-        console.log("WRONG DATA");
         res.status(500).json({ error: "Internal Server Error" });
       }
     }

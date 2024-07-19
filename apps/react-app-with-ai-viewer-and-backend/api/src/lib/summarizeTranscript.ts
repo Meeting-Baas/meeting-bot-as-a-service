@@ -19,7 +19,7 @@ export async function summarizeTranscript(transcript: TranscriptEntry[]) {
         apiKey: process.env.OPENAI_API_KEY,
       });
       const completion = await openai.chat.completions.create({
-        model: process.env.OPENAI_MODEL ?? "gpt-3.5-turbo",
+        model: process.env.OPENAI_MODEL ?? "gpt-4o-mini",
         messages: [
           { role: "system", content: SYSTEM_PROMPT_DESCRIPTION },
           {

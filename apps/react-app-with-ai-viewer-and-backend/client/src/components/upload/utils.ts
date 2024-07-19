@@ -10,7 +10,7 @@ export async function extractAudio(file: ArrayBuffer): Promise<AudioBuffer> {
     const offlineAudioContext = new OfflineAudioContext(
       numberOfChannels,
       sampleRate * duration,
-      sampleRate
+      sampleRate,
     );
 
     const soundSource = offlineAudioContext.createBufferSource();
@@ -22,7 +22,7 @@ export async function extractAudio(file: ArrayBuffer): Promise<AudioBuffer> {
     const renderedBuffer = await offlineAudioContext.startRendering();
     return renderedBuffer;
   } catch (error) {
-    console.error("Audio processing failed: ", error);
+    console.error('Audio processing failed: ', error);
     throw error;
   }
 }
@@ -34,10 +34,10 @@ export function convertToBuffer(file: File): Promise<ArrayBuffer> {
       if (reader.result instanceof ArrayBuffer) {
         resolve(reader.result);
       } else {
-        reject(new Error("File reading result is not an ArrayBuffer"));
+        reject(new Error('File reading result is not an ArrayBuffer'));
       }
     };
-    reader.onerror = () => reject(new Error("Error reading file"));
+    reader.onerror = () => reject(new Error('Error reading file'));
     reader.readAsArrayBuffer(file);
   });
 }

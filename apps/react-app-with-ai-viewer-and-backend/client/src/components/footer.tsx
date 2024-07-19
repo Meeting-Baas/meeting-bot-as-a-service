@@ -1,24 +1,12 @@
-import ServerAvailability from "@/components/server-availablity";
+import ServerAvailability from '@/components/server-availablity';
 
 function Footer() {
   return (
-    <footer className="w-full text-sm flex flex-col items-center px-3">
+    <footer className="flex w-full flex-col items-center px-3 text-sm">
       <div className="w-full">
         <hr className="border-foreground/10" />
       </div>
-      <div className="w-full py-3.5 flex flex-col items-center justify-center">
-        <div className="mt-2">
-          <a
-            href="https://github.com/meeting-baas/meeting-bot-as-a-service/apps/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
-          >
-            Open-source meeting interface
-          </a>{" "}
-          by Meeting Baas 🐟
-        </div>
-
+      <div className="flex w-full flex-col items-center justify-center py-3.5">
         <ServerAvailability />
       </div>
     </footer>

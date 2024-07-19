@@ -1,6 +1,5 @@
-"use client";
-import React from // useState
-"react";
+'use client';
+import React from 'react'; // useState
 import {
   EditorRoot,
   EditorCommand,
@@ -10,18 +9,18 @@ import {
   type JSONContent,
   EditorCommandList,
   EditorBubble,
-} from "novel";
-import { ImageResizer, handleCommandNavigation } from "novel/extensions";
-import { defaultExtensions } from "./extensions";
-import { NodeSelector } from "./selectors/node-selector";
-import { LinkSelector } from "./selectors/link-selector";
-import { ColorSelector } from "./selectors/color-selector";
+} from 'novel';
+import { ImageResizer, handleCommandNavigation } from 'novel/extensions';
+import { defaultExtensions } from './extensions';
+import { NodeSelector } from './selectors/node-selector';
+import { LinkSelector } from './selectors/link-selector';
+import { ColorSelector } from './selectors/color-selector';
 
-import { TextButtons } from "./selectors/text-buttons";
-import { slashCommand, suggestionItems } from "./slash-command";
-import { handleImageDrop, handleImagePaste } from "novel/plugins";
-import { uploadFn } from "./image-upload";
-import { Separator } from "@/components/ui/separator";
+import { TextButtons } from './selectors/text-buttons';
+import { slashCommand, suggestionItems } from './slash-command';
+import { handleImageDrop, handleImagePaste } from 'novel/plugins';
+import { uploadFn } from './image-upload';
+import { Separator } from '@/components/ui/separator';
 
 const extensions = [...defaultExtensions, slashCommand];
 
@@ -37,7 +36,7 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
   return (
     <EditorRoot>
       <EditorContent
-        className="border-0 border-x lg:border-0 lg:border-t lg:border-r p-4 pl-6 h-full w-full"
+        className="h-full w-full border-0 border-x p-4 pl-6 lg:border-0 lg:border-r lg:border-t"
         {...(initialValue && { initialContent: initialValue })}
         extensions={extensions}
         editorProps={{
@@ -45,8 +44,7 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
             keydown: (_view, event) => handleCommandNavigation(event),
           },
           handlePaste: (view, event) => handleImagePaste(view, event, uploadFn),
-          handleDrop: (view, event, _slice, moved) =>
-            handleImageDrop(view, event, moved, uploadFn),
+          handleDrop: (view, event, _slice, moved) => handleImageDrop(view, event, moved, uploadFn),
           attributes: {
             class: `prose prose-lg dark:prose-invert prose-headings:font-title font-default focus:outline-none max-w-full`,
           },
@@ -57,15 +55,13 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
         slotAfter={<ImageResizer />}
       >
         <EditorCommand className="z-50 h-auto max-h-[330px] overflow-y-auto rounded-md border border-muted bg-background px-1 py-2 shadow-md transition-all">
-          <EditorCommandEmpty className="px-2 text-muted-foreground">
-            No results
-          </EditorCommandEmpty>
+          <EditorCommandEmpty className="px-2 text-muted-foreground">No results</EditorCommandEmpty>
           <EditorCommandList>
             {suggestionItems.map((item) => (
               <EditorCommandItem
                 value={item.title}
                 onCommand={(val) => item.command?.(val)}
-                className={`flex w-full items-center space-x-2 rounded-md px-2 py-1 text-left text-sm hover:bg-accent aria-selected:bg-accent `}
+                className={`flex w-full items-center space-x-2 rounded-md px-2 py-1 text-left text-sm hover:bg-accent aria-selected:bg-accent`}
                 key={item.title}
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-md border border-muted bg-background">
@@ -73,9 +69,7 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
                 </div>
                 <div>
                   <p className="font-medium">{item.title}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {item.description}
-                  </p>
+                  <p className="text-xs text-muted-foreground">{item.description}</p>
                 </div>
               </EditorCommandItem>
             ))}
@@ -84,7 +78,7 @@ const Editor = ({ initialValue, onChange }: EditorProp) => {
 
         <EditorBubble
           tippyOptions={{
-            placement: "top",
+            placement: 'top',
           }}
           className="flex w-fit max-w-[90vw] overflow-hidden rounded-md border border-muted bg-background shadow-xl"
         >

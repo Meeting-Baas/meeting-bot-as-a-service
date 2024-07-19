@@ -1,16 +1,16 @@
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
 import {
   // ArrowLeft,
   ArrowUpIcon,
   LoaderCircleIcon,
-} from "lucide-react";
-import * as React from "react";
+} from 'lucide-react';
+import * as React from 'react';
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
 
-import { z } from "zod";
+import { z } from 'zod';
 
 import {
   Form,
@@ -20,12 +20,12 @@ import {
   FormItem,
   //   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { toast } from "sonner";
+} from '@/components/ui/form';
+import { toast } from 'sonner';
 
 export const formSchema = z.object({
   message: z.string().trim().min(2, {
-    message: "Message must be at least 2 characters.",
+    message: 'Message must be at least 2 characters.',
   }),
 });
 
@@ -38,7 +38,7 @@ function ChatInput({ handleSubmit }: ChatInputProps) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      message: "",
+      message: '',
     },
   });
 
@@ -48,13 +48,13 @@ function ChatInput({ handleSubmit }: ChatInputProps) {
       await handleSubmit(values);
 
       setIsLoading(false);
-      form.reset({ message: "" });
+      form.reset({ message: '' });
     } catch (error) {
-      console.error("Error sending message:", error);
+      console.error('Error sending message:', error);
 
       setIsLoading(false);
-      form.reset({ message: "" });
-      toast.error("Ooops! Something went wrong. Please try again.");
+      form.reset({ message: '' });
+      toast.error('Ooops! Something went wrong. Please try again.');
     }
   }
 
@@ -70,13 +70,9 @@ function ChatInput({ handleSubmit }: ChatInputProps) {
                 <Textarea
                   placeholder="Chat with your meeting here..."
                   rows={1}
-                  className="min-h-[48px] rounded-2xl resize-none p-4 border shadow-sm"
+                  className="min-h-[48px] resize-none rounded-2xl border p-4 shadow-sm"
                   onKeyDown={(e) => {
-                    if (
-                      e.key === "Enter" &&
-                      !e.shiftKey &&
-                      "form" in e.target
-                    ) {
+                    if (e.key === 'Enter' && !e.shiftKey && 'form' in e.target) {
                       e.preventDefault();
                       (e.target.form as HTMLFormElement).requestSubmit();
                     }
@@ -92,13 +88,13 @@ function ChatInput({ handleSubmit }: ChatInputProps) {
         <Button
           type="submit"
           size="icon"
-          className="absolute w-8 h-8 top-2.5 right-3"
+          className="absolute right-3 top-2.5 h-8 w-8"
           disabled={isLoading}
         >
           {isLoading ? (
             <LoaderCircleIcon className="h-4 w-4 animate-spin" />
           ) : (
-            <ArrowUpIcon className="w-4 h-4" />
+            <ArrowUpIcon className="h-4 w-4" />
           )}
           <span className="sr-only">Send</span>
         </Button>

@@ -75,7 +75,7 @@ export async function fetchBotDetails({
 }: BotDetailsParams) {
   try {
     const url = proxyUrl
-      ? `${proxyUrl}/bots/meeting_data`
+      ? proxyUrl
       : "https://api.meetingbaas.com/bots/meeting_data";
 
     const response = await axios.get(url, {
@@ -87,7 +87,7 @@ export async function fetchBotDetails({
       },
     });
 
-    console.log(`Bot details fetched, with id: ${response.data?.id}`);
+    console.log(`bot details fetched, with id: ${response.data?.id}`);
     return { data: response.data };
   } catch (error: any) {
     console.error("Error fetching meeting:", error);
