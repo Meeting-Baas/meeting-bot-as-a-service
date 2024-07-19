@@ -1,37 +1,31 @@
-# Open-Source Conversation Viewer with Bot Integration
+# Transcript Seeker
 
 ![Header](./../../GithubPreview.png)
 
 ## Overview
 
-This project is a comprehensive, open-source solution for managing meeting bots, viewing conversations, and handling API integrations. It features a full-stack implementation with a simple backend and a standalone frontend interface.
+Open-source transcript viewer running in-browser using IndexedDB. Upload recordings, create meeting bots, chat with transcripts using OpenAI, and add notes.
 
-## Features
+## Key Features
 
-1. **Bot Invitation**: Easily invite bots to your meetings
-2. **Conversation View**: Browse and interact with all your meetings or any conversation
-3. **Settings Management**: Manage your API keys and other configurations
-4. **Standalone Mode**: Uses browser Local Storage for data persistence when running without a backend
+- Upload video/audio recordings
+- Create meeting bots for Zoom, Google Meet, Teams
+- Chat with transcripts via OpenAI
+- Add notes to recordings
+- Standalone mode with browser Local Storage
 
-## Technology Stack
+## Tech Stack
 
-- **Backend**: Node.js, Express
-- **Frontend**: React, TypeScript, TailwindCSS
-- **Media Playback**: Vidstack
+- Frontend: React, TypeScript, TailwindCSS
+- Media Playback: Vidstack
+- Backend: Node.js, Express (optional)
 
-## Getting Started
+## Quick Start
 
-### Prerequisites
-
-- Node.js (v14 or later)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
+1. Clone the repo:
    ```
-   git clone https://github.com/yourusername/conversation-viewer.git
-   cd conversation-viewer
+   git clone https://github.com/Meeting-Baas/meeting-bot-as-a-service/
+   cd meeting-bot-as-a-service/apps/react-app-with-ai-viewer-and-backend
    ```
 
 2. Install dependencies:
@@ -39,39 +33,24 @@ This project is a comprehensive, open-source solution for managing meeting bots,
    npm install
    ```
 
-
-3. Build once, and then enjoy dev mode:
-   ```
-   npm install
-   ```
-
+3. Build and run dev mode:
    ```
    npm run dev
    ```
 
-4. Optional: get the back-end running, and set up environment variables:
-   Create a `.env` file in the root directory and add necessary API keys and configurations.
-
-
-## Usage
-
-1. **Bot Invitation**: Navigate to the Bot Invitation page to send bots to your meetings.
-2. **Conversation View**: Access and interact with your recorded meetings and conversations.
-3. **Settings**: Configure your API keys and other settings as needed.
-
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+See [Contributing Guidelines](CONTRIBUTING.md).
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+MIT License
 
 ## Support
 
-For support, please open an issue in the GitHub repository or contact our support team at support@example.com.
+Open an issue or join our [Discord](https://discord.com/invite/dsvFgDTr6c).
 
 ## Acknowledgements
 
-- [Meeting Baas API](https://meetingbaas.com/) for providing the underlying meeting bot technology
-- [Vidstack](https://www.vidstack.io/) for media playback capabilities
+- [Meeting Baas API](https://meetingbaas.com/)
+- [Vidstack](https://www.vidstack.io/)
