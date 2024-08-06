@@ -1,12 +1,12 @@
-# Automate Meeting Transcription and Summarization with Make and AI Meeting Bot
+# Automate Meeting Transcription and Summarization with Make and Meeting Baas
 
-This guide walks through setting up a Make workflow to automate video meeting recording, transcription, summarization, and synchronization of insights to an Airtable database. It leverages the OpenAI API for data analysis and summarization, and AI Meeting Bot for video meeting recording and data access.
+This guide walks through setting up a Make workflow to automate video meeting recording, transcription, summarization, and synchronization of insights to an Airtable database. It leverages the OpenAI API for data analysis and summarization, and Meeting Baas for video meeting recording and data access.
 
 ## Prerequisites
 
 - Make account
 - Airtable account
-- AI Meeting Bot API access
+- Meeting Baas API access
 - OpenAI API key
 
 ### Step 1: Set Up Make Account
@@ -23,7 +23,7 @@ This guide walks through setting up a Make workflow to automate video meeting re
 1. Create an Airtable account:
    - Sign up at [airtable.com](http://airtable.com/).
    - From the dashboard, click "Create" to start a new base.
-   - Choose "Start from scratch" and rename the base (e.g., "AI Meeting Bot").
+   - Choose "Start from scratch" and rename the base (e.g., "Meeting Baas").
 2. Import CSV files:
    - Download the [CSV files](./Airtable/).
    - Click "Add or Import" and select the "Data" CSV file.
@@ -71,8 +71,8 @@ This guide walks through setting up a Make workflow to automate video meeting re
    - Upload the Webhook Scenario file and save.
 2. Rename the scenario (e.g., "Integration Webhook").
 3. Click the webhooks node and create a new webhook.
-4. Name the webhook (e.g., "AI Meeting Bot webhook") and copy the address.
-5. In the AI Meeting Bot dashboard, navigate to the Webhook tab.
+4. Name the webhook (e.g., "Meeting Baas webhook") and copy the address.
+5. In the Meeting Baas dashboard, navigate to the Webhook tab.
 6. Paste the Make webhook URL.
 
 ### Step 5: Configure the OpenRouter Node
@@ -97,8 +97,8 @@ This guide walks through setting up a Make workflow to automate video meeting re
 ### Step 8: Save and Test
 
 1. Save the workflow.
-2. Open the form, input the meeting URL and AI Meeting Bot API key, and test the setup.
+2. Open the form, input the meeting URL and Meeting Baas API key, and test the setup.
 
 ## Conclusion
 
-Your Make workflow should now be connected to AI Meeting Bot and configured to use the OpenAI API. If you encounter issues, refer back to the steps or seek help on the AI Meeting Bot dashboard.
+Your Make workflow should now be connected to Meeting Baas and configured to use the OpenAI API. If you encounter issues, refer back to the steps or seek help on the Meeting Baas dashboard.
