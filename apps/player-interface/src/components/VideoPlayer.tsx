@@ -1,93 +1,86 @@
-import 'video.js/dist/video-js.css'
 import './VideoPlayer.css'
 
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
-import videojs from 'video.js'
-import Player from 'video.js/dist/types/player'
+import {
+    isHLSProvider,
+    MediaPlayer,
+    MediaProvider,
+    Poster,
+    type MediaPlayerInstance,
+    type MediaProviderAdapter,
+} from '@vidstack/react'
+import {
+    DefaultAudioLayout,
+    defaultLayoutIcons,
+    DefaultVideoLayout,
+} from '@vidstack/react/player/layouts/default'
 
-interface VideoPlayerProps {
-    url: string
+interface PlayerProps {
+    setPlayer: (player: MediaPlayerInstance) => void
+    src: string
     onTimeUpdate: (time: number) => void
-    setPlayerRef?: (player: Player) => void
+    assetTitle: string
 }
 
-export const VideoPlayer: React.FC<VideoPlayerProps> = ({
-    url,
+export const VideoPlayer = ({
+    setPlayer,
+    src,
     onTimeUpdate,
-    setPlayerRef,
-}) => {
-    const videoRef = useRef<HTMLVideoElement>(null)
-    const playerRef = useRef<Player | null>(null)
-    const [isMounted, setIsMounted] = useState(false)
+    assetTitle,
+}: PlayerProps) => {
+    let player = useRef<MediaPlayerInstance>(null)
 
     useEffect(() => {
-        setIsMounted(true)
-        return () => {
-            setIsMounted(false)
-        }
+        // Subscribe to state updates.
+
+        return player.current!.subscribe(({ currentTime, error }) => {
+            onTimeUpdate(currentTime)
+
+            if (error?.code === 3) {
+                console.error('Oops! Something went wrong!')
+            }
+        })
     }, [])
 
-    useEffect(() => {
-        if (isMounted && videoRef.current && !playerRef.current) {
-            const player = videojs(videoRef.current, {
-                controls: true,
-                autoplay: false,
-                preload: 'auto',
-                fluid: true,
-            })
-
-            player.src(url)
-            playerRef.current = player
-            if (setPlayerRef) {
-                setPlayerRef(player)
-            }
-
-            player.on('timeupdate', () => {
-                const currentTime = player.currentTime()
-                if (typeof currentTime === 'number') {
-                    onTimeUpdate(currentTime)
-                }
-            })
-
-            // Ajoutez un bouton de contrôle de vitesse
-            const speedButton = player
-                .getChild('controlBar')
-                ?.addChild('button', {
-                    clickHandler: function () {
-                        const currentRate = player.playbackRate()
-                        const newRate =
-                            currentRate! >= 2 ? 1 : currentRate! + 0.5
-                        player.playbackRate(newRate)
-                        updateSpeedButtonText(newRate)
-                    },
-                })
-
-            // Fonction pour mettre à jour le texte du bouton de vitesse
-            function updateSpeedButtonText(rate: number) {
-                if (speedButton && speedButton.el()) {
-                    speedButton.el().textContent = `${rate}x`
-                }
-            }
-
-            // Initialisation du texte du bouton
-            updateSpeedButtonText(1)
-
-            return () => {
-                player.dispose()
-                playerRef.current = null
-            }
+    function onProviderChange(provider: MediaProviderAdapter | null) {
+        // We can configure provider's here.
+        if (isHLSProvider(provider)) {
+            provider.library = () => import('hls.js')
         }
-    }, [url, onTimeUpdate, isMounted, setPlayerRef])
+    }
+
+    // We can listen for the `can-play` event to be notified when the player is ready.
+    function onCanPlay() {
+        setPlayer(player.current!)
+    }
 
     return (
-        <div data-vjs-player>
-            <video
-                style={{ borderRadius: '10px' }}
-                ref={videoRef}
-                className="video-js vjs-big-play-centered"
+        <>
+            <MediaPlayer
+                className="player"
+                title={assetTitle}
+                src={src}
+                crossOrigin
                 playsInline
-            />
-        </div>
+                onProviderChange={onProviderChange}
+                onCanPlay={onCanPlay}
+                ref={player}
+            >
+                <MediaProvider>
+                    <Poster
+                        className="vds-poster"
+                        src="https://mordaklava.ch/stuff/vincent.png"
+                    />
+                </MediaProvider>
+
+                {/* Layouts */}
+                <DefaultAudioLayout icons={defaultLayoutIcons} />
+                <DefaultVideoLayout
+                    icons={defaultLayoutIcons}
+                    // thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
+                />
+            </MediaPlayer>
+        </>
     )
 }

@@ -16,13 +16,15 @@ const TranscriptComponent: React.FC<TranscriptProps> = ({
 }) => {
     return (
         <Flex
+            rounded={'md'}
+            bg="neutral.900"
             h="full"
             w="full"
             maxW={'full'}
             overflowY="scroll"
             overflowX="hidden"
             flexDir={'column'}
-            p={{ base: '4px', lg: '8px' }}
+            p={{ base: '2', lg: '4' }}
         >
             {transcript.map((entry, index) => (
                 <Flex
@@ -31,11 +33,24 @@ const TranscriptComponent: React.FC<TranscriptProps> = ({
                     key={index}
                     userSelect={'none'}
                 >
-                    <Heading as="h6" size="sm" fontWeight="bold" px="1">
+                    <Heading
+                        as="h6"
+                        size="sm"
+                        fontWeight="bold"
+                        px="1"
+                        color={'neutral.50'}
+                        opacity={'80%'}
+                    >
                         {entry.speaker}
                     </Heading>
 
-                    <Wrap w="full" py="1" maxW={'full'} textAlign={'justify'}>
+                    <Wrap
+                        w="full"
+                        py="2"
+                        maxW={'full'}
+                        textAlign={'justify'}
+                        pl="4"
+                    >
                         {entry.words.map((word, idx) => (
                             <Text
                                 key={idx}
@@ -45,17 +60,18 @@ const TranscriptComponent: React.FC<TranscriptProps> = ({
                                 bgColor={
                                     currentTime >= word.start_time &&
                                     currentTime <= word.end_time
-                                        ? 'blue'
+                                        ? 'primary.500'
                                         : 'transparent'
                                 }
                                 color={
                                     currentTime >= word.start_time &&
                                     currentTime <= word.end_time
-                                        ? 'white'
-                                        : 'black'
+                                        ? 'neutral.900'
+                                        : 'neutral.200'
                                 }
                                 onClick={() => onWordClick(word.start_time)}
                                 cursor={'pointer'}
+                                data-time={word.start_time}
                             >
                                 {word.text}{' '}
                             </Text>

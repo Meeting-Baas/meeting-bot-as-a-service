@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { MeetingInfo } from '../type'
 
-// const API_URL = 'https://api.meetingbaas.com'
-const API_URL = 'http://localhost:3001'
+const API_URL = 'http://127.0.0.1:3001'
 const API_KEY = 'banane'
+
 const useMeetingData = (botId: string) => {
     const [meetingData, setMeetingData] = useState<MeetingInfo | null>(null)
     const [loading, setLoading] = useState<boolean>(true)
@@ -13,6 +13,7 @@ const useMeetingData = (botId: string) => {
 
     useEffect(() => {
         const fetchMeetingData = async () => {
+            console.log('Fetching meeting data for botId:', botId)
             try {
                 const response = await axios.get<MeetingInfo>(
                     `${API_URL}/bots/meeting_data`,
@@ -23,9 +24,11 @@ const useMeetingData = (botId: string) => {
                         },
                     },
                 )
+                console.log('Response received:', response.data)
                 setMeetingData(response.data)
                 setLoading(false)
             } catch (err) {
+                console.error('Error fetching meeting data:', err)
                 setError('Failed to fetch meeting data')
                 setLoading(false)
             }
