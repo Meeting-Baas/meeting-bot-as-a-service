@@ -1,5 +1,5 @@
 import { Container, Flex } from '@chakra-ui/react'
-import React, { useCallback, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 import { MediaPlayerInstance } from '@vidstack/react'
 import TranscriptComponent from './components/Transcript'
@@ -7,20 +7,29 @@ import { VideoPlayer } from './components/VideoPlayer'
 import useMeetingData from './hooks/useMeetingData'
 
 const App: React.FC = () => {
-    const botId = 'f479f395-3f88-4922-85c9-2018906a8003'
-    const { meetingData, loading, error } = useMeetingData(botId)
-
+    const [botId, setBotId] = useState<string | null>(null)
+    const [apiKey, setApiKey] = useState<string | null>(null)
     const [currentTime, setCurrentTime] = useState(0)
     const [videoPlayer, setVideoPlayer] = useState<MediaPlayerInstance | null>(
         null,
     )
     const transcriptRef = useRef<HTMLDivElement>(null)
 
+    useEffect(() => {
+        const url = new URL(window.location.href)
+        const pathParts = url.pathname.split('/')
+        const lastPathPart = pathParts[pathParts.length - 1]
+
+        setBotId(lastPathPart)
+        setApiKey(url.searchParams.get('api_key'))
+    }, [])
+
+    const { meetingData, loading, error } = useMeetingData(botId, apiKey)
+
     const handleTimeUpdate = useCallback(
         (time: number) => {
             setCurrentTime(time)
 
-            // Scroll to the current word in the transcript
             if (transcriptRef.current && meetingData) {
                 const currentWord = meetingData.bot_data.transcripts
                     .flatMap((entry) => entry.words)
@@ -58,7 +67,11 @@ const App: React.FC = () => {
         setVideoPlayer(player)
     }, [])
 
-    if (loading) return <div>Loading...</div>
+    if (!botId || !apiKey) {
+        return <div>Loading URL parameters...</div>
+    }
+
+    if (loading) return <div>Loading meeting data...</div>
     if (error) return <div>Error: {error}</div>
     if (!meetingData) return <div>No meeting data available</div>
 
@@ -79,7 +92,6 @@ const App: React.FC = () => {
                 <Flex width={'full'} mx="auto" maxW="2xl">
                     <VideoPlayer
                         setPlayer={setPlayerRef}
-                        // src="http://localhost:9000/bots-videos/3/fpdtoxso1d/758.mp4"
                         src={meetingData.mp4}
                         onTimeUpdate={handleTimeUpdate}
                         assetTitle={meetingData.name || 'Meeting Video'}

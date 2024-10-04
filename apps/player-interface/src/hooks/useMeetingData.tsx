@@ -4,14 +4,20 @@ import axios from 'axios'
 import { MeetingInfo } from '../type'
 
 const API_URL = 'http://127.0.0.1:3001'
-const API_KEY = 'banane'
 
-const useMeetingData = (botId: string) => {
+const useMeetingData = (botId: string | null, apiKey: string | null) => {
     const [meetingData, setMeetingData] = useState<MeetingInfo | null>(null)
-    const [loading, setLoading] = useState<boolean>(true)
+    const [loading, setLoading] = useState<boolean>(false)
     const [error, setError] = useState<string | null>(null)
 
     useEffect(() => {
+        if (!botId || !apiKey) {
+            return
+        }
+
+        setLoading(true)
+        setError(null)
+
         const fetchMeetingData = async () => {
             console.log('Fetching meeting data for botId:', botId)
             try {
@@ -20,7 +26,7 @@ const useMeetingData = (botId: string) => {
                     {
                         params: { bot_id: botId },
                         headers: {
-                            'x-spoke-api-key': API_KEY,
+                            'x-spoke-api-key': apiKey,
                         },
                     },
                 )
@@ -35,7 +41,7 @@ const useMeetingData = (botId: string) => {
         }
 
         fetchMeetingData()
-    }, [botId])
+    }, [botId, apiKey])
 
     return { meetingData, loading, error }
 }

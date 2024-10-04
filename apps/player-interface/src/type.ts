@@ -1,25 +1,3 @@
-// types.ts
-export interface Word {
-    start: number
-    end: number
-    word: string
-}
-
-export interface TranscriptEntry {
-    speaker: string
-    words: Word[]
-}
-
-export interface VideoData {
-    event: string
-    data: {
-        bot_id: string
-        transcript: TranscriptEntry[]
-        speakers: string[]
-        mp4: string
-    }
-}
-
 //new type from Micka
 export type Meeting = {
     id: string
@@ -55,11 +33,13 @@ export type BotData = {
     bot: Bot | null
     transcripts: Transcript[]
 }
-export type MeetingInfo = {
-    name: string
-    bot_data: BotData
-    mp4: string
-}
+export type MeetingInfo =
+    | {
+          name: string
+          bot_data: BotData
+          mp4: string
+      }
+    | undefined
 
 export type Transcript = {
     speaker: string
