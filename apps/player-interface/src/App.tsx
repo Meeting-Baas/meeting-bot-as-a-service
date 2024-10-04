@@ -1,18 +1,17 @@
 import { Box, Center, Flex, Text } from '@chakra-ui/react'
 import React, { useCallback, useEffect, useState } from 'react'
 
-import Player from 'video.js/dist/types/player'
 import { Card } from './components/Card'
 import Editor from './components/Editor'
-import Transcript from './components/Transcript'
+import Player from 'video.js/dist/types/player'
+import TranscriptComponent from './components/Transcript'
 import { VideoPlayer } from './components/VideoPlayer'
-import videoExample from './fakeData/customer_service_480x360.mp4'
-import jsonData from './fakeData/fakedata.json'
-import { VideoData } from './type'
-
-const videoData: VideoData = jsonData as VideoData
+import useMeetingData from './hooks/useMeetingData' // Assurez-vous que le chemin d'importation est correct
 
 const App: React.FC = () => {
+    const botId = '1e98af82-db45-46ac-b11a-8bd9d60a3486' // Votre bot ID
+    const { meetingData, loading, error } = useMeetingData(botId)
+
     const [isHover, setIsHover] = useState(false)
     const [width, setWidth] = useState(30)
     const [isDragging, setIsDragging] = useState(false)
@@ -23,6 +22,7 @@ const App: React.FC = () => {
     const handleEditorChange = (data: any) => {
         setEditorData(data)
     }
+
     const handleMouseDown = useCallback(() => {
         setIsDragging(true)
     }, [])
@@ -35,7 +35,7 @@ const App: React.FC = () => {
                 setWidth(newWidth)
             }
         },
-        [isDragging]
+        [isDragging],
     )
 
     const handleMouseUp = useCallback(() => {
@@ -61,12 +61,16 @@ const App: React.FC = () => {
                 videoPlayer.currentTime(time)
             }
         },
-        [videoPlayer]
+        [videoPlayer],
     )
 
     const setPlayerRef = useCallback((player: Player) => {
         setVideoPlayer(player)
     }, [])
+
+    if (loading) return <div>Loading...</div>
+    if (error) return <div>Error: {error}</div>
+    if (!meetingData) return <div>No meeting data available</div>
 
     return (
         <Flex
@@ -85,7 +89,7 @@ const App: React.FC = () => {
                 gap="4"
             >
                 <VideoPlayer
-                    url={videoExample}
+                    url={meetingData.mp4}
                     onTimeUpdate={handleTimeUpdate}
                     setPlayerRef={setPlayerRef}
                 />
@@ -100,8 +104,8 @@ const App: React.FC = () => {
                     isOpen={true}
                     toggleCard={() => {}}
                     bodyContent={
-                        <Transcript
-                            transcript={videoData.data.transcript}
+                        <TranscriptComponent
+                            transcript={meetingData.bot_data.transcripts}
                             currentTime={currentTime}
                             onWordClick={handleSeek}
                         />

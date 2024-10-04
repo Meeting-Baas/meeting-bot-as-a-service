@@ -1,15 +1,15 @@
 import { Flex, Heading, Text, Wrap } from '@chakra-ui/react'
 
 import React from 'react'
-import { TranscriptEntry } from '../type'
+import { Transcript } from '../type'
 
 interface TranscriptProps {
-    transcript: TranscriptEntry[]
+    transcript: Transcript[]
     currentTime: number
     onWordClick: (time: number) => void
 }
 
-const Transcript: React.FC<TranscriptProps> = ({
+const TranscriptComponent: React.FC<TranscriptProps> = ({
     transcript,
     currentTime,
     onWordClick,
@@ -43,21 +43,21 @@ const Transcript: React.FC<TranscriptProps> = ({
                                 w="fit-content"
                                 px="0.5"
                                 bgColor={
-                                    currentTime >= word.start &&
-                                    currentTime <= word.end
+                                    currentTime >= word.start_time &&
+                                    currentTime <= word.end_time
                                         ? 'blue'
                                         : 'transparent'
                                 }
                                 color={
-                                    currentTime >= word.start &&
-                                    currentTime <= word.end
+                                    currentTime >= word.start_time &&
+                                    currentTime <= word.end_time
                                         ? 'white'
                                         : 'black'
                                 }
-                                onClick={() => onWordClick(word.start)}
+                                onClick={() => onWordClick(word.start_time)}
                                 cursor={'pointer'}
                             >
-                                {word.word}{' '}
+                                {word.text}{' '}
                             </Text>
                         ))}
                     </Wrap>
@@ -67,4 +67,4 @@ const Transcript: React.FC<TranscriptProps> = ({
     )
 }
 
-export default Transcript
+export default TranscriptComponent
